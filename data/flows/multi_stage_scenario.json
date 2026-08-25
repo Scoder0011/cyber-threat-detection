@@ -1,0 +1,61 @@
+{
+  "campaign_name": "Operation ShadowInfiltrate (APT-29 Simulation)",
+  "victim_organization": "National Infrastructure Agency",
+  "attacker_c2": "185.220.101.44",
+  "stages": [
+    {
+      "stage": 1,
+      "phase": "Reconnaissance (Port & Subnet Scanning)",
+      "timestamp": "2026-08-25T14:41:46.668864+00:00",
+      "vector": "PORT_SCAN",
+      "attacker_ip": "185.220.101.15",
+      "target_ip": "10.0.10.5",
+      "evidence": "Vertical port scan probing ports 1-1024. Discovered open port 8080 (Vulnerable WebApp)."
+    },
+    {
+      "stage": 2,
+      "phase": "Weaponization & C2 Rendezvous (DGA DNS)",
+      "timestamp": "2026-08-25T14:56:46.668864+00:00",
+      "vector": "DGA_DNS",
+      "attacker_ip": "10.0.10.5",
+      "target_ip": "8.8.8.8",
+      "evidence": "High-entropy DGA domain lookups (kdfj934jsd834kf.net) to locate dynamic C2 IP."
+    },
+    {
+      "stage": 3,
+      "phase": "Payload Delivery & Dropper (Encrypted Malware TLS)",
+      "timestamp": "2026-08-25T15:06:46.668864+00:00",
+      "vector": "ENCRYPTED_MALWARE",
+      "attacker_ip": "10.0.10.5",
+      "target_ip": "185.220.101.44",
+      "evidence": "Outbound TLS handshake matching Cobalt Strike Beacon JA3 hash (a0e9f5d64349fb13191bc781f81f42e1)."
+    },
+    {
+      "stage": 4,
+      "phase": "Command & Control Persistence (Periodic Beaconing)",
+      "timestamp": "2026-08-25T15:16:46.668864+00:00",
+      "vector": "C2_BEACONING",
+      "attacker_ip": "10.0.10.5",
+      "target_ip": "185.220.101.44",
+      "evidence": "Heartbeat beaconing every exactly 10.0s (jitter < 0.05s) sending keep-alives."
+    },
+    {
+      "stage": 5,
+      "phase": "Data Collection & Exfiltration",
+      "timestamp": "2026-08-25T15:26:46.668864+00:00",
+      "vector": "DATA_EXFILTRATION",
+      "attacker_ip": "10.0.10.5",
+      "target_ip": "185.220.101.88",
+      "evidence": "Burst transfer of 14.8 MB database archive over HTTPS POST, outbound ratio 450:1."
+    },
+    {
+      "stage": 6,
+      "phase": "Cover Tracks & Distraction (DDoS SYN Flood)",
+      "timestamp": "2026-08-25T15:36:46.668864+00:00",
+      "vector": "DDOS_SYN_FLOOD",
+      "attacker_ip": "Spoofed Botnet (500+ IPs)",
+      "target_ip": "10.0.10.20",
+      "evidence": "Massive 25,000 pps SYN flood hitting border gateway to blind SOC monitoring."
+    }
+  ]
+}
