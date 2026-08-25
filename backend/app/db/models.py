@@ -15,4 +15,3 @@ class Alert(Base):
     evidence = Column(JSON)
     blockchain_tx = Column(String, nullable=True)
 
-    postgresql://postgres:[YOUR-PASSWORD]@db.focoivjprqtixbtobpmb.supabase.co:5432/postgres
