@@ -1,1 +1,136 @@
-backend/.env
+# =============================================================================
+# 🛡️ AI-Powered Cyber Threat Detection System - .gitignore
+# =============================================================================
+
+# --- Environment & Secret Credentials ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.crt
+secrets.yaml
+
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
+
+# Typing & Linters
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Node.js & Frontend ---
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.npm
+.eslintcache
+.vite/
+*.tsbuildinfo
+
+# --- Machine Learning Models & Heavy Binaries ---
+# Keep .gitkeep in saved_models directory
+ai_models/saved_models/*
+!ai_models/saved_models/.gitkeep
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+*.safetensors
+
+# --- Datasets & Heavy Captures ---
+# Ignore large PCAP files downloaded externally (keep sample_threats.pcap & .gitkeep)
+data/pcaps/*.pcap
+!data/pcaps/sample_threats.pcap
+!data/pcaps/.gitkeep
+*.pcapng
+*.cap
+
+# Large external dataset dumps (if unzipped)
+data/flows/*.tar.gz
+data/flows/*.zip
+data/flows/*.parquet
+
+# --- Databases & Local Storage ---
+*.sqlite
+*.sqlite3
+*.db
+*.log
+logs/
+*.pid
+
+# --- Docker & Infrastructure ---
+.docker/
+
+# --- Operating System & Editor Artifacts ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# IDEs
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
