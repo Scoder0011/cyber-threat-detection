@@ -3,13 +3,21 @@ Main Controller AI — calls each specialist bot's /predict endpoint,
 and if a bot flags malicious traffic, writes a ThreatAlert.
 """
 import requests
+import uuid
 from app.db.session import SessionLocal
 from app.db.models import ThreatAlert
-import uuid
 
 AI_SERVICE_URL = "https://three-1-1oz2.onrender.com"
-
 CONFIDENCE_THRESHOLD = 0.7
+
+# Bots currently known to work; add scanning_bot once fixed
+ACTIVE_BOTS = [
+    "ddos_bot",
+    "beaconing_bot",
+    "dga_dns_bot",
+    "encrypted_malware_bot",
+    "exfiltration_bot",
+]
 
 
 def call_bot(bot_name: str, payload: dict) -> dict:
@@ -24,10 +32,13 @@ def call_bot(bot_name: str, payload: dict) -> dict:
 
 def evaluate_flow(flow_data: dict, bot_name: str, bot_payload: dict):
     """
-    Calls one bot with the given payload derived from flow_data.
-    If malicious, writes an alert to the DB.
+    Calls one bot with the given payload. If malicious, writes an alert.
     """
-    result = call_bot(bot_name, bot_payload)
+    try:
+        result = call_bot(bot_name, bot_payload)
+    except Exception as e:
+        print(f"{bot_name}: call failed - {e}")
+        return None
 
     if result.get("malicious") and result.get("confidence", 0) >= CONFIDENCE_THRESHOLD:
         db = SessionLocal()
@@ -52,5 +63,5 @@ def evaluate_flow(flow_data: dict, bot_name: str, bot_payload: dict):
         finally:
             db.close()
     else:
-        print(f"{bot_name}: benign/low-confidence, no alert")
+        print(f"{bot_name}: benign/low-confidence ({result.get('confidence')}), no alert")
         return None
