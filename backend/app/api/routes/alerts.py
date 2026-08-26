@@ -47,3 +47,13 @@ def update_alert(alert_id: str, update: ThreatAlertUpdate, db: Session = Depends
     db.commit()
     db.refresh(alert)
     return alert
+
+
+@router.delete("/alerts/{alert_id}")
+def delete_alert(alert_id: str, db: Session = Depends(get_db)):
+    alert = db.query(ThreatAlert).filter(ThreatAlert.alert_id == alert_id).first()
+    if not alert:
+        raise HTTPException(status_code=404, detail="Alert not found")
+    db.delete(alert)
+    db.commit()
+    return {"detail": f"Alert {alert_id} deleted"}
