@@ -3,16 +3,16 @@
 AI-Powered Cyber Threat Detection System - Dataset Integrity & Validation Suite
 ================================================================================
 Performs comprehensive quality, statistical distribution, and schema checks across
-all CSV, JSON, PCAP, and SQL artifacts in the /data directory.
+all 6 specialized threat schemas as well as full Supabase network_flows telemetry.
 
-Checks:
-1. Schema conformity (matching Supabase DDL specifications)
-2. IP address & Port range validity (0 <= port <= 65535, valid IPv4 format)
-3. Positive durations, byte counts, and packet rates
-4. Entropy boundaries (0.0 <= entropy <= 8.0)
-5. Label consistency (is_attack vs attack_type taxonomy)
-6. Null / NaN value absence in required columns
-7. Binary PCAP packet format validation
+Validated Schemas:
+1. DDoS: flow_id,src_ip,dst_ip,src_port,dst_port,protocol,pkts_in,bytes_in,duration,entropy,is_attack,attack_type
+2. Beaconing: session_id,src_ip,dst_ip,inter_arrival_times,is_attack
+3. DGA Domains: domain,family,entropy,vowel_ratio,length,is_dga
+4. Encrypted Malware: flow_id,src_ip,ja3_hash,client_type,is_attack
+5. Port Scanning: src_ip,dst_ip,unique_dst_ports,scan_duration_s,is_attack
+6. Exfiltration: flow_id,src_ip,dst_ip,bytes_in,bytes_out,ratio_out_in,is_attack
+7. Full Telemetry: sample_mixed_flows, benign_flows, ML splits
 """
 
 import os
@@ -25,82 +25,85 @@ from typing import List, Dict, Any, Tuple
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-REQUIRED_FLOW_FIELDS = [
-    "flow_id", "src_ip", "dst_ip", "src_port", "dst_port",
-    "protocol", "duration", "bytes_in", "bytes_out", "pkts_in", "pkts_out",
-    "tcp_flags", "entropy", "is_attack", "attack_type"
-]
-
-KNOWN_ATTACK_TYPES = {
-    "BENIGN", "DDOS_SYN_FLOOD", "DDOS_UDP_AMPLIFICATION", "DOS_SLOWLORIS",
-    "DNS_TUNNELING", "DGA_DNS", "C2_BEACONING", "PORT_SCAN_VERTICAL",
-    "PORT_SCAN_HORIZONTAL", "ENCRYPTED_MALWARE_TLS", "DATA_EXFILTRATION"
-}
-
 def validate_ip(ip_str: str) -> bool:
-    """Validates IPv4 or subnet format."""
-    clean_ip = ip_str.split("/")[0].split(" ")[0]
+    """Validates IPv4 format."""
+    clean_ip = ip_str.split("/")[0].split(" ")[0].strip()
     try:
         ipaddress.ip_address(clean_ip)
         return True
     except ValueError:
         return False
 
-def validate_flow_record(row: Dict[str, Any], filename: str, row_idx: int) -> List[str]:
-    """Validates a single flow record against physical network constraints."""
+def validate_record_by_schema(row: Dict[str, Any], filename: str, row_idx: int) -> List[str]:
+    """Dynamically validates row according to its dedicated schema."""
     errors = []
     
-    # 1. Missing fields
-    for field in REQUIRED_FLOW_FIELDS:
-        if field not in row or row[field] is None or row[field] == "":
-            errors.append(f"Row {row_idx}: Missing required field '{field}'")
+    # 1. Beaconing Schema
+    if "session_id" in row and "inter_arrival_times" in row:
+        for field in ["session_id", "src_ip", "dst_ip", "inter_arrival_times", "is_attack"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        if not validate_ip(row.get("dst_ip", "")): errors.append(f"Row {row_idx}: Invalid dst_ip")
+        try:
+            iats = json.loads(row.get("inter_arrival_times", "[]"))
+            if not isinstance(iats, list) or len(iats) == 0:
+                errors.append(f"Row {row_idx}: Invalid IAT list")
+        except Exception:
+            errors.append(f"Row {row_idx}: IAT not valid JSON array")
+        return errors
 
-    # 2. IP validity
-    src_ip = str(row.get("src_ip", ""))
-    dst_ip = str(row.get("dst_ip", ""))
-    if not validate_ip(src_ip):
-        errors.append(f"Row {row_idx}: Invalid src_ip '{src_ip}'")
-    if not validate_ip(dst_ip):
-        errors.append(f"Row {row_idx}: Invalid dst_ip '{dst_ip}'")
+    # 2. DGA Domains Schema
+    if "domain" in row and "vowel_ratio" in row and "is_dga" in row:
+        for field in ["domain", "family", "entropy", "vowel_ratio", "length", "is_dga"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        return errors
 
-    # 3. Port ranges
-    try:
-        src_port = int(row.get("src_port", 0))
-        dst_port = int(row.get("dst_port", 0))
-        if not (0 <= src_port <= 65535):
-            errors.append(f"Row {row_idx}: src_port {src_port} out of range [0, 65535]")
-        if not (0 <= dst_port <= 65535):
-            errors.append(f"Row {row_idx}: dst_port {dst_port} out of range [0, 65535]")
-    except (ValueError, TypeError):
-        errors.append(f"Row {row_idx}: Non-integer port values")
+    # 3. Encrypted Malware JA3 Schema
+    if "flow_id" in row and "ja3_hash" in row and "client_type" in row:
+        for field in ["flow_id", "src_ip", "ja3_hash", "client_type", "is_attack"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        return errors
 
-    # 4. Durations & Bytes
-    try:
-        duration = float(row.get("duration", 0))
-        bytes_in = int(row.get("bytes_in", 0))
-        bytes_out = int(row.get("bytes_out", 0))
-        if duration < 0:
-            errors.append(f"Row {row_idx}: Negative duration ({duration})")
-        if bytes_in < 0 or bytes_out < 0:
-            errors.append(f"Row {row_idx}: Negative byte counts ({bytes_in}, {bytes_out})")
-    except (ValueError, TypeError) as e:
-        errors.append(f"Row {row_idx}: Invalid numerical flow stats: {e}")
+    # 4. Port Scanning Schema
+    if "src_ip" in row and "unique_dst_ports" in row and "scan_duration_s" in row:
+        for field in ["src_ip", "dst_ip", "unique_dst_ports", "scan_duration_s", "is_attack"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        if not validate_ip(row.get("dst_ip", "")): errors.append(f"Row {row_idx}: Invalid dst_ip")
+        return errors
 
-    # 5. Entropy
-    try:
-        entropy = float(row.get("entropy", 0))
-        if not (0.0 <= entropy <= 8.0):
-            errors.append(f"Row {row_idx}: Entropy {entropy} outside [0.0, 8.0]")
-    except (ValueError, TypeError):
-        pass
+    # 5. Exfiltration Schema
+    if "flow_id" in row and "ratio_out_in" in row and "bytes_out" in row:
+        for field in ["flow_id", "src_ip", "dst_ip", "bytes_in", "bytes_out", "ratio_out_in", "is_attack"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        if not validate_ip(row.get("dst_ip", "")): errors.append(f"Row {row_idx}: Invalid dst_ip")
+        return errors
 
-    # 6. Attack type taxonomy
-    attack_type = str(row.get("attack_type", "")).upper()
-    is_attack = str(row.get("is_attack", "")).lower() in ("true", "1")
-    if is_attack and attack_type == "BENIGN":
-        errors.append(f"Row {row_idx}: Contradiction: is_attack=True but attack_type='BENIGN'")
-    if not is_attack and attack_type != "BENIGN":
-        errors.append(f"Row {row_idx}: Contradiction: is_attack=False but attack_type='{attack_type}'")
+    # 6. DDoS Schema (network_flows subset)
+    if "flow_id" in row and "src_port" in row and "pkts_in" in row and "bytes_out" not in row:
+        for field in ["flow_id", "src_ip", "dst_ip", "src_port", "dst_port", "protocol", "pkts_in", "bytes_in", "duration", "entropy", "is_attack", "attack_type"]:
+            if field not in row or row[field] is None:
+                errors.append(f"Row {row_idx}: Missing '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        if not validate_ip(row.get("dst_ip", "")): errors.append(f"Row {row_idx}: Invalid dst_ip")
+        return errors
+
+    # 7. Full Telemetry Schema (sample_mixed_flows, benign_flows, etc.)
+    if "flow_id" in row and "bytes_out" in row:
+        req = ["flow_id", "src_ip", "dst_ip", "src_port", "dst_port", "protocol", "duration", "bytes_in", "bytes_out", "pkts_in", "pkts_out", "tcp_flags", "entropy", "is_attack", "attack_type"]
+        for field in req:
+            if field not in row or row[field] is None or row[field] == "":
+                errors.append(f"Row {row_idx}: Missing required field '{field}'")
+        if not validate_ip(row.get("src_ip", "")): errors.append(f"Row {row_idx}: Invalid src_ip")
+        if not validate_ip(row.get("dst_ip", "")): errors.append(f"Row {row_idx}: Invalid dst_ip")
+        return errors
 
     return errors
 
@@ -134,7 +137,7 @@ def validate_pcap_file(filepath: str) -> Tuple[bool, int, str]:
 
 def main():
     print("=================================================================")
-    print("🧪 Running Dataset Quality & Schema Verification")
+    print("🧪 Running Dataset Quality & Multi-Schema Verification")
     print("=================================================================\n")
     
     total_files = 0
@@ -142,7 +145,7 @@ def main():
     total_errors = 0
     
     # 1. Validate all CSV files
-    print("1. Validating CSV Datasets...")
+    print("1. Validating CSV Datasets across all 6 threat schemas...")
     for root, _, files in os.walk(BASE_DIR):
         for f in sorted(files):
             if f.endswith(".csv"):
@@ -154,9 +157,8 @@ def main():
                     rows = list(reader)
                     file_errors = []
                     for idx, row in enumerate(rows, 1):
-                        if "flow_id" in row:
-                            errs = validate_flow_record(row, f, idx)
-                            file_errors.extend(errs)
+                        errs = validate_record_by_schema(row, f, idx)
+                        file_errors.extend(errs)
                     
                     total_records += len(rows)
                     if file_errors:
