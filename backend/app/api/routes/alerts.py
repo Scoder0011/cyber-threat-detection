@@ -1,37 +1,49 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from sqlalchemy import desc
+
+from app.db.session import get_db
+from app.db.models import ThreatAlert
+from app.schemas.alert import ThreatAlertCreate, ThreatAlertUpdate, ThreatAlertResponse
 
 router = APIRouter()
 
-MOCK_ALERTS = [
-    {
-        "id": "1",
-        "timestamp": "2026-08-25T14:30:00Z",
-        "flow_id": "src:1.2.3.4-dst:5.6.7.8-proto:TCP",
-        "threat_class": "syn_flood",
-        "confidence": 0.93,
-        "severity": "high",
-        "evidence": {"syn_rate": 45000, "src_entropy": 0.11},
-        "blockchain_tx": "0xabc..."
-    },
-    {
-        "id": "2",
-        "timestamp": "2026-08-25T14:32:00Z",
-        "flow_id": "src:9.9.9.9-dst:8.8.8.8-proto:UDP",
-        "threat_class": "port_scan",
-        "confidence": 0.81,
-        "severity": "medium",
-        "evidence": {"unique_ports": 340},
-        "blockchain_tx": "0xdef..."
-    }
-]
 
-@router.get("/alerts")
-def get_alerts():
-    return MOCK_ALERTS
+@router.get("/alerts", response_model=list[ThreatAlertResponse])
+def get_alerts(limit: int = 50, db: Session = Depends(get_db)):
+    alerts = (
+        db.query(ThreatAlert)
+        .order_by(desc(ThreatAlert.created_at))
+        .limit(limit)
+        .all()
+    )
+    return alerts
 
-@router.get("/alerts/{alert_id}")
-def get_alert(alert_id: str):
-    alert = next((a for a in MOCK_ALERTS if a["id"] == alert_id), None)
+
+@router.get("/alerts/{alert_id}", response_model=ThreatAlertResponse)
+def get_alert(alert_id: str, db: Session = Depends(get_db)):
+    alert = db.query(ThreatAlert).filter(ThreatAlert.alert_id == alert_id).first()
     if not alert:
         raise HTTPException(status_code=404, detail="Alert not found")
+    return alert
+
+
+@router.post("/alerts", response_model=ThreatAlertResponse)
+def create_alert(alert: ThreatAlertCreate, db: Session = Depends(get_db)):
+    db_alert = ThreatAlert(**alert.model_dump())
+    db.add(db_alert)
+    db.commit()
+    db.refresh(db_alert)
+    return db_alert
+
+
+@router.patch("/alerts/{alert_id}", response_model=ThreatAlertResponse)
+def update_alert(alert_id: str, update: ThreatAlertUpdate, db: Session = Depends(get_db)):
+    alert = db.query(ThreatAlert).filter(ThreatAlert.alert_id == alert_id).first()
+    if not alert:
+        raise HTTPException(status_code=404, detail="Alert not found")
+    for field, value in update.model_dump(exclude_unset=True).items():
+        setattr(alert, field, value)
+    db.commit()
+    db.refresh(alert)
     return alert

@@ -38,7 +38,7 @@ class NetworkFlow(Base):
     is_attack = Column(Boolean, nullable=False, default=False)
     attack_type = Column(String(64), default="BENIGN")
     timestamp = Column(DateTime(timezone=True), default=datetime.datetime.utcnow)
-    metadata = Column(JSON, default={})
+    extra_metadata = Column(JSON, default=dict)
 
 
 class ThreatAlert(Base):

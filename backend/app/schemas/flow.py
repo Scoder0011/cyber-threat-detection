@@ -21,7 +21,7 @@ class NetworkFlowBase(BaseModel):
     ja3_hash: Optional[str] = Field(None, max_length=64)
     is_attack: bool = False
     attack_type: Optional[str] = Field("BENIGN", max_length=64)
-    metadata: Optional[Dict[str, Any]] = {}
+    extra_metadata: Optional[Dict[str, Any]] = {}
 
 class NetworkFlowCreate(NetworkFlowBase):
     pass

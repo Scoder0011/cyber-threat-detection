@@ -5,27 +5,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./cyber_threat.db")
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL is not set in .env")
 
-# Fallback to local SQLite database if Postgres is unreachable or sqlite is specified
-if DATABASE_URL.startswith("sqlite"):
-    engine = create_engine(
-        DATABASE_URL, connect_args={"check_same_thread": False}
-    )
-else:
-    try:
-        # Try creating Postgres engine
-        engine = create_engine(DATABASE_URL)
-        # Attempt a quick connection to check if it's reachable
-        conn = engine.connect()
-        conn.close()
-    except Exception as e:
-        print(f"PostgreSQL connection failed ({e}). Falling back to local SQLite database.")
-        DATABASE_URL = "sqlite:///./cyber_threat.db"
-        engine = create_engine(
-            DATABASE_URL, connect_args={"check_same_thread": False}
-        )
-
+engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
