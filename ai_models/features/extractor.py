@@ -63,6 +63,13 @@ class UnifiedFeatureExtractor(BaseFeatureExtractor):
         total_bytes = bytes_in + bytes_out
         total_pkts = pkts_in + pkts_out
 
+        meta = raw_telemetry.get("metadata", {})
+        if isinstance(meta, str):
+            try:
+                meta = json.loads(meta) if meta.strip() else {}
+            except Exception:
+                meta = {}
+
         return {
             "flow_id": str(raw_telemetry.get("flow_id", "")),
             "src_ip": str(raw_telemetry.get("src_ip", "0.0.0.0")),
@@ -83,5 +90,5 @@ class UnifiedFeatureExtractor(BaseFeatureExtractor):
             "is_attack": bool(raw_telemetry.get("is_attack", False)),
             "attack_type": str(raw_telemetry.get("attack_type", "BENIGN")),
             "timestamp": str(raw_telemetry.get("timestamp", "")),
-            "metadata": raw_telemetry.get("metadata", {})
+            "metadata": meta
         }

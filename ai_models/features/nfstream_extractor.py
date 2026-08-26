@@ -157,7 +157,15 @@ class NFStreamFeatureExtractor(BaseFeatureExtractor):
         ja3_conf = MALWARE_JA3_DB[ja3_hash]["confidence"] if is_mal_ja3 else 0.0
 
         # DNS query metrics if query domain present
-        dom = raw_flow.get("metadata", {}).get("domain", raw_flow.get("query_name", ""))
+        meta = raw_flow.get("metadata", {})
+        if isinstance(meta, str):
+            try:
+                meta = json.loads(meta) if meta.strip() else {}
+            except Exception:
+                meta = {}
+        elif not isinstance(meta, dict):
+            meta = {}
+        dom = meta.get("domain", raw_flow.get("query_name", ""))
         dns_ent = 0.0
         vowel_ratio = 0.0
         if dom:

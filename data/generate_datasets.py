@@ -85,6 +85,100 @@ for path in [
 # 1. Specialized Threat Dataset Generators (6 Vector Schemas)
 # -----------------------------------------------------------------------------
 
+def generate_slowloris_flows(count: int = 300) -> List[Dict[str, Any]]:
+    """Generates Slowloris low-and-slow HTTP resource exhaustion flows."""
+    flows = []
+    now = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=30)
+    attacker_ip = "185.220.101.99"
+    target_ip = "10.0.10.5"
+    
+    for i in range(count):
+        now += datetime.timedelta(milliseconds=random.randint(50, 350))
+        duration = round(random.uniform(85.0, 320.0), 2)
+        bytes_out = random.randint(140, 420)
+        bytes_in = random.randint(0, 120)
+        pkts_out = random.randint(10, 35)
+        pkts_in = random.randint(1, 6)
+        
+        flow = {
+            "flow_id": f"flow_slowloris_{i+1:06d}",
+            "src_ip": attacker_ip,
+            "dst_ip": target_ip,
+            "src_port": 40000 + i,
+            "dst_port": 80,
+            "protocol": "TCP",
+            "duration": duration,
+            "bytes_in": bytes_in,
+            "bytes_out": bytes_out,
+            "pkts_in": pkts_in,
+            "pkts_out": pkts_out,
+            "tcp_flags": "PSH-ACK",
+            "flow_rate_bps": round((bytes_out * 8.0) / duration, 2),
+            "packet_rate_pps": round((pkts_out + pkts_in) / duration, 4),
+            "entropy": round(random.uniform(2.1, 3.15), 4),
+            "ja3_hash": None,
+            "is_attack": True,
+            "attack_type": "DOS_SLOWLORIS",
+            "timestamp": now.isoformat(),
+            "metadata": {
+                "tool": "slowloris.py",
+                "attack_vector": "SLOW_HTTP_EXHAUSTION",
+                "connection_hold_time_sec": duration
+            }
+        }
+        flows.append(flow)
+    return flows
+
+def generate_encrypted_malware_flows(count: int = 300) -> List[Dict[str, Any]]:
+    """Generates malicious TLS sessions matching real published JA3 fingerprints."""
+    flows = []
+    now = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=45)
+    c2_servers = ["185.220.101.44", "91.108.4.182", "194.26.29.112", "45.154.255.88"]
+    
+    for i in range(count):
+        now += datetime.timedelta(milliseconds=random.randint(200, 2500))
+        mal = random.choice(MALWARE_JA3_LIST) if MALWARE_JA3_LIST else {
+            "malware_family": "Cobalt Strike Beacon",
+            "ja3_hash": "4d7a28d6f2263ed61de88ca66eb011e3"
+        }
+        
+        victim_ip = f"192.168.1.{random.randint(10, 240)}"
+        c2_ip = random.choice(c2_servers)
+        duration = round(random.uniform(0.15, 4.85), 3)
+        bytes_out = random.randint(1500, 12000)
+        bytes_in = random.randint(3000, 45000)
+        pkts_out = max(4, int(bytes_out / random.randint(400, 800)))
+        pkts_in = max(4, int(bytes_in / random.randint(900, 1400)))
+        
+        flow = {
+            "flow_id": f"flow_malware_tls_{i+1:05d}",
+            "src_ip": victim_ip,
+            "dst_ip": c2_ip,
+            "src_port": random.randint(35000, 61000),
+            "dst_port": random.choice([443, 8443, 4443]),
+            "protocol": "TLS",
+            "duration": duration,
+            "bytes_in": bytes_in,
+            "bytes_out": bytes_out,
+            "pkts_in": pkts_in,
+            "pkts_out": pkts_out,
+            "tcp_flags": "PSH-ACK",
+            "flow_rate_bps": round(((bytes_in + bytes_out) * 8.0) / duration, 2),
+            "packet_rate_pps": round((pkts_in + pkts_out) / duration, 2),
+            "entropy": round(random.uniform(4.75, 4.99), 4),
+            "ja3_hash": mal["ja3_hash"],
+            "is_attack": True,
+            "attack_type": "ENCRYPTED_MALWARE_TLS",
+            "timestamp": now.isoformat(),
+            "metadata": {
+                "malware_family": mal["malware_family"],
+                "threat_category": mal.get("threat_category", "C2 Channel"),
+                "ja3_signature": mal["ja3_hash"]
+            }
+        }
+        flows.append(flow)
+    return flows
+
 def generate_ddos_dataset(count: int = 1000) -> List[Dict[str, Any]]:
     """
     1. DDoS Schema:
