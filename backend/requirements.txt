@@ -7,8 +7,5 @@ python-dotenv==1.2.3
 redis==8.1.0
 SQLAlchemy==2.0.52
 typing_extensions==4.16.0
-<<<<<<< HEAD
-=======
 fastapi==0.135.3
 uvicorn==0.38.0
->>>>>>> ea9fc8d (feat: Implement AI model registry and dynamic bot loading)

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-from sqlalchemy import Column, String, Float, DateTime, JSON
-from app.db.session import Base
-import uuid
-import datetime
-
-class Alert(Base):
-    __tablename__ = "alerts"
-
-    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    timestamp = Column(DateTime, default=datetime.datetime.utcnow)
-    flow_id = Column(String, nullable=False)
-    threat_class = Column(String, nullable=False)
-    confidence = Column(Float, nullable=False)
-    severity = Column(String, nullable=False)
-    evidence = Column(JSON)
-    blockchain_tx = Column(String, nullable=True)
-
-=======
 from sqlalchemy import Column, String, Integer, Float, Boolean, DateTime, Numeric, BigInteger, JSON, ForeignKey
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB
 from sqlalchemy.types import TypeDecorator
@@ -145,4 +126,3 @@ class DNSQuery(Base):
     is_tunneling = Column(Boolean, nullable=False, default=False)
     tunneling_score = Column(Numeric(5, 4), default=0.0)
     timestamp = Column(DateTime(timezone=True), default=datetime.datetime.utcnow)
->>>>>>> ea9fc8d (feat: Implement AI model registry and dynamic bot loading)
