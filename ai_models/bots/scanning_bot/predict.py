@@ -30,9 +30,11 @@ def _get_bot() -> ScanningBot:
     return _bot
 
 
-def predict(session: dict) -> dict:
+def predict(session: dict = None) -> dict:
     """session: dict with unique_dst_ips, unique_dst_ports, syn_count,
     synack_count, total_packets, duration -- per-source aggregate."""
+    if session is None:
+        session = {}
     return _get_bot().predict(session).to_dict()
 
 
