@@ -45,11 +45,17 @@ def run_consumer():
     db = SessionLocal()
     try:
         while True:
-            entries = r.xreadgroup(
-                GROUP_NAME, CONSUMER_NAME,
-                {STREAM_NAME: ">"},
-                count=10, block=5000
-            )
+            try:
+                entries = r.xreadgroup(
+                    GROUP_NAME, CONSUMER_NAME,
+                    {STREAM_NAME: ">"},
+                    count=10, block=5000
+                )
+            except Exception as e:
+                print(f"Redis read error, retrying: {e}")
+                time.sleep(2)
+                continue
+
             if not entries:
                 continue
             for _, events in entries:

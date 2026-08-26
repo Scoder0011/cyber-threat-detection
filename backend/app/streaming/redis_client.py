@@ -4,6 +4,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# redis_client.py
 def get_redis_client():
-    return redis.from_url(os.getenv("REDIS_URL"), decode_responses=True)
+    return redis.from_url(
+        os.getenv("REDIS_URL"),
+        decode_responses=True,
+        socket_timeout=10,
+        socket_connect_timeout=10,
+        socket_keepalive=True,
+        retry_on_timeout=True,
+    )
