@@ -1,8 +1,16 @@
 """
 Consumes flow events from Redis stream 'flow:events' and writes
 them into the network_flows table.
+
+Also runs a minimal dummy HTTP server so this can be deployed on
+Render's free tier as a Web Service (which requires a bound port),
+even though its real job is the background consume loop.
 """
+import os
 import time
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
 from app.streaming.redis_client import get_redis_client
 from app.db.session import SessionLocal
 from app.db.models import NetworkFlow
@@ -13,6 +21,26 @@ CONSUMER_NAME = "consumer_1"
 
 r = get_redis_client()
 
+
+# ---------- Dummy HTTP server (Render port-check satisfier) ----------
+
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"consumer alive")
+
+    def log_message(self, format, *args):
+        pass  # silence default request logging
+
+
+def start_dummy_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(("0.0.0.0", port), HealthHandler)
+    server.serve_forever()
+
+
+# ---------- Redis stream consumer ----------
 
 def ensure_group():
     try:
@@ -58,6 +86,7 @@ def run_consumer():
 
             if not entries:
                 continue
+
             for _, events in entries:
                 for event_id, data in events:
                     try:
@@ -70,4 +99,5 @@ def run_consumer():
 
 
 if __name__ == "__main__":
+    threading.Thread(target=start_dummy_server, daemon=True).start()
     run_consumer()
