@@ -32,6 +32,41 @@ function SortIcon({ active, direction }: { active: boolean; direction: SortDirec
   );
 }
 
+interface SortableHeaderProps {
+  field: SortField;
+  label: string;
+  active: boolean;
+  direction: SortDirection;
+  onSort: (field: SortField) => void;
+  className?: string;
+}
+
+function SortableHeader({
+  field,
+  label,
+  active,
+  direction,
+  onSort,
+  className = '',
+}: SortableHeaderProps) {
+  return (
+    <th
+      scope="col"
+      className={`px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white/40 ${className}`}
+    >
+      <button
+        type="button"
+        onClick={() => onSort(field)}
+        className="inline-flex items-center gap-0.5 hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded cursor-pointer"
+        aria-label={`Sort by ${label}${active ? `, currently ${direction}ending` : ''}`}
+      >
+        {label}
+        <SortIcon active={active} direction={direction} />
+      </button>
+    </th>
+  );
+}
+
 export function AlertsTable({ alerts, loading, error, onRowClick }: AlertsTableProps) {
   const [sortField, setSortField] = useState<SortField>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
@@ -66,35 +101,6 @@ export function AlertsTable({ alerts, loading, error, onRowClick }: AlertsTableP
   }
 
   const displayedAlerts = getDisplayedAlerts();
-
-  /** Shared header cell button */
-  function SortableHeader({
-    field,
-    label,
-    className = '',
-  }: {
-    field: SortField;
-    label: string;
-    className?: string;
-  }) {
-    const isActive = sortField === field;
-    return (
-      <th
-        scope="col"
-        className={`px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white/40 ${className}`}
-      >
-        <button
-          type="button"
-          onClick={() => handleHeaderClick(field)}
-          className="inline-flex items-center gap-0.5 hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded cursor-pointer"
-          aria-label={`Sort by ${label}${isActive ? `, currently ${sortDirection}ending` : ''}`}
-        >
-          {label}
-          <SortIcon active={isActive} direction={sortDirection} />
-        </button>
-      </th>
-    );
-  }
 
   return (
     <div className="w-full">
@@ -135,7 +141,13 @@ export function AlertsTable({ alerts, loading, error, onRowClick }: AlertsTableP
           <thead style={{ background: "rgba(255,255,255,0.03)" }}>
             <tr>
               {/* Requirement 5.7 — clickable Severity header */}
-              <SortableHeader field="severity" label="Severity" />
+              <SortableHeader
+                field="severity"
+                label="Severity"
+                active={sortField === 'severity'}
+                direction={sortDirection}
+                onSort={handleHeaderClick}
+              />
               <th
                 scope="col"
                 className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white/40"
@@ -155,7 +167,13 @@ export function AlertsTable({ alerts, loading, error, onRowClick }: AlertsTableP
                 Destination IP
               </th>
               {/* Requirement 5.8 — clickable Timestamp header */}
-              <SortableHeader field="timestamp" label="Timestamp" />
+              <SortableHeader
+                field="timestamp"
+                label="Timestamp"
+                active={sortField === 'timestamp'}
+                direction={sortDirection}
+                onSort={handleHeaderClick}
+              />
               <th
                 scope="col"
                 className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white/40"
