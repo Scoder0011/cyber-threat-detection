@@ -15,7 +15,18 @@ interface HeaderProps {
 export function Header({ connectionStatus, mode, onModeChange, onSearch }: HeaderProps) {
   const [searchValue, setSearchValue] = useState("");
   const [focused, setFocused] = useState(false);
+  const [utcTime, setUtcTime] = useState("");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setUtcTime(now.toUTCString().replace("GMT", "UTC"));
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => () => { if (debounceRef.current) clearTimeout(debounceRef.current); }, []);
 
@@ -34,9 +45,9 @@ export function Header({ connectionStatus, mode, onModeChange, onSearch }: Heade
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="glass border-b border-white/5 px-6 py-3 flex items-center gap-4"
+      className="glass border-b border-white/5 px-6 py-3 flex items-center justify-between gap-4"
     >
-      {/* Search */}
+      {/* Search Input */}
       <div className={`relative flex-1 max-w-md transition-all duration-300 ${focused ? "max-w-lg" : ""}`}>
         <svg
           className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none"
@@ -56,7 +67,7 @@ export function Header({ connectionStatus, mode, onModeChange, onSearch }: Heade
           onBlur={() => setFocused(false)}
           maxLength={200}
           aria-label="Global search"
-          placeholder="Search threats, IPs, alerts…"
+          placeholder="Search threats, IPs, alert vector…"
           className="w-full glass rounded-xl pl-9 pr-4 py-2 text-sm text-white placeholder-white/25 focus:outline-none focus:border-cyan-500/50 transition-all border border-white/5 focus:border-cyan-400/30"
           style={{ background: "rgba(255,255,255,0.04)" }}
         />
@@ -64,7 +75,7 @@ export function Header({ connectionStatus, mode, onModeChange, onSearch }: Heade
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/70 transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/70 transition-colors cursor-pointer"
             aria-label="Clear search"
           >
             ✕
@@ -72,7 +83,13 @@ export function Header({ connectionStatus, mode, onModeChange, onSearch }: Heade
         )}
       </div>
 
-      <div className="flex items-center gap-3 ml-auto">
+      {/* Right Controls: UTC Clock, Status Badge, Mode Toggle */}
+      <div className="flex items-center gap-4 ml-auto">
+        <div className="hidden lg:flex flex-col text-right font-mono text-[11px] text-gray-400">
+          <span className="text-gray-200">{utcTime || 'Syncing UTC...'}</span>
+          <span className="text-[9px] text-purple-400">Polygon Amoy Verified</span>
+        </div>
+
         <ConnectionStatusBadge status={connectionStatus} />
         <ModeToggle value={mode} onChange={onModeChange} />
       </div>

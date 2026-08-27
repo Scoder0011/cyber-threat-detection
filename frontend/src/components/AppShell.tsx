@@ -5,6 +5,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
+import { ChatAI } from "./ChatAI";
 import { useAlerts } from "../hooks/useAlerts";
 import { useMode } from "../hooks/useMode";
 
@@ -16,10 +17,7 @@ const COLLAPSE_BREAKPOINT = 1024;
  *
  * Grid columns:
  *   < 1024 px → 64 px sidebar + 1fr content
- *   ≥ 1024 px → 240 px sidebar + 1fr content
- *
- * Exposes `searchQuery` to child pages via Outlet context so pages can call:
- *   const { searchQuery } = useOutletContext<{ searchQuery: string }>();
+ *   ≥ 1024 px → 256 px sidebar + 1fr content
  */
 export function AppShell() {
   const { pathname } = useLocation();
@@ -44,12 +42,18 @@ export function AppShell() {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   return (
-    <div className="h-screen grid grid-cols-[64px_1fr] lg:grid-cols-[240px_1fr] text-white overflow-hidden" style={{ background: "radial-gradient(ellipse at 20% 20%, rgba(6,182,212,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(99,102,241,0.08) 0%, transparent 60%), #020817" }}>
+    <div
+      className="h-screen grid grid-cols-[64px_1fr] lg:grid-cols-[256px_1fr] text-white overflow-hidden cyber-grid"
+      style={{
+        background:
+          "radial-gradient(ellipse at 15% 20%, rgba(6,182,212,0.12) 0%, transparent 50%), radial-gradient(ellipse at 85% 85%, rgba(139,92,246,0.12) 0%, transparent 50%), #030712",
+      }}
+    >
       {/* Left column — sidebar */}
       <Sidebar collapsed={isCollapsed} />
 
       {/* Right column — header + page content */}
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col overflow-hidden relative">
         <Header
           connectionStatus={connectionStatus}
           mode={mode}
@@ -63,6 +67,9 @@ export function AppShell() {
             <Outlet key={pathname} context={{ searchQuery }} />
           </AnimatePresence>
         </main>
+
+        {/* Floating AI SOC Assistant */}
+        <ChatAI />
       </div>
     </div>
   );
