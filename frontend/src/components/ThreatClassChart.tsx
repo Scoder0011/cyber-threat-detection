@@ -13,6 +13,7 @@ import { Info } from "lucide-react";
 import type { Alert } from "../types/alert";
 import {
   groupAlertsByType,
+  getThreatClassColors,
 } from "../utils/threatClassUtils";
 
 interface ThreatClassChartProps {
@@ -20,26 +21,6 @@ interface ThreatClassChartProps {
   loading?: boolean;
   error?: boolean;
 }
-
-// Fixed color palette matching the ThreatLens design mockup
-const DONUT_COLORS = [
-  '#3b82f6', // Blue (Ransomware)
-  '#ef4444', // Red (Phishing)
-  '#f97316', // Orange (Brute Force)
-  '#06b6d4', // Cyan (DDoS)
-  '#22c55e', // Green (Malware)
-  '#cbd5e1', // Gray (Other)
-];
-
-// Fallback distribution matching mockup if alerts is empty or small
-const MOCKUP_DISTRIBUTION = [
-  { name: 'Ransomware', count: 5170, percent: '28%' },
-  { name: 'Phishing', count: 4435, percent: '24%' },
-  { name: 'Brute Force', count: 3694, percent: '20%' },
-  { name: 'DDoS', count: 2770, percent: '15%' },
-  { name: 'Malware', count: 1478, percent: '8%' },
-  { name: 'Other', count: 925, percent: '5%' },
-];
 
 function CustomTooltip({
   active,
@@ -84,18 +65,19 @@ export function ThreatClassChart({
   }
 
   // Derive grouped data — omits zero-count categories (req 3.5)
-  const realData = groupAlertsByType(alerts);
-  const data = realData.length > 0 ? realData : MOCKUP_DISTRIBUTION;
+  const data = groupAlertsByType(alerts);
 
-  // --- Empty / no-data state (req 3.5, 3.7) when alerts is explicitly empty array and we strictly check ---
-  if (alerts.length === 0 && realData.length === 0) {
+  // --- Empty / no-data state (req 3.5, 3.7) ---
+  if (data.length === 0) {
     return (
       <div className="flex h-full min-h-[240px] items-center justify-center rounded-2xl bg-white p-6 text-center border border-slate-200">
-        <p className="text-sm text-slate-400">No threat data available</p>
+        <p className="text-sm text-slate-400 font-medium">No threat data available</p>
       </div>
     );
   }
 
+  const categoryNames = data.map((d) => d.name);
+  const colors = getThreatClassColors(categoryNames);
   const totalCount = data.reduce((acc, curr) => acc + curr.count, 0);
 
   return (
@@ -124,7 +106,7 @@ export function ThreatClassChart({
                 {data.map((entry, index) => (
                   <Cell
                     key={`cell-${entry.name}`}
-                    fill={DONUT_COLORS[index % DONUT_COLORS.length]}
+                    fill={colors[index % colors.length]}
                     stroke="#ffffff"
                     strokeWidth={2}
                   />
@@ -144,7 +126,7 @@ export function ThreatClassChart({
         </div>
 
         {/* Breakdown Legend List */}
-        <div className="space-y-1.5 flex-1 w-full text-xs">
+        <div className="space-y-1.5 flex-1 w-full text-xs max-h-[160px] overflow-y-auto">
           {data.map((item, idx) => {
             const pct = Math.round((item.count / (totalCount || 1)) * 100);
             return (
@@ -152,7 +134,7 @@ export function ThreatClassChart({
                 <div className="flex items-center gap-2 truncate">
                   <span
                     className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: DONUT_COLORS[idx % DONUT_COLORS.length] }}
+                    style={{ backgroundColor: colors[idx % colors.length] }}
                   />
                   <span className="truncate text-slate-700 font-medium text-[11px]">{item.name}</span>
                 </div>

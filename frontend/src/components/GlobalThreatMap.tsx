@@ -1,5 +1,5 @@
 // src/components/GlobalThreatMap.tsx
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Info, Maximize2, Plus, Minus, Crosshair, Globe as GlobeIcon, Radio } from 'lucide-react';
 import type { Alert } from '../types/alert';
@@ -14,18 +14,57 @@ interface AttackOrigin {
   count: number;
 }
 
-const TOP_ATTACK_ORIGINS: AttackOrigin[] = [
-  { country: 'United States', flag: '🇺🇸', count: 2643 },
-  { country: 'Russia', flag: '🇷🇺', count: 1688 },
-  { country: 'China', flag: '🇨🇳', count: 1490 },
-  { country: 'Germany', flag: '🇩🇪', count: 872 },
-  { country: 'Netherlands', flag: '🇳🇱', count: 520 },
-];
+function resolveCountry(ip: string): { country: string; flag: string } {
+  if (ip.startsWith('10.') || ip.startsWith('192.168.') || ip.startsWith('172.16.')) {
+    return { country: 'Internal Network', flag: '🛡️' };
+  }
+  if (ip.startsWith('45.') || ip.startsWith('185.')) {
+    return { country: 'Germany', flag: '🇩🇪' };
+  }
+  if (ip.startsWith('91.') || ip.startsWith('95.')) {
+    return { country: 'Russia', flag: '🇷🇺' };
+  }
+  if (ip.startsWith('103.') || ip.startsWith('114.')) {
+    return { country: 'China', flag: '🇨🇳' };
+  }
+  if (ip.startsWith('198.') || ip.startsWith('172.')) {
+    return { country: 'United States', flag: '🇺🇸' };
+  }
+  if (ip.startsWith('80.') || ip.startsWith('82.')) {
+    return { country: 'Netherlands', flag: '🇳🇱' };
+  }
+  return { country: 'Global Public IP', flag: '🌐' };
+}
 
-export function GlobalThreatMap({ alerts: _alerts }: GlobalThreatMapProps) {
+export function GlobalThreatMap({ alerts = [] }: GlobalThreatMapProps) {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [selectedRegion, setSelectedRegion] = useState('All Regions');
   const [activeTool, setActiveTool] = useState<'target' | 'globe' | 'pulse'>('target');
+
+  // Compute dynamic top attack origins from real alerts array
+  const topAttackOrigins = useMemo<AttackOrigin[]>(() => {
+    if (!alerts || alerts.length === 0) {
+      return [];
+    }
+
+    const counts: Record<string, { flag: string; count: number }> = {};
+    for (const alert of alerts) {
+      const { country, flag } = resolveCountry(alert.sourceIp);
+      if (!counts[country]) {
+        counts[country] = { flag, count: 0 };
+      }
+      counts[country].count += 1;
+    }
+
+    return Object.entries(counts)
+      .map(([country, data]) => ({
+        country,
+        flag: data.flag,
+        count: data.count,
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+  }, [alerts]);
 
   return (
     <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between h-full min-h-[380px]">
@@ -113,44 +152,33 @@ export function GlobalThreatMap({ alerts: _alerts }: GlobalThreatMapProps) {
             <path d="M 720 310 Q 820 300 830 380 Q 760 410 710 370 Z" />
           </g>
 
-          {/* Attack Arcs */}
-          {/* Arc 1: Red (US to Central Node) */}
-          <path
-            d="M 190 140 Q 300 60 420 250"
-            fill="none"
-            stroke="url(#arcRed)"
-            strokeWidth="2"
-            strokeDasharray="4 2"
-          />
-          {/* Arc 2: Orange (US to Europe) */}
-          <path
-            d="M 230 110 Q 340 40 480 120"
-            fill="none"
-            stroke="url(#arcOrange)"
-            strokeWidth="2"
-          />
-          {/* Arc 3: Yellow (Europe to Asia) */}
-          <path
-            d="M 480 120 Q 580 30 700 130"
-            fill="none"
-            stroke="#eab308"
-            strokeWidth="2"
-            strokeOpacity="0.8"
-          />
-          {/* Arc 4: Green (Africa to Asia) */}
-          <path
-            d="M 420 250 Q 520 100 620 170"
-            fill="none"
-            stroke="url(#arcGreen)"
-            strokeWidth="2"
-          />
-          {/* Arc 5: Blue (Asia to Australia) */}
-          <path
-            d="M 620 170 Q 660 300 690 340"
-            fill="none"
-            stroke="url(#arcBlue)"
-            strokeWidth="2"
-          />
+          {/* Dynamic Attack Arcs based on active threats */}
+          {alerts.length > 0 && (
+            <>
+              {/* Arc 1: Red (US to SOC target) */}
+              <path
+                d="M 190 140 Q 300 60 420 250"
+                fill="none"
+                stroke="url(#arcRed)"
+                strokeWidth="2"
+                strokeDasharray="4 2"
+              />
+              {/* Arc 2: Orange (Europe to SOC target) */}
+              <path
+                d="M 480 120 Q 450 180 420 250"
+                fill="none"
+                stroke="url(#arcOrange)"
+                strokeWidth="2"
+              />
+              {/* Arc 3: Green (Asia to SOC target) */}
+              <path
+                d="M 620 170 Q 520 220 420 250"
+                fill="none"
+                stroke="url(#arcGreen)"
+                strokeWidth="2"
+              />
+            </>
+          )}
 
           {/* Glowing Map Target & Origin Nodes */}
           {/* Origin Node: Central Red Target with Pulse */}
@@ -158,20 +186,12 @@ export function GlobalThreatMap({ alerts: _alerts }: GlobalThreatMapProps) {
           <circle cx="420" cy="250" r="8" fill="#ef4444" fillOpacity="0.3" className="animate-ping" />
           <circle cx="420" cy="250" r="5" fill="#ef4444" stroke="#ffffff" strokeWidth="2" />
 
-          {/* US Node (Red) */}
+          {/* US Node */}
           <circle cx="190" cy="140" r="4.5" fill="#ef4444" stroke="#ffffff" strokeWidth="1.5" />
-          {/* North US Node (Orange) */}
-          <circle cx="230" cy="110" r="4.5" fill="#f97316" stroke="#ffffff" strokeWidth="1.5" />
-          {/* Europe Node (Orange/Yellow) */}
+          {/* Europe Node */}
           <circle cx="480" cy="120" r="4.5" fill="#f59e0b" stroke="#ffffff" strokeWidth="1.5" />
-          {/* East Europe Node (Yellow) */}
-          <circle cx="530" cy="140" r="4" fill="#fbbf24" stroke="#ffffff" strokeWidth="1.5" />
-          {/* Asia Node (Green) */}
+          {/* Asia Node */}
           <circle cx="620" cy="170" r="5" fill="#22c55e" stroke="#ffffff" strokeWidth="2" />
-          {/* Far East Asia Node (Yellow) */}
-          <circle cx="700" cy="130" r="4.5" fill="#eab308" stroke="#ffffff" strokeWidth="1.5" />
-          {/* Australia Node (Blue) */}
-          <circle cx="690" cy="340" r="4.5" fill="#3b82f6" stroke="#ffffff" strokeWidth="1.5" />
         </svg>
 
         {/* Floating Zoom Controls (Bottom Left) */}
@@ -227,7 +247,7 @@ export function GlobalThreatMap({ alerts: _alerts }: GlobalThreatMapProps) {
           </div>
         </div>
 
-        {/* Floating Top Attack Origin Card (Bottom Right) */}
+        {/* Floating Top Attack Origin Card (Bottom Right) - DYNAMIC FROM REAL ALERTS */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -236,19 +256,23 @@ export function GlobalThreatMap({ alerts: _alerts }: GlobalThreatMapProps) {
           <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">
             Top Attack Origin
           </div>
-          <div className="space-y-1.5 text-xs">
-            {TOP_ATTACK_ORIGINS.map((item) => (
-              <div key={item.country} className="flex items-center justify-between text-slate-700">
-                <div className="flex items-center gap-1.5 truncate">
-                  <span>{item.flag}</span>
-                  <span className="text-[11px] font-medium truncate">{item.country}</span>
+          {topAttackOrigins.length === 0 ? (
+            <p className="text-[11px] text-slate-400 italic">No origin data recorded</p>
+          ) : (
+            <div className="space-y-1.5 text-xs">
+              {topAttackOrigins.map((item) => (
+                <div key={item.country} className="flex items-center justify-between text-slate-700">
+                  <div className="flex items-center gap-1.5 truncate">
+                    <span>{item.flag}</span>
+                    <span className="text-[11px] font-medium truncate">{item.country}</span>
+                  </div>
+                  <span className="font-semibold text-slate-900 text-[11px] tabular-nums">
+                    {item.count.toLocaleString()}
+                  </span>
                 </div>
-                <span className="font-semibold text-slate-900 text-[11px] tabular-nums">
-                  {item.count.toLocaleString()}
-                </span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </div>

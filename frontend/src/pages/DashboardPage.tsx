@@ -1,6 +1,7 @@
 // src/pages/DashboardPage.tsx
 // Requirements: 2.1–2.8, 3.1–3.7, 4.1–4.7, 5.1–5.9
 
+import { useMemo } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -40,12 +41,32 @@ export function DashboardPage() {
 
   const { alerts, loading: alertsLoading, error: alertsError } = useAlerts();
   const { points: throughputPoints, loading: throughputLoading, error: throughputError } = useThroughput();
-  const { bots: _bots, loading: botsLoading, error: botsError } = useBotStatus();
+  const { bots, loading: botsLoading, error: botsError } = useBotStatus();
   const { filteredAlerts } = useSearch(alerts, searchQuery);
 
   const throughputUnit = throughputPoints[throughputPoints.length - 1]?.unit ?? "Mbps";
   const totalAlerts = computeTotalAlerts(alerts);
   const criticalAlerts = computeCriticalAlerts(alerts);
+
+  // ── Dynamic calculations from live data (No Demo Fallbacks) ────────────────
+  const securityScore = useMemo(() => {
+    if (alerts.length === 0) return 100;
+    const critical = alerts.filter((a) => a.severity === "Critical").length;
+    const high = alerts.filter((a) => a.severity === "High").length;
+    const medium = alerts.filter((a) => a.severity === "Medium").length;
+    return Math.max(0, Math.min(100, Math.round(100 - (critical * 12 + high * 6 + medium * 2))));
+  }, [alerts]);
+
+  const totalDetections = useMemo(() => {
+    const fromBots = bots.reduce((acc, b) => acc + (b.detectionCount || 0), 0);
+    const resolved = alerts.filter((a) => a.status === "resolved").length;
+    return fromBots + resolved;
+  }, [bots, alerts]);
+
+  const vulnerableAssetsCount = useMemo(() => {
+    if (alerts.length === 0) return 0;
+    return new Set(alerts.map((a) => `${a.destinationIp}${a.targetPort ? `:${a.targetPort}` : ""}`)).size;
+  }, [alerts]);
 
   return (
     <motion.div
@@ -54,15 +75,15 @@ export function DashboardPage() {
       animate="animate"
       className="space-y-6"
     >
-      {/* ── 1. Top KPI Row (5 Cards) ── */}
+      {/* ── 1. Top KPI Row (5 Dynamic Cards) ── */}
       <motion.div
         variants={fadeUp}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
       >
-        {/* Card 1: Gradient Security Score */}
+        {/* Card 1: Dynamic Security Score */}
         <KPICard
           label="Security Score"
-          value={94}
+          value={securityScore}
           scoreOutOf="/100"
           isGradientScore={true}
           loading={alertsLoading}
@@ -71,41 +92,49 @@ export function DashboardPage() {
         {/* Card 2: Active Threats */}
         <KPICard
           label="Active Threats"
-          value={alerts.length > 0 ? (totalAlerts || 182) : 182}
+          value={totalAlerts}
           loading={alertsLoading}
           error={alertsError !== null}
           icon={<ShieldAlert className="w-4 h-4 text-slate-700" />}
-          delta={{ value: "10.2%", trend: "down", isPositive: true }}
+          delta={
+            totalAlerts > 0
+              ? { value: `${totalAlerts}`, trend: "up", isPositive: false }
+              : { value: "0", trend: "down", isPositive: true }
+          }
         />
 
         {/* Card 3: Critical Incidents */}
         <KPICard
           label="Critical Incidents"
-          value={criticalAlerts > 0 ? criticalAlerts : 12}
+          value={criticalAlerts}
           loading={alertsLoading}
           error={alertsError !== null}
           icon={<AlertCircle className="w-4 h-4 text-slate-700" />}
-          delta={{ value: "5", trend: "up", isPositive: false }}
+          delta={
+            criticalAlerts > 0
+              ? { value: `${criticalAlerts}`, trend: "up", isPositive: false }
+              : { value: "0", trend: "down", isPositive: true }
+          }
         />
 
         {/* Card 4: Threats Blocked */}
         <KPICard
           label="Threats Blocked"
-          value="17,483"
+          value={totalDetections.toLocaleString()}
           loading={botsLoading}
           error={botsError !== null}
           icon={<ShieldCheck className="w-4 h-4 text-slate-700" />}
-          delta={{ value: "8.5%", trend: "up", isPositive: true }}
+          delta={{ value: `${bots.filter((b) => b.status === "active").length} active bots`, trend: "up", isPositive: true }}
         />
 
         {/* Card 5: Vulnerable Assets */}
         <KPICard
           label="Vulnerable Assets"
-          value={255}
+          value={vulnerableAssetsCount}
           loading={throughputLoading}
           error={throughputError !== null}
           icon={<Laptop className="w-4 h-4 text-slate-700" />}
-          delta={{ value: "6.0%", trend: "up", isPositive: false }}
+          delta={{ value: `${vulnerableAssetsCount} endpoints`, trend: "up", isPositive: vulnerableAssetsCount === 0 }}
         />
       </motion.div>
 
@@ -114,12 +143,12 @@ export function DashboardPage() {
         variants={fadeUp}
         className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch"
       >
-        {/* Left (8 Cols / approx 66%): Global Threat Map */}
+        {/* Left (8 Cols): Global Threat Map */}
         <div className="lg:col-span-8 flex flex-col">
           <GlobalThreatMap alerts={alerts} />
         </div>
 
-        {/* Right (4 Cols / approx 34%): Live Threats Feed */}
+        {/* Right (4 Cols): Live Threats Feed */}
         <div className="lg:col-span-4 flex flex-col">
           <LiveThreatsFeed
             alerts={filteredAlerts}
@@ -152,7 +181,7 @@ export function DashboardPage() {
 
         {/* Right: Security Insight & Recommended Actions */}
         <div className="flex flex-col">
-          <SecurityInsightCard />
+          <SecurityInsightCard alerts={alerts} />
         </div>
       </motion.div>
 
