@@ -27,7 +27,14 @@ class BaseFeatureExtractor(ABC):
         """
         pass
 
-    @abstractmethod
     def get_feature_names(self) -> List[str]:
         """Returns the list of feature column names produced by this extractor."""
-        pass
+        if hasattr(self, "FEATURE_NAMES"):
+            return list(self.FEATURE_NAMES)
+        return []
+
+    def to_vector(self, raw_data: Union[Dict[str, Any], bytes]) -> List[float]:
+        """Converts raw input dictionary or bytes to an ordered numerical feature vector."""
+        feats = self.extract(raw_data)
+        names = self.get_feature_names()
+        return [float(feats.get(n, 0.0)) for n in names]

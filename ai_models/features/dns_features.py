@@ -90,3 +90,76 @@ class DNSFeatureExtractor(BaseFeatureExtractor):
             "payload_size_bytes": payload_size,
             "is_txt_query": 1 if "TXT" in qtype or "NULL" in qtype else 0
         }
+
+
+def extract_dns_features(raw_input: dict) -> dict:
+    """Extract DGA DNS features expected by dga_dns_bot."""
+    if not isinstance(raw_input, dict):
+        raw_input = {}
+
+    domain = str(raw_input.get("domain", raw_input.get("query_name", ""))).lower().strip()
+    if "://" in domain:
+        domain = domain.split("://")[-1]
+    domain = domain.strip(".")
+
+    parts = domain.split(".")
+    main_part = parts[0] if parts else domain
+    length = float(len(main_part)) if main_part else 1.0
+
+    if main_part:
+        freq = {}
+        for c in main_part:
+            freq[c] = freq.get(c, 0) + 1
+        entropy = -sum((cnt / len(main_part)) * math.log2(cnt / len(main_part)) for cnt in freq.values())
+    else:
+        entropy = 0.0
+
+    letters = [c for c in main_part if c.isalpha()]
+    digits = [c for c in main_part if c.isdigit()]
+    vowels = [c for c in letters if c in "aeiou"]
+
+    digit_ratio = len(digits) / max(1.0, length)
+    vowel_ratio = len(vowels) / max(1.0, float(len(letters))) if letters else 0.0
+    unique_char_ratio = len(set(main_part)) / max(1.0, length)
+
+    max_cons = 0
+    cur_cons = 0
+    for c in main_part:
+        if c.isalpha() and c not in "aeiou":
+            cur_cons += 1
+            max_cons = max(max_cons, cur_cons)
+        else:
+            cur_cons = 0
+
+    subdomain_count = float(len(parts))
+
+    common_ngrams = {
+        "th", "he", "in", "er", "an", "re", "on", "at", "en", "nd", "ti", "es", "or",
+        "te", "of", "ed", "is", "it", "al", "ar", "st", "to", "nt", "ng", "se", "ha",
+        "as", "ou", "io", "le", "ve", "co", "me", "de", "hi", "ri", "ro", "ic", "ne",
+        "ea", "ra", "ce", "li", "ch", "ll", "be", "ma", "si", "om", "ur"
+    }
+    if len(main_part) >= 2:
+        bigrams = [main_part[i:i+2] for i in range(len(main_part)-1)]
+        hits = sum(1 for bg in bigrams if bg in common_ngrams)
+        ngram_hit_ratio = hits / len(bigrams)
+    else:
+        ngram_hit_ratio = 0.5
+
+    if "entropy" in raw_input and isinstance(raw_input["entropy"], (int, float)):
+        entropy = float(raw_input["entropy"])
+    if "vowel_ratio" in raw_input and isinstance(raw_input["vowel_ratio"], (int, float)):
+        vowel_ratio = float(raw_input["vowel_ratio"])
+    if "length" in raw_input and isinstance(raw_input["length"], (int, float)):
+        length = float(raw_input["length"])
+
+    return {
+        "length": round(length, 4),
+        "entropy": round(entropy, 4),
+        "digit_ratio": round(digit_ratio, 4),
+        "vowel_ratio": round(vowel_ratio, 4),
+        "unique_char_ratio": round(unique_char_ratio, 4),
+        "max_consonant_run": float(max_cons),
+        "subdomain_count": round(subdomain_count, 4),
+        "ngram_hit_ratio": round(ngram_hit_ratio, 4),
+    }

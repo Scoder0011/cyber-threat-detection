@@ -70,6 +70,16 @@ def _attack_flow() -> dict:
 def generate_dataset(n_per_class: int = 2000):
     X = [_benign_flow() for _ in range(n_per_class)] + [_attack_flow() for _ in range(n_per_class)]
     y = [0] * n_per_class + [1] * n_per_class
+
+    flows_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "flows", "ddos_flows.csv"))
+    if os.path.exists(flows_file):
+        import csv
+        with open(flows_file, "r", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                is_att = str(r.get("is_attack", "")).lower() in ["true", "1", "t"]
+                X.append(r)
+                y.append(1 if is_att else 0)
+
     return X, y
 
 

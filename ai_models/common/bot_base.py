@@ -139,6 +139,37 @@ class SpecialistBot(ABC):
             features={k: round(float(v), 4) for k, v in feats.items()},
         )
 
+    def predict_batch(self, raw_inputs: list) -> list:
+        """High-throughput vectorized batch prediction over multiple flow records."""
+        if not self._is_fitted:
+            raise RuntimeError(
+                f"{self.bot_name} model is not fitted/loaded yet. Run train.py first."
+            )
+        if not raw_inputs:
+            return []
+
+        all_feats = [self.feature_extractor.extract(r) for r in raw_inputs]
+        X = np.array([[f.get(n, 0.0) for n in self.feature_names] for f in all_feats])
+        probs = self.model.predict_proba(X)[:, 1]
+
+        results = []
+        for feat, prob in zip(all_feats, probs):
+            prob_val = float(prob)
+            malicious = prob_val >= self.decision_threshold
+            conf = prob_val if malicious else 1.0 - prob_val
+            results.append(
+                BotResult(
+                    bot_name=self.bot_name,
+                    category=self.threat_category,
+                    malicious=bool(malicious),
+                    label="malicious" if malicious else "benign",
+                    confidence=round(conf, 4),
+                    severity=_severity_from_confidence(conf, malicious),
+                    features={k: round(float(v), 4) for k, v in feat.items()},
+                )
+            )
+        return results
+
     # ---- persistence ------------------------------------------------
     def save(self, path: str):
         os.makedirs(os.path.dirname(path), exist_ok=True)
