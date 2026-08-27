@@ -7,6 +7,7 @@ import type {
   SystemMetrics,
   ApiError,
 } from '../types/alert';
+import { supabase, fetchSupabaseAlerts, fetchSupabaseBotStatuses } from './supabaseClient';
 
 // ── Public interface ──────────────────────────────────────────────────────
 
@@ -481,8 +482,19 @@ function createLiveClient(baseUrl: string): ApiClient {
 
   return {
     async fetchAlerts(): Promise<Alert[]> {
-      const response = await fetchWithTimeout(`${base}/alerts`);
-      return parseResponse<Alert[]>(response);
+      try {
+        const response = await fetchWithTimeout(`${base}/alerts`);
+        return await parseResponse<Alert[]>(response);
+      } catch (err) {
+        if (supabase) {
+          try {
+            return await fetchSupabaseAlerts();
+          } catch {
+            // fallback to original error
+          }
+        }
+        throw err;
+      }
     },
 
     async fetchAlert(id: string): Promise<Alert> {
@@ -491,8 +503,19 @@ function createLiveClient(baseUrl: string): ApiClient {
     },
 
     async fetchBotStatuses(): Promise<BotStatus[]> {
-      const response = await fetchWithTimeout(`${base}/bots`);
-      return parseResponse<BotStatus[]>(response);
+      try {
+        const response = await fetchWithTimeout(`${base}/bots`);
+        return await parseResponse<BotStatus[]>(response);
+      } catch (err) {
+        if (supabase) {
+          try {
+            return await fetchSupabaseBotStatuses();
+          } catch {
+            // fallback to original error
+          }
+        }
+        throw err;
+      }
     },
 
     async fetchThroughput(): Promise<ThroughputPoint[]> {

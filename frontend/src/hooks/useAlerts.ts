@@ -3,6 +3,7 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { useMode } from "./useMode";
 import type { Alert, ApiError, ConnectionStatus, Severity, AlertStatus } from "../types/alert";
+import { supabase, subscribeToSupabaseAlerts } from "../api/supabaseClient";
 
 // ── Constants ─────────────────────────────────────────────────────────────
 
@@ -487,22 +488,35 @@ export function useAlerts(): UseAlertsReturn {
         import.meta.env.VITE_USE_MOCK === "true" ||
         import.meta.env.MODE === "test";
 
+      let unsubscribeSupabase: (() => void) | null = null;
+      if (!useMock && supabase) {
+        unsubscribeSupabase = subscribeToSupabaseAlerts((newAlert) => {
+          if (mountedRef.current) {
+            appendAlert(newAlert);
+          }
+        });
+      }
+
       if (!useMock && (wsUrlOverride || baseUrl)) {
         // Convert http(s) → ws(s) or use explicit WS URL
         const wsUrl =
           wsUrlOverride ||
           baseUrl!.replace(/\/$/, "").replace(/^http/, "ws") + "/ws/alerts";
         connectWebSocket(wsUrl);
+      } else if (!useMock && supabase) {
+        setConnectionStatus("connected");
+        setLoading(false);
       } else {
         startMockInterval();
       }
-    }
 
-    return () => {
-      // Cleanup on unmount or before next effect run (mode change)
-      clearTimers();
-      closeWebSocket();
-    };
+      return () => {
+        // Cleanup on unmount or before next effect run (mode change)
+        unsubscribeSupabase?.();
+        clearTimers();
+        closeWebSocket();
+      };
+    }
   }, [mode, connectWebSocket, startMockInterval, startReplay, clearTimers, closeWebSocket]);
 
   // ── Mark unmounted on component destroy ──────────────────────────────────
