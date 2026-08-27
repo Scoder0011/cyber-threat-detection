@@ -539,7 +539,7 @@ export function createApiClient(useMock: boolean): ApiClient {
  * Set VITE_USE_MOCK=true for mock mode, or provide VITE_API_BASE_URL for live mode.
  */
 const apiClient: ApiClient = createApiClient(
-  import.meta.env.VITE_USE_MOCK === 'true',
+  import.meta.env.VITE_USE_MOCK === 'true' || import.meta.env.MODE === 'test',
 );
 
 export default apiClient;

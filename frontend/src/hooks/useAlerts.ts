@@ -481,14 +481,17 @@ export function useAlerts(): UseAlertsReturn {
       startReplay();
     } else {
       // Live mode
+      const wsUrlOverride = import.meta.env.VITE_WS_URL as string | undefined;
       const baseUrl = import.meta.env.VITE_API_BASE_URL as string | undefined;
-      const useMock = import.meta.env.VITE_USE_MOCK === "true";
+      const useMock =
+        import.meta.env.VITE_USE_MOCK === "true" ||
+        import.meta.env.MODE === "test";
 
-      if (!useMock && baseUrl) {
-        // Convert http(s) → ws(s)
-        const wsUrl = baseUrl
-          .replace(/\/$/, "")
-          .replace(/^http/, "ws") + "/ws/alerts";
+      if (!useMock && (wsUrlOverride || baseUrl)) {
+        // Convert http(s) → ws(s) or use explicit WS URL
+        const wsUrl =
+          wsUrlOverride ||
+          baseUrl!.replace(/\/$/, "").replace(/^http/, "ws") + "/ws/alerts";
         connectWebSocket(wsUrl);
       } else {
         startMockInterval();
