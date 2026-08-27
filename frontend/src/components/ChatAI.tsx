@@ -9,9 +9,10 @@ interface ChatMessage {
   role: "user" | "assistant";
   content: string;
   timestamp: string; // ISO-8601
+  remediationCommand?: string;
 }
 
-// Mock AI response bank — 10 cybersecurity-relevant entries
+// Mock AI response bank — cybersecurity-relevant entries
 const MOCK_AI_RESPONSES: string[] = [
   "Detected 3 new DDoS patterns in the last 5 minutes.",
   "Malware Bot is actively quarantining suspicious payloads.",
@@ -21,13 +22,56 @@ const MOCK_AI_RESPONSES: string[] = [
   "Phishing campaign detected targeting internal mail servers.",
   "Anomaly Bot flagged unusual traffic on port 8443.",
   "Blockchain verification completed for 12 alerts.",
-  "System health: CPU 72%, Memory 61%, Latency 18ms.",
+  "System health: CPU 28%, Memory 42%, Latency 4.8ms.",
   "No new threats detected in the last 30 minutes.",
 ];
 
-function getRandomMockResponse(): string {
+function getContextualResponse(query: string): { content: string; remediation?: string } {
+  const lower = query.toLowerCase();
+
+  if (lower.includes("ddos") || lower.includes("syn") || lower.includes("flood")) {
+    return {
+      content:
+        "DDoS SYN Flood detected targeting port 80. Ingress burst exceeding 46,000 pkts/s with narrow spoofed source entropy (0.091). Recommended immediate action: enable SYN cookies and apply iptables rate limiting.",
+      remediation:
+        "sudo iptables -A INPUT -p tcp --syn --dport 80 -m connlimit --connlimit-above 50 -j REJECT\nsudo sysctl -w net.ipv4.tcp_syncookies=1",
+    };
+  }
+
+  if (lower.includes("beacon") || lower.includes("c2")) {
+    return {
+      content:
+        "Cobalt Strike C2 Beaconing observed with 10s base check-in interval and +/-25% Gaussian jitter. Outbound JA3 hash (4d7a28d6f2263ed61de88ca66eb011e3) matches abuse.ch ThreatFox database.",
+      remediation:
+        "sudo iptables -A OUTPUT -d 185.220.101.44 -j DROP\necho '127.0.0.1 malicious-c2-node.net' | sudo tee -a /etc/hosts",
+    };
+  }
+
+  if (lower.includes("exfil") || lower.includes("tunnel")) {
+    return {
+      content:
+        "Data Exfiltration detected over DNS Tunnel (dnscat2). Asymmetric egress-to-ingress ratio is 3023:1 with chunked Base32 TXT records exceeding 4.65 Shannon entropy. Host isolation recommended.",
+      remediation: "sudo iptables -I FORWARD -s 10.0.0.19 -j DROP",
+    };
+  }
+
+  if (lower.includes("dga") || lower.includes("domain")) {
+    return {
+      content:
+        "Algorithmic DGA query flagged (vwqzmxrktbn.net). Character entropy 3.88 and vowel-to-consonant ratio 0.09 match DGArchive Necurs/Cryptolocker algorithm.",
+      remediation: "sudo iptables -A OUTPUT -p udp --dport 53 -d 8.8.8.8 -j ACCEPT",
+    };
+  }
+
+  if (lower.includes("blockchain") || lower.includes("verify") || lower.includes("proof")) {
+    return {
+      content:
+        "Alerts with confidence >= 0.85 are committed to the AlertLog.sol smart contract on Polygon Amoy. You can verify any alert in the Alert Detail view to confirm mathematical tamper-resistance.",
+    };
+  }
+
   const idx = Math.floor(Math.random() * MOCK_AI_RESPONSES.length);
-  return MOCK_AI_RESPONSES[idx];
+  return { content: MOCK_AI_RESPONSES[idx] };
 }
 
 function getRandomDelay(): number {
@@ -103,20 +147,16 @@ export function ChatAI() {
     // Simulate AI response after random 1–2 second delay
     const delay = getRandomDelay();
     setTimeout(() => {
+      const res = getContextualResponse(trimmed);
       const assistantMessage: ChatMessage = {
         id: generateId(),
         role: "assistant",
-        content: getRandomMockResponse(),
+        content: res.content,
         timestamp: new Date().toISOString(),
+        remediationCommand: res.remediation,
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
-
-      // Only increment unread count if panel is closed
-      setUnreadCount((prev) =>
-        // Read isOpen from the functional update closure — if panel is closed, add to unread
-        prev
-      );
 
       // Use a ref-less approach: check isOpen indirectly via a state updater
       setIsOpen((currentIsOpen) => {
@@ -154,7 +194,7 @@ export function ChatAI() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-20 right-6 z-50 w-80 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden"
+            className="fixed bottom-20 right-6 z-50 w-84 sm:w-96 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden"
             aria-label="AI chat assistant panel"
             role="dialog"
             aria-modal="false"
@@ -163,7 +203,7 @@ export function ChatAI() {
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-gray-800">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" aria-hidden="true" />
-                <span className="text-sm font-semibold text-white">AI Assistant</span>
+                <span className="text-sm font-semibold text-white font-mono">AI SOC Assistant</span>
               </div>
               <button
                 type="button"
@@ -191,13 +231,13 @@ export function ChatAI() {
             {/* Message list */}
             <div
               className="flex flex-col gap-3 px-4 py-3 overflow-y-auto"
-              style={{ maxHeight: "280px" }}
+              style={{ maxHeight: "300px" }}
               aria-live="polite"
               aria-label="Chat message history"
             >
               {messages.length === 0 && (
                 <p className="text-gray-500 text-xs text-center py-4">
-                  Ask me about current threats, bot status, or system health.
+                  Ask me about current threats, DDoS mitigations, C2 jitter, or blockchain proofs.
                 </p>
               )}
               {messages.map((msg) => (
@@ -206,19 +246,50 @@ export function ChatAI() {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[75%] rounded-xl px-3 py-2 text-sm break-words ${
+                    className={`max-w-[85%] rounded-xl px-3.5 py-2.5 text-xs leading-relaxed break-words ${
                       msg.role === "user"
                         ? "bg-cyan-600 text-white rounded-br-sm"
-                        : "bg-gray-700 text-gray-100 rounded-bl-sm"
+                        : "bg-gray-800 text-gray-100 border border-gray-700 rounded-bl-sm"
                     }`}
                     aria-label={`${msg.role === "user" ? "You" : "Assistant"}: ${msg.content}`}
                   >
-                    {msg.content}
+                    <p>{msg.content}</p>
+                    {msg.remediationCommand && (
+                      <div className="mt-2 p-2 bg-gray-950 rounded border border-gray-700 font-mono text-[10px] text-emerald-400 overflow-x-auto">
+                        <div className="text-gray-500 text-[9px] mb-0.5 uppercase tracking-wider">Remediation Command:</div>
+                        <pre>{msg.remediationCommand}</pre>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
               {/* Scroll anchor */}
               <div ref={messagesEndRef} />
+            </div>
+
+            {/* Quick Suggestion Chips */}
+            <div className="px-3 py-1.5 bg-gray-900 border-t border-gray-800 flex gap-1.5 overflow-x-auto text-[10px] font-mono">
+              <button
+                type="button"
+                onClick={() => submitMessage("How to mitigate active DDoS attack?")}
+                className="px-2 py-0.5 rounded bg-gray-800 text-cyan-400 border border-gray-700 hover:border-cyan-500/40 whitespace-nowrap"
+              >
+                Mitigate DDoS
+              </button>
+              <button
+                type="button"
+                onClick={() => submitMessage("Explain C2 Beaconing jitter")}
+                className="px-2 py-0.5 rounded bg-gray-800 text-amber-400 border border-gray-700 hover:border-amber-500/40 whitespace-nowrap"
+              >
+                C2 Jitter
+              </button>
+              <button
+                type="button"
+                onClick={() => submitMessage("Verify blockchain proofs")}
+                className="px-2 py-0.5 rounded bg-gray-800 text-purple-400 border border-gray-700 hover:border-purple-500/40 whitespace-nowrap"
+              >
+                On-Chain Proof
+              </button>
             </div>
 
             {/* Input area */}
@@ -229,7 +300,7 @@ export function ChatAI() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleInputKeyDown}
-                placeholder="Ask about threats..."
+                placeholder="Ask about threats, MITRE TTPs..."
                 maxLength={500}
                 className="flex-1 bg-gray-700 text-white text-sm rounded-lg px-3 py-2 placeholder-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 border border-gray-600"
                 aria-label="Chat message input"

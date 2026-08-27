@@ -1,4 +1,5 @@
-﻿// src/components/BotHealthPanel.tsx
+// src/components/BotHealthPanel.tsx
+// Requirements: 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7, 9.8, 9.9
 
 import type { BotStatus, BotStatusValue } from "../types/alert";
 
@@ -60,7 +61,14 @@ function BotCard({ bot, variant }: BotCardProps) {
       aria-label={`Bot: ${bot.name}, Status: ${config.label}`}
     >
       {/* Bot name */}
-      <p className="text-sm font-semibold text-white truncate">{bot.name}</p>
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold text-white truncate">{bot.name}</p>
+        {bot.latencyMs !== undefined && (
+          <span className="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-500/30">
+            {bot.latencyMs}ms
+          </span>
+        )}
+      </div>
 
       {/* Status indicator */}
       <div className="flex items-center gap-2">
@@ -71,7 +79,7 @@ function BotCard({ bot, variant }: BotCardProps) {
         <span className={`text-xs font-medium ${config.textClass}`}>
           {config.label}
         </span>
-        {/* Error badge â€” shown in both variants when status is error */}
+        {/* Error badge — shown in both variants when status is error */}
         {bot.status === "error" && (
           <span
             className="ml-1 px-1.5 py-0.5 text-xs font-semibold bg-red-900 text-red-300 rounded"
@@ -100,6 +108,24 @@ function BotCard({ bot, variant }: BotCardProps) {
             </span>
           </p>
 
+          {/* Enriched telemetry hardware stats */}
+          {(bot.cpuPercent !== undefined || bot.accuracyScore !== undefined) && (
+            <div className="pt-2 border-t border-gray-800 grid grid-cols-2 gap-2 text-[11px] font-mono">
+              {bot.cpuPercent !== undefined && (
+                <div>
+                  <span className="text-gray-500 text-[10px]">CPU / MEM:</span>
+                  <p className="text-gray-300">{bot.cpuPercent}% / {bot.memoryMb}MB</p>
+                </div>
+              )}
+              {bot.accuracyScore !== undefined && (
+                <div>
+                  <span className="text-gray-500 text-[10px]">ACCURACY:</span>
+                  <p className="text-emerald-400 font-semibold">{(bot.accuracyScore * 100).toFixed(1)}%</p>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Error message (only when status is error and message is present) */}
           {bot.status === "error" && bot.errorMessage && (
             <p
@@ -122,7 +148,7 @@ export function BotHealthPanel({
   loading = false,
   error = false,
 }: BotHealthPanelProps) {
-  // Loading state â€” show skeleton cards
+  // Loading state — show skeleton cards
   if (loading) {
     return (
       <div
@@ -137,7 +163,7 @@ export function BotHealthPanel({
     );
   }
 
-  // Error state â€” do NOT render partial bot cards
+  // Error state — do NOT render partial bot cards
   if (error) {
     return (
       <div
@@ -146,7 +172,7 @@ export function BotHealthPanel({
         aria-label="Bot health data unavailable"
       >
         <p className="text-red-400 text-sm font-medium">
-          âš  Bot data could not be loaded
+          ⚠️ Bot data could not be loaded
         </p>
       </div>
     );
@@ -164,7 +190,7 @@ export function BotHealthPanel({
     );
   }
 
-  // Normal state â€” render grid of bot cards
+  // Normal state — render grid of bot cards
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {bots.map((bot) => (
@@ -175,4 +201,3 @@ export function BotHealthPanel({
 }
 
 export default BotHealthPanel;
-

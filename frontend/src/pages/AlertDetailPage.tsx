@@ -174,7 +174,7 @@ export function AlertDetailPage() {
           type="button"
           onClick={() => navigate(-1)}
           aria-label="Go back"
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 cursor-pointer"
         >
           <svg
             className="w-4 h-4"
@@ -202,21 +202,32 @@ export function AlertDetailPage() {
         className="bg-gray-900 border border-gray-700 rounded-xl p-6 space-y-5"
         aria-label="Alert details"
       >
-        <div className="flex items-center gap-3 flex-wrap">
-          <h2 className="text-base font-semibold text-white">{alert.type}</h2>
-          {/* Req 7.2: SeverityBadge */}
-          <SeverityBadge severity={alert.severity} />
-          <span
-            className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${
-              alert.status === "open"
-                ? "bg-red-900 text-red-300"
-                : alert.status === "investigating"
-                ? "bg-amber-900 text-amber-300"
-                : "bg-emerald-900 text-emerald-300"
-            }`}
-          >
-            {alert.status}
-          </span>
+        <div className="flex items-center justify-between flex-wrap gap-3">
+          <div className="flex items-center gap-3 flex-wrap">
+            <h2 className="text-base font-semibold text-white">{alert.type}</h2>
+            {/* Req 7.2: SeverityBadge */}
+            <SeverityBadge severity={alert.severity} />
+            <span
+              className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${
+                alert.status === "open"
+                  ? "bg-red-900 text-red-300"
+                  : alert.status === "investigating"
+                  ? "bg-amber-900 text-amber-300"
+                  : "bg-emerald-900 text-emerald-300"
+              }`}
+            >
+              {alert.status}
+            </span>
+          </div>
+
+          {alert.confidenceScore !== undefined && (
+            <div className="bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700 font-mono text-right">
+              <span className="text-[10px] text-gray-400 block uppercase">Confidence Score</span>
+              <span className="text-base font-bold text-red-400">
+                {(alert.confidenceScore * 100).toFixed(1)}%
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Req 7.1: all alert fields */}
@@ -224,7 +235,11 @@ export function AlertDetailPage() {
           <Field label="Alert ID" value={alert.id} mono />
           <Field label="Type" value={alert.type} />
           <Field label="Source IP" value={alert.sourceIp} mono />
-          <Field label="Destination IP" value={alert.destinationIp} mono />
+          <Field
+            label="Destination IP"
+            value={alert.targetPort ? `${alert.destinationIp}:${alert.targetPort}` : alert.destinationIp}
+            mono
+          />
           <Field label="Protocol" value={alert.protocol} />
           <Field label="Timestamp" value={new Date(alert.timestamp).toLocaleString()} />
           <Field
@@ -233,6 +248,25 @@ export function AlertDetailPage() {
           />
           <Field label="Status" value={alert.status} />
         </dl>
+
+        {/* 6 Specialist Bots Score Breakdown */}
+        {alert.botScores && Object.keys(alert.botScores).length > 0 && (
+          <div className="pt-3 border-t border-gray-800">
+            <dt className="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-2">
+              Specialist AI Bots Evaluation
+            </dt>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-xs">
+              {Object.entries(alert.botScores).map(([botName, score]) => (
+                <div key={botName} className="bg-gray-800/80 p-2 rounded border border-gray-700 flex justify-between items-center">
+                  <span className="text-gray-400 truncate">{botName}:</span>
+                  <span className={`font-bold ${score > 0.7 ? 'text-red-400' : 'text-gray-300'}`}>
+                    {(score * 100).toFixed(1)}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Description spans full width */}
         <div>
@@ -260,6 +294,8 @@ export function AlertDetailPage() {
           <BlockchainSection
             hash={alert.blockchainHash}
             verified={alert.blockchainVerified}
+            txHash={alert.blockchainTxHash}
+            blockNum={alert.blockchainBlockNum}
           />
         </section>
       )}

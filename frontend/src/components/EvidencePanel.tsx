@@ -82,6 +82,16 @@ function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps)
             <DetailField label="Bytes" value={flow.bytes.toLocaleString()} />
             <DetailField label="Packets" value={flow.packets.toLocaleString()} />
             <DetailField label="Timestamp" value={flow.timestamp} mono />
+            {flow.tcpFlags && <DetailField label="TCP Flags" value={flow.tcpFlags} />}
+            {flow.packetRatePps !== undefined && (
+              <DetailField label="Packet Rate" value={`${flow.packetRatePps.toLocaleString()} pps`} />
+            )}
+            {flow.entropy !== undefined && (
+              <DetailField label="Entropy" value={flow.entropy.toFixed(3)} />
+            )}
+            {flow.ja3Hash && (
+              <DetailField label="JA3 Fingerprint" value={flow.ja3Hash} mono />
+            )}
           </div>
 
           {/* Raw packet metadata (Req 8.2) — or error fallback (Req 8.6) */}

@@ -22,6 +22,11 @@ export interface Flow {
   bytes: number;
   packets: number;
   timestamp: string; // ISO-8601
+  tcpFlags?: string;
+  flowRateBps?: number;
+  packetRatePps?: number;
+  entropy?: number;
+  ja3Hash?: string | null;
 }
 
 export interface Evidence {
@@ -42,6 +47,12 @@ export interface Alert {
   evidence: Evidence;
   blockchainHash: string | null;
   blockchainVerified: boolean;
+  targetPort?: number;
+  confidenceScore?: number; // 0.0 - 1.0
+  contributingBots?: string[];
+  botScores?: Record<string, number>;
+  blockchainTxHash?: string | null;
+  blockchainBlockNum?: number | null;
 }
 
 export interface BotStatus {
@@ -51,6 +62,11 @@ export interface BotStatus {
   detectionCount: number;
   lastActive: string; // ISO-8601
   errorMessage: string | null;
+  latencyMs?: number;
+  cpuPercent?: number;
+  memoryMb?: number;
+  accuracyScore?: number;
+  f1Score?: number;
 }
 
 export interface ThroughputPoint {
