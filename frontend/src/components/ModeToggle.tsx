@@ -1,49 +1,45 @@
-import React from 'react';
-import { Radio, PlayCircle, RefreshCw } from 'lucide-react';
-import { api } from '../api/client';
+import { motion } from "framer-motion";
 
 interface ModeToggleProps {
-  mode: 'LIVE' | 'REPLAY';
-  onModeChange: (mode: 'LIVE' | 'REPLAY') => void;
+  value: "live" | "replay";
+  onChange: (mode: "live" | "replay") => void;
 }
 
-export const ModeToggle: React.FC<ModeToggleProps> = ({ mode, onModeChange }) => {
-  const handleToggle = async (newMode: 'LIVE' | 'REPLAY') => {
-    if (newMode === mode) return;
-    onModeChange(newMode);
-    await api.setSystemMode(newMode);
-  };
+const OPTIONS: { label: string; value: "live" | "replay" }[] = [
+  { label: "Live", value: "live" },
+  { label: "Replay", value: "replay" },
+];
 
+export function ModeToggle({ value, onChange }: ModeToggleProps) {
   return (
-    <div className="flex items-center bg-slate-900/90 rounded-lg p-1 border border-slate-800 text-xs font-mono">
-      <button
-        onClick={() => handleToggle('LIVE')}
-        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
-          mode === 'LIVE'
-            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm'
-            : 'text-slate-400 hover:text-slate-200'
-        }`}
-      >
-        <span className="relative flex h-2 w-2">
-          {mode === 'LIVE' && (
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          )}
-          <span className={`relative inline-flex rounded-full h-2 w-2 ${mode === 'LIVE' ? 'bg-emerald-500' : 'bg-slate-600'}`}></span>
-        </span>
-        Live NIC Capture
-      </button>
-
-      <button
-        onClick={() => handleToggle('REPLAY')}
-        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
-          mode === 'REPLAY'
-            ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
-            : 'text-slate-400 hover:text-slate-200'
-        }`}
-      >
-        <PlayCircle className="w-3.5 h-3.5" />
-        PCAP Replay Mode
-      </button>
+    <div
+      className="relative bg-gray-800 rounded-full p-1 flex items-center gap-1"
+      role="group"
+      aria-label="Mode selection"
+    >
+      {OPTIONS.map((option) => {
+        const isActive = value === option.value;
+        return (
+          <button
+            key={option.value}
+            aria-pressed={isActive}
+            onClick={() => onChange(option.value)}
+            className={`relative z-10 px-4 py-1.5 text-sm rounded-full transition-colors ${
+              isActive ? "text-white font-semibold" : "text-gray-400"
+            }`}
+          >
+            {isActive && (
+              <motion.div
+                layoutId="mode-toggle-indicator"
+                className="bg-cyan-500 rounded-full absolute inset-y-1 inset-x-0"
+                style={{ zIndex: -1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
+            {option.label}
+          </button>
+        );
+      })}
     </div>
   );
-};
+}

@@ -32,23 +32,27 @@ describe('Search Property Tests', () => {
             vi.advanceTimersByTime(300);
           });
 
-          const qLower = query.toLowerCase();
-          const { filteredAlerts } = result.current;
+          const { filteredAlerts, debouncedQuery } = result.current;
 
-          for (const alert of filteredAlerts) {
-            const matches =
-              alert.id.toLowerCase().includes(qLower) ||
-              alert.type.toLowerCase().includes(qLower) ||
-              alert.sourceIp.toLowerCase().includes(qLower) ||
-              alert.destinationIp.toLowerCase().includes(qLower) ||
-              alert.description.toLowerCase().includes(qLower);
-            expect(matches).toBe(true);
+          if (debouncedQuery.trim() === '') {
+            expect(filteredAlerts).toEqual(alerts);
+          } else {
+            const qLower = debouncedQuery.toLowerCase();
+            for (const alert of filteredAlerts) {
+              const matches =
+                alert.id.toLowerCase().includes(qLower) ||
+                alert.type.toLowerCase().includes(qLower) ||
+                alert.sourceIp.toLowerCase().includes(qLower) ||
+                alert.destinationIp.toLowerCase().includes(qLower) ||
+                alert.description.toLowerCase().includes(qLower);
+              expect(matches).toBe(true);
+            }
           }
 
           unmount();
         }
       ),
-      { numRuns: 25 }
+      { numRuns: 30 }
     );
   });
 });

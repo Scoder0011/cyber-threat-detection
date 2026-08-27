@@ -3,7 +3,7 @@
 // Property 23: Mock API client is deterministic (Requirements 13.2)
 // Property 24: API client throws typed errors for non-2xx responses (Requirements 13.5, 13.6)
 
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import * as fc from 'fast-check';
 import { createApiClient } from '../../api/apiClient';
 import type { ApiError } from '../../types/alert';

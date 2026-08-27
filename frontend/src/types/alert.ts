@@ -1,99 +1,73 @@
-export type SeverityLevel = 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
+// src/types/alert.ts — single source of truth for all data shapes
 
-export type AttackType =
-  | 'BENIGN'
-  | 'DDOS_SYN_FLOOD'
-  | 'DDOS_UDP_AMPLIFICATION'
-  | 'DOS_SLOWLORIS'
-  | 'C2_BEACONING'
-  | 'DGA_DOMAIN_LOOKUP'
-  | 'ENCRYPTED_MALWARE_TLS'
-  | 'PORT_SCAN_VERTICAL'
-  | 'PORT_SCAN_HORIZONTAL'
-  | 'DATA_EXFILTRATION';
+export type Severity = "Critical" | "High" | "Medium" | "Low";
+export type AlertStatus = "open" | "investigating" | "resolved";
+export type BotStatusValue = "active" | "idle" | "error";
+export type ConnectionStatus = "connected" | "reconnecting" | "disconnected" | "replay";
+export type AppMode = "live" | "replay";
 
-export type AlertStatus = 'NEW' | 'INVESTIGATING' | 'RESOLVED' | 'FALSE_POSITIVE';
-
-export interface ThreatAlert {
-  id?: string;
-  alert_id: string;
-  title: string;
-  description: string;
-  severity: SeverityLevel;
-  attack_type: AttackType;
-  source_ip: string;
-  target_ip: string;
-  target_port?: number;
-  confidence_score: number; // 0.0 - 1.0
-  contributing_bots: string[];
-  bot_scores: Record<string, number>;
-  evidence: Record<string, any>;
-  status: AlertStatus;
-  blockchain_tx_hash?: string | null;
-  blockchain_verified: boolean;
-  blockchain_block_num?: number | null;
-  created_at: string;
-  updated_at?: string;
+export interface RawPacket {
+  frameLength: number;
+  captureTimestamp: string; // ISO-8601
+  summary: string;
 }
 
-export interface NetworkFlow {
-  id?: string;
-  flow_id: string;
-  src_ip: string;
-  dst_ip: string;
-  src_port: number;
-  dst_port: number;
+export interface Flow {
+  id: string;
+  srcIp: string;
+  dstIp: string;
+  srcPort: number;
+  dstPort: number;
   protocol: string;
-  duration: number;
-  bytes_in: number;
-  bytes_out: number;
-  pkts_in: number;
-  pkts_out: number;
-  tcp_flags?: string;
-  flow_rate_bps?: number;
-  packet_rate_pps?: number;
-  entropy?: number;
-  ja3_hash?: string | null;
-  is_attack: boolean;
-  attack_type: string;
-  timestamp: string;
-  metadata?: Record<string, any>;
+  bytes: number;
+  packets: number;
+  timestamp: string; // ISO-8601
 }
 
-export interface BotMetric {
-  id?: string;
-  bot_name: string;
-  display_name: string;
-  status: 'HEALTHY' | 'DEGRADED' | 'OFFLINE' | 'INITIALIZING';
-  version: string;
-  latency_ms: number;
-  cpu_percent: number;
-  memory_mb: number;
-  predictions_count: number;
-  threats_detected: number;
-  accuracy_score: number;
-  f1_score: number;
-  last_heartbeat: string;
+export interface Evidence {
+  flows: Flow[];
+  rawPackets: RawPacket[];
 }
 
-export interface BlockchainVerificationResult {
-  alert_id: string;
-  status: 'VERIFIED_ON_CHAIN' | 'UNVERIFIED' | 'TAMPERING_DETECTED';
-  is_tamper_free: boolean;
-  local_alert_hash: string;
-  on_chain_alert_hash: string;
-  transaction_hash: string;
-  block_number: number;
-  contract_address: string;
-  network: string;
-  explorer_url: string;
-  verified_at?: string;
+export interface Alert {
+  id: string;
+  type: string; // "DDoS" | "Malware" | "Intrusion" | "Phishing" | "Anomaly"
+  severity: Severity;
+  sourceIp: string;
+  destinationIp: string;
+  protocol: string;
+  timestamp: string; // ISO-8601
+  description: string;
+  status: AlertStatus;
+  evidence: Evidence;
+  blockchainHash: string | null;
+  blockchainVerified: boolean;
 }
 
-export interface ThroughputDataPoint {
-  timestamp: string;
-  timeLabel: string;
-  flowsPerSec: number;
-  packetsPerSec: number;
-  bandwidthMbps: number;
+export interface BotStatus {
+  id: string;
+  name: string;
+  status: BotStatusValue;
+  detectionCount: number;
+  lastActive: string; // ISO-8601
+  errorMessage: string | null;
+}
+
+export interface ThroughputPoint {
+  timestamp: string; // ISO-8601
+  value: number;     // flows per second
+  unit: string;      // e.g. "Kbps", "Mbps"
+}
+
+export interface SystemMetrics {
+  cpuUsage: number;       // percentage 0–100
+  memoryUsage: number;    // percentage 0–100
+  networkIo: number;      // Mbps
+  pipelineLatency: number; // ms
+}
+
+export interface ApiError {
+  statusCode: number;
+  message: string;
+  kind: "http" | "network" | "timeout";
 }

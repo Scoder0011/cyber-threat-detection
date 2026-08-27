@@ -1,121 +1,185 @@
-import React from 'react';
-import { ThreatAlert } from '../types/alert';
-import { Terminal, Shield, Cpu, KeyRound, Clock, ArrowRight } from 'lucide-react';
+// src/components/EvidencePanel.tsx
+// Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6
+
+import { useState } from "react";
+import type { Evidence, Flow, RawPacket } from "../types/alert";
 
 interface EvidencePanelProps {
-  alert: ThreatAlert;
+  evidence: Evidence;
 }
 
-export const EvidencePanel: React.FC<EvidencePanelProps> = ({ alert }) => {
-  const { evidence, bot_scores, contributing_bots } = alert;
+interface FlowRowProps {
+  flow: Flow;
+  index: number;
+  isExpanded: boolean;
+  rawPacket: RawPacket | undefined;
+  onToggle: (id: string) => void;
+}
 
+function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps) {
   return (
-    <div className="space-y-4">
-      {/* 5-Tuple Network Coordinates */}
-      <div className="bg-slate-900/90 rounded-lg p-4 border border-slate-800 font-mono text-xs">
-        <div className="text-slate-400 uppercase tracking-wider text-[11px] mb-2 flex items-center gap-1.5">
-          <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-          Network 5-Tuple Flow Vector
-        </div>
+    <li className="border-b border-gray-700 last:border-b-0">
+      {/* Collapsed row — always visible (Req 8.1) */}
+      <button
+        type="button"
+        aria-expanded={isExpanded}
+        aria-controls={`flow-detail-${flow.id}`}
+        onClick={() => onToggle(flow.id)}
+        className="w-full flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3 text-left text-sm hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+      >
+        {/* Row index */}
+        <span className="text-gray-500 font-mono text-xs w-5 shrink-0">
+          {index + 1}
+        </span>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 bg-slate-950 p-3 rounded-md border border-slate-800/80">
-          <div>
-            <div className="text-slate-500 text-[10px]">SOURCE HOST</div>
-            <div className="text-red-400 font-bold text-sm">
-              {alert.source_ip}
-              <span className="text-slate-500 font-normal text-xs ml-1">
-                :{evidence.src_port || 49152}
-              </span>
-            </div>
+        {/* 5-tuple */}
+        <span className="text-gray-300 font-mono">
+          {flow.srcIp}:{flow.srcPort}
+        </span>
+        <span className="text-gray-500">→</span>
+        <span className="text-gray-300 font-mono">
+          {flow.dstIp}:{flow.dstPort}
+        </span>
+
+        {/* Protocol */}
+        <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-gray-700 text-cyan-300 uppercase">
+          {flow.protocol}
+        </span>
+
+        {/* Bytes / Packets */}
+        <span className="text-gray-400 text-xs ml-auto">
+          {flow.bytes.toLocaleString()} B &nbsp;·&nbsp; {flow.packets.toLocaleString()} pkts
+        </span>
+
+        {/* Chevron indicator */}
+        <svg
+          className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${
+            isExpanded ? "rotate-180" : "rotate-0"
+          }`}
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {/* Expanded detail section (Req 8.2, 8.3, 8.4, 8.6) */}
+      {isExpanded && (
+        <div
+          id={`flow-detail-${flow.id}`}
+          className="px-4 pb-4 pt-2 bg-gray-800 text-sm space-y-3"
+        >
+          {/* Full flow metadata recap */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+            <DetailField label="Src IP" value={flow.srcIp} />
+            <DetailField label="Dst IP" value={flow.dstIp} />
+            <DetailField label="Src Port" value={String(flow.srcPort)} />
+            <DetailField label="Dst Port" value={String(flow.dstPort)} />
+            <DetailField label="Protocol" value={flow.protocol.toUpperCase()} />
+            <DetailField label="Bytes" value={flow.bytes.toLocaleString()} />
+            <DetailField label="Packets" value={flow.packets.toLocaleString()} />
+            <DetailField label="Timestamp" value={flow.timestamp} mono />
           </div>
 
-          <ArrowRight className="w-4 h-4 text-slate-600 hidden sm:block" />
-
-          <div>
-            <div className="text-slate-500 text-[10px]">TARGET DESTINATION</div>
-            <div className="text-cyan-400 font-bold text-sm">
-              {alert.target_ip}
-              <span className="text-slate-500 font-normal text-xs ml-1">
-                :{alert.target_port || 80}
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-slate-500 text-[10px]">PROTOCOL</div>
-            <div className="text-slate-200 font-semibold">{evidence.protocol || 'TCP / TLS'}</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Specialist Bots Confidence Fusion Matrix */}
-      <div className="bg-slate-900/90 rounded-lg p-4 border border-slate-800 font-mono text-xs">
-        <div className="text-slate-400 uppercase tracking-wider text-[11px] mb-3 flex items-center justify-between">
-          <span className="flex items-center gap-1.5 text-purple-400">
-            <Cpu className="w-3.5 h-3.5" />
-            6 Specialist AI Bots Confidence Matrix
-          </span>
-          <span className="text-[10px] text-slate-500">
-            Weighted Score: {(alert.confidence_score * 100).toFixed(1)}%
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {Object.entries(bot_scores || {}).map(([botName, score]) => {
-            const isContributing = contributing_bots.includes(botName);
-            const scorePct = Math.round(score * 100);
-
-            return (
-              <div
-                key={botName}
-                className={`p-2.5 rounded-md border transition-all ${
-                  isContributing
-                    ? 'bg-red-500/10 border-red-500/40 text-red-300'
-                    : 'bg-slate-950 border-slate-800 text-slate-400'
-                }`}
-              >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="capitalize font-semibold text-[11px]">
-                    {botName.replace('_', ' ')}
-                  </span>
-                  <span className="font-bold">{scorePct}%</span>
-                </div>
-                <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full rounded-full transition-all ${
-                      scorePct > 80 ? 'bg-red-500' : scorePct > 50 ? 'bg-orange-500' : 'bg-slate-600'
-                    }`}
-                    style={{ width: `${scorePct}%` }}
-                  />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Forensic Evidence Key-Value Details */}
-      <div className="bg-slate-900/90 rounded-lg p-4 border border-slate-800 font-mono text-xs">
-        <div className="text-slate-400 uppercase tracking-wider text-[11px] mb-3 flex items-center gap-1.5 text-cyan-400">
-          <KeyRound className="w-3.5 h-3.5" />
-          Extracted Feature Indicators
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {Object.entries(evidence || {}).map(([key, val]) => (
-            <div key={key} className="bg-slate-950 p-2.5 rounded border border-slate-800/80">
-              <div className="text-slate-500 text-[10px] uppercase truncate">{key.replace(/_/g, ' ')}</div>
-              <div className="text-slate-200 font-semibold text-xs mt-0.5 truncate">
-                {typeof val === 'number'
-                  ? val.toLocaleString()
-                  : typeof val === 'object'
-                  ? JSON.stringify(val)
-                  : String(val)}
+          {/* Raw packet metadata (Req 8.2) — or error fallback (Req 8.6) */}
+          {rawPacket !== undefined ? (
+            <div className="border-t border-gray-700 pt-3 space-y-2">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                Packet Capture
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <DetailField
+                  label="Frame Length"
+                  value={`${rawPacket.frameLength} bytes`}
+                />
+                <DetailField
+                  label="Capture Timestamp"
+                  value={rawPacket.captureTimestamp}
+                  mono
+                />
+                <DetailField label="Summary" value={rawPacket.summary} />
               </div>
             </div>
-          ))}
+          ) : (
+            // Req 8.6: error fallback when rawPacket is missing
+            <div
+              className="border-t border-gray-700 pt-3"
+              role="alert"
+              aria-label="Packet data unavailable"
+            >
+              <p className="text-xs text-amber-400">Packet data unavailable</p>
+            </div>
+          )}
         </div>
-      </div>
+      )}
+    </li>
+  );
+}
+
+interface DetailFieldProps {
+  label: string;
+  value: string;
+  mono?: boolean;
+}
+
+function DetailField({ label, value, mono = false }: DetailFieldProps) {
+  return (
+    <div>
+      <p className="text-gray-500 mb-0.5">{label}</p>
+      <p className={`text-gray-200 break-all ${mono ? "font-mono" : ""}`}>{value}</p>
     </div>
   );
-};
+}
+
+export function EvidencePanel({ evidence }: EvidencePanelProps) {
+  // Req 8.3: only one row expanded at a time
+  const [expandedFlowId, setExpandedFlowId] = useState<string | null>(null);
+
+  function handleToggle(id: string) {
+    // Req 8.4: clicking an expanded row collapses it
+    setExpandedFlowId((prev) => (prev === id ? null : id));
+  }
+
+  // Req 8.5: empty state
+  if (evidence.flows.length === 0) {
+    return (
+      <div
+        className="bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center p-8"
+        aria-label="No evidence available"
+      >
+        <p className="text-gray-400 text-sm">No evidence available</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden">
+      {/* Panel header */}
+      <div className="px-4 py-3 border-b border-gray-700">
+        <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+          Network Flows
+        </h3>
+      </div>
+
+      {/* Accordion list (Req 8.1, 8.3) */}
+      <ul aria-label="Network flow evidence list">
+        {evidence.flows.map((flow, index) => (
+          <FlowRow
+            key={flow.id}
+            flow={flow}
+            index={index}
+            // Req 8.2: match flow at index i with rawPackets[i]
+            rawPacket={evidence.rawPackets[index]}
+            isExpanded={expandedFlowId === flow.id}
+            onToggle={handleToggle}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default EvidencePanel;
