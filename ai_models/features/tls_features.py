@@ -41,7 +41,16 @@ class TLSFeatureExtractor(BaseFeatureExtractor):
         ja3 = str(flow.get("ja3_hash", "") or "").lower().strip()
         proto = str(flow.get("protocol", "")).upper()
         entropy = float(flow.get("entropy", 0.0))
-        metadata = flow.get("metadata", {}) or {}
+        raw_meta = flow.get("metadata", {}) or {}
+        if isinstance(raw_meta, str):
+            try:
+                metadata = json.loads(raw_meta) if raw_meta.strip() else {}
+            except Exception:
+                metadata = {}
+        elif isinstance(raw_meta, dict):
+            metadata = raw_meta
+        else:
+            metadata = {}
 
         is_mal = 1 if ja3 in MALICIOUS_JA3_SET else 0
         threat_conf = 0.95 if is_mal else 0.0

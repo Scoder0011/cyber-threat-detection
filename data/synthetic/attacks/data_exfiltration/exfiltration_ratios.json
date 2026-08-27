@@ -1,0 +1,4502 @@
+[
+  {
+    "flow_id": "f201",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3263379,
+    "bytes_out": 11855,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f202",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 14690,
+    "bytes_out": 44411532,
+    "ratio_out_in": 3023.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f203",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2452771,
+    "bytes_out": 11627,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f204",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 15406,
+    "bytes_out": 35183468,
+    "ratio_out_in": 2283.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f205",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2228494,
+    "bytes_out": 18455,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f206",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21203,
+    "bytes_out": 33941949,
+    "ratio_out_in": 1600.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f207",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3311219,
+    "bytes_out": 15021,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f208",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17741,
+    "bytes_out": 41346653,
+    "ratio_out_in": 2330.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f209",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 968149,
+    "bytes_out": 18503,
+    "ratio_out_in": 0.019,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f210",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21796,
+    "bytes_out": 52339493,
+    "ratio_out_in": 2401.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f211",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4244101,
+    "bytes_out": 18801,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f212",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21559,
+    "bytes_out": 52627770,
+    "ratio_out_in": 2441.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f213",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1974839,
+    "bytes_out": 13865,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f214",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16891,
+    "bytes_out": 44725464,
+    "ratio_out_in": 2647.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f215",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1572585,
+    "bytes_out": 21468,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f216",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 19005,
+    "bytes_out": 34575666,
+    "ratio_out_in": 1819.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f217",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3891209,
+    "bytes_out": 18103,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f218",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 17715,
+    "bytes_out": 42006332,
+    "ratio_out_in": 2371.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f219",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3928137,
+    "bytes_out": 17323,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f220",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 20903,
+    "bytes_out": 42375079,
+    "ratio_out_in": 2027.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f221",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2787546,
+    "bytes_out": 16159,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f222",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21560,
+    "bytes_out": 40015909,
+    "ratio_out_in": 1856.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f223",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2055843,
+    "bytes_out": 20091,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f224",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 19964,
+    "bytes_out": 52256947,
+    "ratio_out_in": 2617.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f225",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2048707,
+    "bytes_out": 10926,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f226",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 18665,
+    "bytes_out": 40259325,
+    "ratio_out_in": 2156.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f227",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2362252,
+    "bytes_out": 16601,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f228",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21520,
+    "bytes_out": 41876709,
+    "ratio_out_in": 1945.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f229",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4325160,
+    "bytes_out": 14523,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f230",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 13629,
+    "bytes_out": 40551242,
+    "ratio_out_in": 2975.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f231",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3389230,
+    "bytes_out": 9085,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f232",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14250,
+    "bytes_out": 39119177,
+    "ratio_out_in": 2745.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f233",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2810068,
+    "bytes_out": 16477,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f234",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 17085,
+    "bytes_out": 33559688,
+    "ratio_out_in": 1964.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f235",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1800335,
+    "bytes_out": 15191,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f236",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20184,
+    "bytes_out": 48714150,
+    "ratio_out_in": 2413.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f237",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 894558,
+    "bytes_out": 20951,
+    "ratio_out_in": 0.023,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f238",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 12771,
+    "bytes_out": 38046336,
+    "ratio_out_in": 2979.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f239",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2366936,
+    "bytes_out": 15672,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f240",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 18385,
+    "bytes_out": 35394459,
+    "ratio_out_in": 1925.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f241",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3653303,
+    "bytes_out": 21815,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f242",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 20266,
+    "bytes_out": 40458109,
+    "ratio_out_in": 1996.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f243",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3703230,
+    "bytes_out": 13845,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f244",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 18840,
+    "bytes_out": 32772093,
+    "ratio_out_in": 1739.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f245",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2085126,
+    "bytes_out": 9000,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f246",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12452,
+    "bytes_out": 49454641,
+    "ratio_out_in": 3971.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f247",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1362287,
+    "bytes_out": 11957,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f248",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14863,
+    "bytes_out": 31687767,
+    "ratio_out_in": 2132.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f249",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3912641,
+    "bytes_out": 21704,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f250",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21192,
+    "bytes_out": 28419652,
+    "ratio_out_in": 1341.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f251",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3136264,
+    "bytes_out": 20009,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f252",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16349,
+    "bytes_out": 51486073,
+    "ratio_out_in": 3149.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f253",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4386159,
+    "bytes_out": 11202,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f254",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 18193,
+    "bytes_out": 36169864,
+    "ratio_out_in": 1988.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f255",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3715451,
+    "bytes_out": 10571,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f256",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 20380,
+    "bytes_out": 43570448,
+    "ratio_out_in": 2137.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f257",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3175106,
+    "bytes_out": 16721,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f258",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 17162,
+    "bytes_out": 50493929,
+    "ratio_out_in": 2942.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f259",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1251776,
+    "bytes_out": 20025,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f260",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17387,
+    "bytes_out": 37254262,
+    "ratio_out_in": 2142.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f261",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3861633,
+    "bytes_out": 18180,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f262",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 15938,
+    "bytes_out": 52499000,
+    "ratio_out_in": 3294.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f263",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2013436,
+    "bytes_out": 12663,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f264",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 17431,
+    "bytes_out": 44784695,
+    "ratio_out_in": 2569.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f265",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1930160,
+    "bytes_out": 18346,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f266",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21878,
+    "bytes_out": 50901212,
+    "ratio_out_in": 2326.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f267",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 4237194,
+    "bytes_out": 21326,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f268",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 19098,
+    "bytes_out": 47810190,
+    "ratio_out_in": 2503.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f269",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1634661,
+    "bytes_out": 14704,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f270",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17566,
+    "bytes_out": 32803410,
+    "ratio_out_in": 1867.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f271",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3007389,
+    "bytes_out": 20722,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f272",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17270,
+    "bytes_out": 30656429,
+    "ratio_out_in": 1775.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f273",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 729420,
+    "bytes_out": 18360,
+    "ratio_out_in": 0.025,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f274",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 13077,
+    "bytes_out": 46394794,
+    "ratio_out_in": 3547.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f275",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2782637,
+    "bytes_out": 19934,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f276",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21423,
+    "bytes_out": 43351566,
+    "ratio_out_in": 2023.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f277",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3913451,
+    "bytes_out": 10036,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f278",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 13303,
+    "bytes_out": 37634510,
+    "ratio_out_in": 2829.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f279",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2475332,
+    "bytes_out": 12912,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f280",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 18940,
+    "bytes_out": 28854149,
+    "ratio_out_in": 1523.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f281",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2976602,
+    "bytes_out": 18996,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f282",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12881,
+    "bytes_out": 38553165,
+    "ratio_out_in": 2993.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f283",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 712261,
+    "bytes_out": 13617,
+    "ratio_out_in": 0.019,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f284",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21915,
+    "bytes_out": 53230138,
+    "ratio_out_in": 2428.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f285",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3363849,
+    "bytes_out": 10671,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f286",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19410,
+    "bytes_out": 49771436,
+    "ratio_out_in": 2564.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f287",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 958353,
+    "bytes_out": 9458,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f288",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 20040,
+    "bytes_out": 40315294,
+    "ratio_out_in": 2011.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f289",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1572150,
+    "bytes_out": 13288,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f290",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17859,
+    "bytes_out": 48147118,
+    "ratio_out_in": 2696.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f291",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1843165,
+    "bytes_out": 11753,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f292",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12269,
+    "bytes_out": 52027842,
+    "ratio_out_in": 4240.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f293",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1383292,
+    "bytes_out": 9273,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f294",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16823,
+    "bytes_out": 31013342,
+    "ratio_out_in": 1843.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f295",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1484196,
+    "bytes_out": 17934,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f296",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17251,
+    "bytes_out": 37107793,
+    "ratio_out_in": 2151.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f297",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 851164,
+    "bytes_out": 16622,
+    "ratio_out_in": 0.02,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f298",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19257,
+    "bytes_out": 33840764,
+    "ratio_out_in": 1757.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f299",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2079716,
+    "bytes_out": 9570,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f300",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17092,
+    "bytes_out": 32007430,
+    "ratio_out_in": 1872.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f301",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4419843,
+    "bytes_out": 10979,
+    "ratio_out_in": 0.002,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f302",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 12788,
+    "bytes_out": 47252382,
+    "ratio_out_in": 3695.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f303",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2621023,
+    "bytes_out": 15056,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f304",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 19632,
+    "bytes_out": 28074734,
+    "ratio_out_in": 1430.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f305",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4174557,
+    "bytes_out": 21844,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f306",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 18210,
+    "bytes_out": 50057627,
+    "ratio_out_in": 2748.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f307",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4297099,
+    "bytes_out": 20170,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f308",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 13518,
+    "bytes_out": 50495633,
+    "ratio_out_in": 3735.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f309",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3161892,
+    "bytes_out": 13515,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f310",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 15461,
+    "bytes_out": 53516106,
+    "ratio_out_in": 3461.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f311",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4123701,
+    "bytes_out": 10647,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f312",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 20879,
+    "bytes_out": 36809859,
+    "ratio_out_in": 1763.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f313",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1559747,
+    "bytes_out": 15223,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f314",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17130,
+    "bytes_out": 40080606,
+    "ratio_out_in": 2339.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f315",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 4180312,
+    "bytes_out": 14971,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f316",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 14623,
+    "bytes_out": 44253030,
+    "ratio_out_in": 3026.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f317",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3791459,
+    "bytes_out": 10009,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f318",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21552,
+    "bytes_out": 48782999,
+    "ratio_out_in": 2263.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f319",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 4416977,
+    "bytes_out": 11235,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f320",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21814,
+    "bytes_out": 50021277,
+    "ratio_out_in": 2293.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f321",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4141951,
+    "bytes_out": 15137,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f322",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21229,
+    "bytes_out": 50576099,
+    "ratio_out_in": 2382.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f323",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4437760,
+    "bytes_out": 13125,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f324",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 12468,
+    "bytes_out": 42594899,
+    "ratio_out_in": 3416.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f325",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4269018,
+    "bytes_out": 17580,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f326",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 20148,
+    "bytes_out": 42251150,
+    "ratio_out_in": 2097.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f327",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 781525,
+    "bytes_out": 9176,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f328",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 15691,
+    "bytes_out": 39882236,
+    "ratio_out_in": 2541.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f329",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3459942,
+    "bytes_out": 11252,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f330",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16240,
+    "bytes_out": 40262120,
+    "ratio_out_in": 2479.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f331",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3671540,
+    "bytes_out": 21741,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f332",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21560,
+    "bytes_out": 31680185,
+    "ratio_out_in": 1469.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f333",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3976239,
+    "bytes_out": 16689,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f334",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 16274,
+    "bytes_out": 48162889,
+    "ratio_out_in": 2959.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f335",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4394387,
+    "bytes_out": 12189,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f336",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17670,
+    "bytes_out": 49299333,
+    "ratio_out_in": 2790.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f337",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2474700,
+    "bytes_out": 12283,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f338",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 19809,
+    "bytes_out": 40030097,
+    "ratio_out_in": 2020.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f339",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 4334727,
+    "bytes_out": 17387,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f340",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21703,
+    "bytes_out": 51243473,
+    "ratio_out_in": 2361.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f341",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1718135,
+    "bytes_out": 20999,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f342",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19758,
+    "bytes_out": 51714068,
+    "ratio_out_in": 2617.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f343",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2788815,
+    "bytes_out": 9044,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f344",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21194,
+    "bytes_out": 45309570,
+    "ratio_out_in": 2137.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f345",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3341912,
+    "bytes_out": 21836,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f346",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 13965,
+    "bytes_out": 52187977,
+    "ratio_out_in": 3737.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f347",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1679996,
+    "bytes_out": 16753,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f348",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17337,
+    "bytes_out": 50431190,
+    "ratio_out_in": 2908.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f349",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1574357,
+    "bytes_out": 12310,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f350",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16357,
+    "bytes_out": 35889607,
+    "ratio_out_in": 2194.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f351",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1855468,
+    "bytes_out": 10335,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f352",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12204,
+    "bytes_out": 50453433,
+    "ratio_out_in": 4134.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f353",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4383829,
+    "bytes_out": 21426,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f354",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 14368,
+    "bytes_out": 44430668,
+    "ratio_out_in": 3092.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f355",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2734909,
+    "bytes_out": 21646,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f356",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 18819,
+    "bytes_out": 36052704,
+    "ratio_out_in": 1915.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f357",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3827605,
+    "bytes_out": 17354,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f358",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12670,
+    "bytes_out": 45202418,
+    "ratio_out_in": 3567.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f359",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 987695,
+    "bytes_out": 12145,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f360",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 14829,
+    "bytes_out": 52708215,
+    "ratio_out_in": 3554.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f361",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4183524,
+    "bytes_out": 17314,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f362",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 14966,
+    "bytes_out": 29817913,
+    "ratio_out_in": 1992.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f363",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1882481,
+    "bytes_out": 17504,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f364",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15919,
+    "bytes_out": 38672226,
+    "ratio_out_in": 2429.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f365",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3232203,
+    "bytes_out": 17041,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f366",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21204,
+    "bytes_out": 31291477,
+    "ratio_out_in": 1475.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f367",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4393954,
+    "bytes_out": 13184,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f368",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17787,
+    "bytes_out": 43965565,
+    "ratio_out_in": 2471.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f369",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4068545,
+    "bytes_out": 21433,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f370",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16766,
+    "bytes_out": 32738930,
+    "ratio_out_in": 1952.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f371",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4350595,
+    "bytes_out": 14582,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f372",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21686,
+    "bytes_out": 28572349,
+    "ratio_out_in": 1317.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f373",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3649865,
+    "bytes_out": 21808,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f374",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 20375,
+    "bytes_out": 37887016,
+    "ratio_out_in": 1859.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f375",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1258308,
+    "bytes_out": 13505,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f376",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20168,
+    "bytes_out": 29466744,
+    "ratio_out_in": 1461.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f377",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1221783,
+    "bytes_out": 17833,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f378",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 13567,
+    "bytes_out": 36004691,
+    "ratio_out_in": 2653.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f379",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2764413,
+    "bytes_out": 20075,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f380",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15434,
+    "bytes_out": 36638409,
+    "ratio_out_in": 2373.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f381",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1640216,
+    "bytes_out": 9971,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f382",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 19749,
+    "bytes_out": 47259345,
+    "ratio_out_in": 2393.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f383",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2092901,
+    "bytes_out": 20586,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f384",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20159,
+    "bytes_out": 35490392,
+    "ratio_out_in": 1760.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f385",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1731500,
+    "bytes_out": 14692,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f386",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 13887,
+    "bytes_out": 35806178,
+    "ratio_out_in": 2578.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f387",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2800647,
+    "bytes_out": 11675,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f388",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12768,
+    "bytes_out": 30741317,
+    "ratio_out_in": 2407.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f389",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4385028,
+    "bytes_out": 14483,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f390",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 19970,
+    "bytes_out": 48678565,
+    "ratio_out_in": 2437.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f391",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3019599,
+    "bytes_out": 15029,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f392",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18619,
+    "bytes_out": 33895012,
+    "ratio_out_in": 1820.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f393",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1087610,
+    "bytes_out": 15313,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f394",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12142,
+    "bytes_out": 49269251,
+    "ratio_out_in": 4057.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f395",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2449285,
+    "bytes_out": 11689,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f396",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20423,
+    "bytes_out": 32593723,
+    "ratio_out_in": 1595.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f397",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4153785,
+    "bytes_out": 11174,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f398",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 12161,
+    "bytes_out": 43336432,
+    "ratio_out_in": 3563.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f399",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2283315,
+    "bytes_out": 16089,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f400",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17535,
+    "bytes_out": 50408268,
+    "ratio_out_in": 2874.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f401",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2331054,
+    "bytes_out": 11496,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f402",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 14095,
+    "bytes_out": 31901420,
+    "ratio_out_in": 2263.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f403",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1728606,
+    "bytes_out": 20857,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f404",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 12718,
+    "bytes_out": 49239490,
+    "ratio_out_in": 3871.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f405",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1139868,
+    "bytes_out": 12929,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f406",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16199,
+    "bytes_out": 48325319,
+    "ratio_out_in": 2983.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f407",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2972341,
+    "bytes_out": 20283,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f408",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17344,
+    "bytes_out": 28907932,
+    "ratio_out_in": 1666.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f409",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1256100,
+    "bytes_out": 18231,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f410",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20628,
+    "bytes_out": 37573135,
+    "ratio_out_in": 1821.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f411",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3155578,
+    "bytes_out": 18723,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f412",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17832,
+    "bytes_out": 37112572,
+    "ratio_out_in": 2081.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f413",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3726082,
+    "bytes_out": 18567,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f414",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21728,
+    "bytes_out": 42736364,
+    "ratio_out_in": 1966.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f415",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2175559,
+    "bytes_out": 13829,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f416",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 14403,
+    "bytes_out": 50102748,
+    "ratio_out_in": 3478.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f417",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1911501,
+    "bytes_out": 17019,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f418",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17023,
+    "bytes_out": 32212743,
+    "ratio_out_in": 1892.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f419",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1151980,
+    "bytes_out": 16336,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f420",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18748,
+    "bytes_out": 35748810,
+    "ratio_out_in": 1906.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f421",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1778484,
+    "bytes_out": 18614,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f422",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16307,
+    "bytes_out": 40894119,
+    "ratio_out_in": 2507.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f423",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1123168,
+    "bytes_out": 13644,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f424",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16236,
+    "bytes_out": 38239521,
+    "ratio_out_in": 2355.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f425",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3609863,
+    "bytes_out": 14949,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f426",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17070,
+    "bytes_out": 45341315,
+    "ratio_out_in": 2656.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f427",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4047947,
+    "bytes_out": 13790,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f428",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14622,
+    "bytes_out": 38639232,
+    "ratio_out_in": 2642.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f429",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3649902,
+    "bytes_out": 17382,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f430",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20751,
+    "bytes_out": 50358707,
+    "ratio_out_in": 2426.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f431",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1949864,
+    "bytes_out": 15208,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f432",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 12281,
+    "bytes_out": 46799174,
+    "ratio_out_in": 3810.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f433",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1661911,
+    "bytes_out": 9407,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f434",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15903,
+    "bytes_out": 30758654,
+    "ratio_out_in": 1934.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f435",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3040863,
+    "bytes_out": 13812,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f436",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 13252,
+    "bytes_out": 35972382,
+    "ratio_out_in": 2714.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f437",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1110696,
+    "bytes_out": 12666,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f438",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21983,
+    "bytes_out": 48718322,
+    "ratio_out_in": 2216.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f439",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2127040,
+    "bytes_out": 13270,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f440",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 15584,
+    "bytes_out": 48644250,
+    "ratio_out_in": 3121.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f441",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2745462,
+    "bytes_out": 16944,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f442",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 14170,
+    "bytes_out": 53112267,
+    "ratio_out_in": 3748.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f443",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3794610,
+    "bytes_out": 10998,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f444",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16118,
+    "bytes_out": 33087212,
+    "ratio_out_in": 2052.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f445",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1779553,
+    "bytes_out": 10893,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f446",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 17199,
+    "bytes_out": 53587045,
+    "ratio_out_in": 3115.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f447",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3705546,
+    "bytes_out": 12335,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f448",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 15449,
+    "bytes_out": 37229294,
+    "ratio_out_in": 2409.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f449",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1480299,
+    "bytes_out": 13718,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f450",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 14251,
+    "bytes_out": 34054147,
+    "ratio_out_in": 2389.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f451",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 4327868,
+    "bytes_out": 16459,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f452",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12713,
+    "bytes_out": 42916535,
+    "ratio_out_in": 3375.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f453",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 988732,
+    "bytes_out": 18817,
+    "ratio_out_in": 0.019,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f454",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17661,
+    "bytes_out": 35265699,
+    "ratio_out_in": 1996.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f455",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 906766,
+    "bytes_out": 20055,
+    "ratio_out_in": 0.022,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f456",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 19038,
+    "bytes_out": 35925826,
+    "ratio_out_in": 1887.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f457",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1684574,
+    "bytes_out": 18760,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f458",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21126,
+    "bytes_out": 50281539,
+    "ratio_out_in": 2380.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f459",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3030073,
+    "bytes_out": 17020,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f460",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 15436,
+    "bytes_out": 35587124,
+    "ratio_out_in": 2305.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f461",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1368150,
+    "bytes_out": 10588,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f462",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20699,
+    "bytes_out": 39457870,
+    "ratio_out_in": 1906.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f463",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1493519,
+    "bytes_out": 19488,
+    "ratio_out_in": 0.013,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f464",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 17991,
+    "bytes_out": 39958057,
+    "ratio_out_in": 2221.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f465",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2990394,
+    "bytes_out": 21867,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f466",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 18800,
+    "bytes_out": 35595582,
+    "ratio_out_in": 1893.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f467",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1067460,
+    "bytes_out": 17641,
+    "ratio_out_in": 0.017,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f468",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16606,
+    "bytes_out": 53868148,
+    "ratio_out_in": 3243.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f469",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4386876,
+    "bytes_out": 10639,
+    "ratio_out_in": 0.002,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f470",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21122,
+    "bytes_out": 45559667,
+    "ratio_out_in": 2157.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f471",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3909567,
+    "bytes_out": 17313,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f472",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21476,
+    "bytes_out": 45310510,
+    "ratio_out_in": 2109.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f473",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3501849,
+    "bytes_out": 10529,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f474",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 14006,
+    "bytes_out": 31345740,
+    "ratio_out_in": 2238.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f475",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3301956,
+    "bytes_out": 13428,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f476",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21197,
+    "bytes_out": 32030054,
+    "ratio_out_in": 1511.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f477",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4130533,
+    "bytes_out": 20645,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f478",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 15852,
+    "bytes_out": 37573366,
+    "ratio_out_in": 2370.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f479",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3971673,
+    "bytes_out": 19527,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f480",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 18745,
+    "bytes_out": 36563324,
+    "ratio_out_in": 1950.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f481",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1540849,
+    "bytes_out": 19781,
+    "ratio_out_in": 0.013,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f482",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17229,
+    "bytes_out": 39388441,
+    "ratio_out_in": 2286.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f483",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 4100559,
+    "bytes_out": 14057,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f484",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 15073,
+    "bytes_out": 37522485,
+    "ratio_out_in": 2489.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f485",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3540343,
+    "bytes_out": 16434,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f486",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21761,
+    "bytes_out": 42925401,
+    "ratio_out_in": 1972.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f487",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3323308,
+    "bytes_out": 9206,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f488",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 12827,
+    "bytes_out": 46961830,
+    "ratio_out_in": 3661.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f489",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1604754,
+    "bytes_out": 12035,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f490",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14430,
+    "bytes_out": 37295597,
+    "ratio_out_in": 2584.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f491",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 4172695,
+    "bytes_out": 19266,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f492",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12400,
+    "bytes_out": 48565804,
+    "ratio_out_in": 3916.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f493",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1039939,
+    "bytes_out": 20152,
+    "ratio_out_in": 0.019,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f494",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 15685,
+    "bytes_out": 31744396,
+    "ratio_out_in": 2023.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f495",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1508306,
+    "bytes_out": 12629,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f496",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 16806,
+    "bytes_out": 49741338,
+    "ratio_out_in": 2959.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f497",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 715936,
+    "bytes_out": 19775,
+    "ratio_out_in": 0.028,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f498",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20158,
+    "bytes_out": 53665836,
+    "ratio_out_in": 2662.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f499",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1982539,
+    "bytes_out": 13169,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f500",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 20236,
+    "bytes_out": 36023436,
+    "ratio_out_in": 1780.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f501",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3790109,
+    "bytes_out": 9465,
+    "ratio_out_in": 0.002,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f502",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 13946,
+    "bytes_out": 32542081,
+    "ratio_out_in": 2333.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f503",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4495471,
+    "bytes_out": 11736,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f504",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 20122,
+    "bytes_out": 48784394,
+    "ratio_out_in": 2424.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f505",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3166466,
+    "bytes_out": 16072,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f506",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 13279,
+    "bytes_out": 29672692,
+    "ratio_out_in": 2234.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f507",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1972082,
+    "bytes_out": 10826,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f508",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20243,
+    "bytes_out": 50113868,
+    "ratio_out_in": 2475.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f509",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2674506,
+    "bytes_out": 21537,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f510",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 16603,
+    "bytes_out": 37760278,
+    "ratio_out_in": 2274.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f511",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3315091,
+    "bytes_out": 14897,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f512",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12611,
+    "bytes_out": 42785868,
+    "ratio_out_in": 3392.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f513",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3093018,
+    "bytes_out": 18550,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f514",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 17827,
+    "bytes_out": 32809875,
+    "ratio_out_in": 1840.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f515",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1582916,
+    "bytes_out": 10396,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f516",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21264,
+    "bytes_out": 43552887,
+    "ratio_out_in": 2048.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f517",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2825388,
+    "bytes_out": 18441,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f518",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 13748,
+    "bytes_out": 42301850,
+    "ratio_out_in": 3076.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f519",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2202723,
+    "bytes_out": 9923,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f520",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20763,
+    "bytes_out": 29621232,
+    "ratio_out_in": 1426.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f521",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2262103,
+    "bytes_out": 13522,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f522",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 12341,
+    "bytes_out": 53213739,
+    "ratio_out_in": 4311.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f523",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2657777,
+    "bytes_out": 16169,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f524",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12968,
+    "bytes_out": 31930375,
+    "ratio_out_in": 2462.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f525",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4329311,
+    "bytes_out": 11071,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f526",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 13594,
+    "bytes_out": 41051422,
+    "ratio_out_in": 3019.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f527",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2123986,
+    "bytes_out": 16722,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f528",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 13509,
+    "bytes_out": 28822203,
+    "ratio_out_in": 2133.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f529",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 781151,
+    "bytes_out": 12532,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f530",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 18733,
+    "bytes_out": 53179281,
+    "ratio_out_in": 2838.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f531",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2163027,
+    "bytes_out": 16724,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f532",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15918,
+    "bytes_out": 47649020,
+    "ratio_out_in": 2993.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f533",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3396519,
+    "bytes_out": 12879,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f534",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16425,
+    "bytes_out": 43134011,
+    "ratio_out_in": 2626.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f535",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4126924,
+    "bytes_out": 10492,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f536",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16415,
+    "bytes_out": 40284352,
+    "ratio_out_in": 2454.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f537",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1012608,
+    "bytes_out": 15363,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f538",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12777,
+    "bytes_out": 33917575,
+    "ratio_out_in": 2654.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f539",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1429960,
+    "bytes_out": 18703,
+    "ratio_out_in": 0.013,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f540",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 20781,
+    "bytes_out": 33333029,
+    "ratio_out_in": 1604.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f541",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2407281,
+    "bytes_out": 12173,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f542",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 14197,
+    "bytes_out": 39079782,
+    "ratio_out_in": 2752.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f543",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1091627,
+    "bytes_out": 11283,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f544",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20540,
+    "bytes_out": 29049773,
+    "ratio_out_in": 1414.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f545",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4351107,
+    "bytes_out": 12368,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f546",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12863,
+    "bytes_out": 33175134,
+    "ratio_out_in": 2579.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f547",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1341247,
+    "bytes_out": 12808,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f548",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12403,
+    "bytes_out": 40177869,
+    "ratio_out_in": 3239.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f549",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2308905,
+    "bytes_out": 21817,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f550",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 16830,
+    "bytes_out": 46689610,
+    "ratio_out_in": 2774.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f551",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1431540,
+    "bytes_out": 20083,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f552",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14622,
+    "bytes_out": 33113914,
+    "ratio_out_in": 2264.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f553",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1369945,
+    "bytes_out": 14341,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f554",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18444,
+    "bytes_out": 39296644,
+    "ratio_out_in": 2130.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f555",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3520261,
+    "bytes_out": 13564,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f556",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 18161,
+    "bytes_out": 35467180,
+    "ratio_out_in": 1952.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f557",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 2514023,
+    "bytes_out": 18861,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f558",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 16864,
+    "bytes_out": 40434706,
+    "ratio_out_in": 2397.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f559",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 4472263,
+    "bytes_out": 18751,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f560",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 15380,
+    "bytes_out": 40914341,
+    "ratio_out_in": 2660.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f561",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1645004,
+    "bytes_out": 14816,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f562",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14597,
+    "bytes_out": 34845898,
+    "ratio_out_in": 2387.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f563",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1367763,
+    "bytes_out": 13188,
+    "ratio_out_in": 0.01,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f564",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 18949,
+    "bytes_out": 43163094,
+    "ratio_out_in": 2277.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f565",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3826249,
+    "bytes_out": 11059,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f566",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 18706,
+    "bytes_out": 51419594,
+    "ratio_out_in": 2748.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f567",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2335109,
+    "bytes_out": 10210,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f568",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 16982,
+    "bytes_out": 49609595,
+    "ratio_out_in": 2921.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f569",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3166419,
+    "bytes_out": 9194,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f570",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 17827,
+    "bytes_out": 53219657,
+    "ratio_out_in": 2985.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f571",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1396780,
+    "bytes_out": 21388,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f572",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 16820,
+    "bytes_out": 52295465,
+    "ratio_out_in": 3109.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f573",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3602810,
+    "bytes_out": 9708,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f574",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21787,
+    "bytes_out": 42320137,
+    "ratio_out_in": 1942.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f575",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1317905,
+    "bytes_out": 15000,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f576",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 21900,
+    "bytes_out": 43095968,
+    "ratio_out_in": 1967.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f577",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 920615,
+    "bytes_out": 15151,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f578",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15758,
+    "bytes_out": 44182851,
+    "ratio_out_in": 2803.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f579",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3289501,
+    "bytes_out": 19731,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f580",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12655,
+    "bytes_out": 51307045,
+    "ratio_out_in": 4054.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f581",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 1492909,
+    "bytes_out": 13752,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f582",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19959,
+    "bytes_out": 35452931,
+    "ratio_out_in": 1776.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f583",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1155195,
+    "bytes_out": 16015,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f584",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 14012,
+    "bytes_out": 39676179,
+    "ratio_out_in": 2831.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f585",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 4247840,
+    "bytes_out": 14623,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f586",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21275,
+    "bytes_out": 48232722,
+    "ratio_out_in": 2267.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f587",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1476487,
+    "bytes_out": 10506,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f588",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 17209,
+    "bytes_out": 37393872,
+    "ratio_out_in": 2172.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f589",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1769831,
+    "bytes_out": 9079,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f590",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 17690,
+    "bytes_out": 28768873,
+    "ratio_out_in": 1626.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f591",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3809360,
+    "bytes_out": 13278,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f592",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 19623,
+    "bytes_out": 48503959,
+    "ratio_out_in": 2471.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f593",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3651731,
+    "bytes_out": 17596,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f594",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 20979,
+    "bytes_out": 28897588,
+    "ratio_out_in": 1377.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f595",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 4074723,
+    "bytes_out": 17384,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f596",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 17544,
+    "bytes_out": 45693322,
+    "ratio_out_in": 2604.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f597",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3838811,
+    "bytes_out": 15049,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f598",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 20235,
+    "bytes_out": 49639003,
+    "ratio_out_in": 2453.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f599",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2491633,
+    "bytes_out": 13273,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f600",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16307,
+    "bytes_out": 49261691,
+    "ratio_out_in": 3020.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f601",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2580445,
+    "bytes_out": 15112,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f602",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19355,
+    "bytes_out": 47275683,
+    "ratio_out_in": 2442.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f603",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3937778,
+    "bytes_out": 21471,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f604",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 16258,
+    "bytes_out": 32462263,
+    "ratio_out_in": 1996.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f605",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3777154,
+    "bytes_out": 13791,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f606",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21517,
+    "bytes_out": 49742490,
+    "ratio_out_in": 2311.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f607",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3766949,
+    "bytes_out": 21593,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f608",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15489,
+    "bytes_out": 40904773,
+    "ratio_out_in": 2640.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f609",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1402865,
+    "bytes_out": 16822,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f610",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18612,
+    "bytes_out": 45284941,
+    "ratio_out_in": 2433.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f611",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 3154472,
+    "bytes_out": 17105,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f612",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 17370,
+    "bytes_out": 30071341,
+    "ratio_out_in": 1731.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f613",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4432217,
+    "bytes_out": 16423,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f614",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 19063,
+    "bytes_out": 44146683,
+    "ratio_out_in": 2315.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f615",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 3900093,
+    "bytes_out": 14200,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f616",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12929,
+    "bytes_out": 53480287,
+    "ratio_out_in": 4136.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f617",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1148758,
+    "bytes_out": 14464,
+    "ratio_out_in": 0.013,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f618",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 12093,
+    "bytes_out": 46231251,
+    "ratio_out_in": 3823.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f619",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2541634,
+    "bytes_out": 17559,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f620",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16285,
+    "bytes_out": 40520249,
+    "ratio_out_in": 2488.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f621",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1150972,
+    "bytes_out": 18870,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f622",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 14600,
+    "bytes_out": 37509443,
+    "ratio_out_in": 2569.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f623",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2723064,
+    "bytes_out": 10163,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f624",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21722,
+    "bytes_out": 33177538,
+    "ratio_out_in": 1527.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f625",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2110140,
+    "bytes_out": 11802,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f626",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 19194,
+    "bytes_out": 31540034,
+    "ratio_out_in": 1643.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f627",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4378435,
+    "bytes_out": 9138,
+    "ratio_out_in": 0.002,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f628",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 18031,
+    "bytes_out": 48549927,
+    "ratio_out_in": 2692.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f629",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 2317539,
+    "bytes_out": 12121,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f630",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 13208,
+    "bytes_out": 53715227,
+    "ratio_out_in": 4066.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f631",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 4253659,
+    "bytes_out": 16960,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f632",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 19412,
+    "bytes_out": 29865224,
+    "ratio_out_in": 1538.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f633",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1555259,
+    "bytes_out": 11967,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f634",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 21219,
+    "bytes_out": 52103090,
+    "ratio_out_in": 2455.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f635",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2278192,
+    "bytes_out": 10250,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f636",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 12329,
+    "bytes_out": 30184441,
+    "ratio_out_in": 2448.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f637",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2007632,
+    "bytes_out": 15674,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f638",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 13775,
+    "bytes_out": 48863413,
+    "ratio_out_in": 3547.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f639",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1361502,
+    "bytes_out": 20633,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f640",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 16734,
+    "bytes_out": 30381728,
+    "ratio_out_in": 1815.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f641",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 940513,
+    "bytes_out": 12462,
+    "ratio_out_in": 0.013,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f642",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 20078,
+    "bytes_out": 39009460,
+    "ratio_out_in": 1942.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f643",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 759596,
+    "bytes_out": 15350,
+    "ratio_out_in": 0.02,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f644",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 15639,
+    "bytes_out": 33157103,
+    "ratio_out_in": 2120.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f645",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 3761864,
+    "bytes_out": 21648,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f646",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 21689,
+    "bytes_out": 36931129,
+    "ratio_out_in": 1702.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f647",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 997148,
+    "bytes_out": 10497,
+    "ratio_out_in": 0.011,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f648",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 13271,
+    "bytes_out": 34361861,
+    "ratio_out_in": 2589.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f649",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3847493,
+    "bytes_out": 13070,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f650",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12458,
+    "bytes_out": 48773844,
+    "ratio_out_in": 3915.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f651",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 1125056,
+    "bytes_out": 17667,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f652",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18751,
+    "bytes_out": 43397145,
+    "ratio_out_in": 2314.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f653",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 939385,
+    "bytes_out": 18042,
+    "ratio_out_in": 0.019,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f654",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 19800,
+    "bytes_out": 51422236,
+    "ratio_out_in": 2597.1,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f655",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2695646,
+    "bytes_out": 12541,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f656",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 18818,
+    "bytes_out": 47163535,
+    "ratio_out_in": 2506.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f657",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 2576663,
+    "bytes_out": 14653,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f658",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 14775,
+    "bytes_out": 44453026,
+    "ratio_out_in": 3008.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f659",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 2435518,
+    "bytes_out": 9775,
+    "ratio_out_in": 0.004,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f660",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12706,
+    "bytes_out": 28544389,
+    "ratio_out_in": 2246.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f661",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 3372887,
+    "bytes_out": 18982,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f662",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 19711,
+    "bytes_out": 37799789,
+    "ratio_out_in": 1917.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f663",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 706792,
+    "bytes_out": 18738,
+    "ratio_out_in": 0.027,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f664",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12901,
+    "bytes_out": 30113563,
+    "ratio_out_in": 2334.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f665",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1603505,
+    "bytes_out": 11167,
+    "ratio_out_in": 0.007,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f666",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 18524,
+    "bytes_out": 40793541,
+    "ratio_out_in": 2202.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f667",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "142.250.80.14",
+    "bytes_in": 4334570,
+    "bytes_out": 10168,
+    "ratio_out_in": 0.002,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f668",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 12142,
+    "bytes_out": 40681142,
+    "ratio_out_in": 3350.4,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f669",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 713559,
+    "bytes_out": 17628,
+    "ratio_out_in": 0.025,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f670",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 15992,
+    "bytes_out": 43225905,
+    "ratio_out_in": 2703.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f671",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 727150,
+    "bytes_out": 17185,
+    "ratio_out_in": 0.024,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f672",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12338,
+    "bytes_out": 31363350,
+    "ratio_out_in": 2542.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f673",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1327746,
+    "bytes_out": 21292,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f674",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 14169,
+    "bytes_out": 52323661,
+    "ratio_out_in": 3692.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f675",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 1409986,
+    "bytes_out": 20505,
+    "ratio_out_in": 0.015,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f676",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 21168,
+    "bytes_out": 35320820,
+    "ratio_out_in": 1668.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f677",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 875479,
+    "bytes_out": 14220,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f678",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 12585,
+    "bytes_out": 32090106,
+    "ratio_out_in": 2549.9,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f679",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 3893415,
+    "bytes_out": 17946,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f680",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 18206,
+    "bytes_out": 47001613,
+    "ratio_out_in": 2581.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f681",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 4012269,
+    "bytes_out": 13400,
+    "ratio_out_in": 0.003,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f682",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 13833,
+    "bytes_out": 28174187,
+    "ratio_out_in": 2036.7,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f683",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "151.101.1.69",
+    "bytes_in": 2642809,
+    "bytes_out": 16149,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f684",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 20489,
+    "bytes_out": 44000586,
+    "ratio_out_in": 2147.5,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f685",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 866371,
+    "bytes_out": 10800,
+    "ratio_out_in": 0.012,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f686",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 16995,
+    "bytes_out": 30662768,
+    "ratio_out_in": 1804.2,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f687",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "203.0.113.9",
+    "bytes_in": 4019716,
+    "bytes_out": 21729,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f688",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 15758,
+    "bytes_out": 34022118,
+    "ratio_out_in": 2159.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f689",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 1328388,
+    "bytes_out": 21184,
+    "ratio_out_in": 0.016,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f690",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 17944,
+    "bytes_out": 31760570,
+    "ratio_out_in": 1770.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f691",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 2298592,
+    "bytes_out": 13215,
+    "ratio_out_in": 0.006,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f692",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.10",
+    "bytes_in": 21667,
+    "bytes_out": 39051370,
+    "ratio_out_in": 1802.3,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f693",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "104.16.85.20",
+    "bytes_in": 3347118,
+    "bytes_out": 15326,
+    "ratio_out_in": 0.005,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f694",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.9",
+    "bytes_in": 19088,
+    "bytes_out": 42967524,
+    "ratio_out_in": 2251.0,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f695",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "198.51.100.2",
+    "bytes_in": 1155282,
+    "bytes_out": 10030,
+    "ratio_out_in": 0.009,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f696",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.12",
+    "bytes_in": 12323,
+    "bytes_out": 33232265,
+    "ratio_out_in": 2696.8,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f697",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 1761937,
+    "bytes_out": 13938,
+    "ratio_out_in": 0.008,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f698",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "185.220.101.88",
+    "bytes_in": 18397,
+    "bytes_out": 38608082,
+    "ratio_out_in": 2098.6,
+    "is_attack": true
+  },
+  {
+    "flow_id": "f699",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.217.0.14",
+    "bytes_in": 851135,
+    "bytes_out": 11573,
+    "ratio_out_in": 0.014,
+    "is_attack": false
+  },
+  {
+    "flow_id": "f700",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "45.77.12.11",
+    "bytes_in": 14567,
+    "bytes_out": 52025070,
+    "ratio_out_in": 3571.4,
+    "is_attack": true
+  }
+]

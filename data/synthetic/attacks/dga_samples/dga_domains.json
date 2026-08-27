@@ -1,0 +1,7978 @@
+[
+  {
+    "domain": "oceanhunting.net",
+    "family": "matsnu",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "paypal.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "hwwmwsadjlfjpvnb.be",
+    "family": "locky",
+    "entropy": 3.79,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "ydkzofwhorozypqf.net",
+    "family": "cryptolocker",
+    "entropy": 3.78,
+    "vowel_ratio": 0.21,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.linode.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "500f8b4b93c1.link",
+    "family": "mirai",
+    "entropy": 3.85,
+    "vowel_ratio": 0.12,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.dropbox.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "twitch.tv",
+    "family": "benign",
+    "entropy": 2.64,
+    "vowel_ratio": 0.12,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "www.quad9.net",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.3,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "supabase.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "api.stackoverflow.com",
+    "family": "benign",
+    "entropy": 3.88,
+    "vowel_ratio": 0.37,
+    "length": 21,
+    "is_dga": false
+  },
+  {
+    "domain": "e57fdec2532e.link",
+    "family": "mirai",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "f29bd927989d.top",
+    "family": "mirai",
+    "entropy": 3.25,
+    "vowel_ratio": 0.14,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "api.redhat.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ktelulczmxsra.org",
+    "family": "cryptolocker",
+    "entropy": 3.85,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "securedriver11.com",
+    "family": "suppobox",
+    "entropy": 3.42,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.yahoo.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.atlassian.com",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "winterflying.org",
+    "family": "matsnu",
+    "entropy": 3.5,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "api.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.53,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "thunderflying.biz",
+    "family": "matsnu",
+    "entropy": 3.85,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.who.int",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.22,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.twitch.tv",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "www.vultr.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "matrixagent12.org",
+    "family": "suppobox",
+    "entropy": 3.62,
+    "vowel_ratio": 0.36,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mfkfivqxypafsj.org",
+    "family": "cryptolocker",
+    "entropy": 3.91,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.digitalocean.com",
+    "family": "benign",
+    "entropy": 3.55,
+    "vowel_ratio": 0.5,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.espn.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "qxqcocimfvsgrbou.in",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.oracle.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.office.com",
+    "family": "benign",
+    "entropy": 3.11,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "www.github.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "akamai.net",
+    "family": "benign",
+    "entropy": 2.85,
+    "vowel_ratio": 0.56,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.oracle.com",
+    "family": "benign",
+    "entropy": 3.11,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "vemhllianyzsczww.be",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "pmkqagpabcmvhiam.info",
+    "family": "locky",
+    "entropy": 3.75,
+    "vowel_ratio": 0.3,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "api.live.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "api.forbes.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "nqpofybolqlkfwrob.ru",
+    "family": "cryptolocker",
+    "entropy": 3.58,
+    "vowel_ratio": 0.21,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.youtube.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "networkshield70.com",
+    "family": "suppobox",
+    "entropy": 4.04,
+    "vowel_ratio": 0.31,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mountainstriking.info",
+    "family": "matsnu",
+    "entropy": 3.44,
+    "vowel_ratio": 0.4,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.cdnjs.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.24,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.stripe.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "wiqhlmklvhxrytgi.in",
+    "family": "locky",
+    "entropy": 3.79,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "b603f7cbb9ea.top",
+    "family": "mirai",
+    "entropy": 3.7,
+    "vowel_ratio": 0.3,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "vectortunnel61.net",
+    "family": "suppobox",
+    "entropy": 3.38,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.quad9.net",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.45,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "dogeburozi.info",
+    "family": "necurs",
+    "entropy": 3.46,
+    "vowel_ratio": 0.5,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.weather.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "wssqvdeusentezyv.su",
+    "family": "locky",
+    "entropy": 3.37,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "pexadamadime.net",
+    "family": "necurs",
+    "entropy": 3.16,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "oceangliding.info",
+    "family": "matsnu",
+    "entropy": 3.29,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.cloud.google.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.47,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "ivypcvwtgjwto.info",
+    "family": "cryptolocker",
+    "entropy": 3.61,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.cloud.google.com",
+    "family": "benign",
+    "entropy": 3.15,
+    "vowel_ratio": 0.35,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "1f5fa0893b59.top",
+    "family": "mirai",
+    "entropy": 3.62,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.ibm.com",
+    "family": "benign",
+    "entropy": 2.86,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "779ea5b8487a.cc",
+    "family": "mirai",
+    "entropy": 3.19,
+    "vowel_ratio": 0.5,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "haluxida.top",
+    "family": "necurs",
+    "entropy": 3.42,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "utwlefkjibqtybuxsl.com",
+    "family": "cryptolocker",
+    "entropy": 4.1,
+    "vowel_ratio": 0.24,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "froststriking.biz",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "www.archlinux.org",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.engadget.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "forestblazing.com",
+    "family": "matsnu",
+    "entropy": 3.97,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bing.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.29,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.apple.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.who.int",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "forestblazing.com",
+    "family": "matsnu",
+    "entropy": 3.97,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "riverrising.biz",
+    "family": "matsnu",
+    "entropy": 3.06,
+    "vowel_ratio": 0.36,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.azure.microsoft.com",
+    "family": "benign",
+    "entropy": 3.66,
+    "vowel_ratio": 0.43,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.ebay.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "api.aliexpress.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.44,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "www.archive.org",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "targethost79.com",
+    "family": "suppobox",
+    "entropy": 3.58,
+    "vowel_ratio": 0.31,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.pinterest.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.trello.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "2a08f320909f.xyz",
+    "family": "mirai",
+    "entropy": 3.33,
+    "vowel_ratio": 0.17,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "globalagent8.org",
+    "family": "suppobox",
+    "entropy": 3.33,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "api.supabase.io",
+    "family": "benign",
+    "entropy": 3.06,
+    "vowel_ratio": 0.62,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.espn.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "shadowfalling.com",
+    "family": "matsnu",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.atlassian.com",
+    "family": "benign",
+    "entropy": 3.17,
+    "vowel_ratio": 0.44,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "www.booking.com",
+    "family": "benign",
+    "entropy": 3.14,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "rsfihclerspunuvsl.net",
+    "family": "cryptolocker",
+    "entropy": 3.69,
+    "vowel_ratio": 0.25,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "rorihurasavace.biz",
+    "family": "necurs",
+    "entropy": 3.53,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.apple.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.45,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "rezunmlmfqjyxo.com",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "targetaccess27.com",
+    "family": "suppobox",
+    "entropy": 3.46,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.reddit.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.render.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "google.com",
+    "family": "benign",
+    "entropy": 2.65,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.fastapi.tiangolo.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.45,
+    "length": 25,
+    "is_dga": false
+  },
+  {
+    "domain": "eaglehunting.info",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.openai.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.vmware.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "falconbreaking.org",
+    "family": "matsnu",
+    "entropy": 3.61,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.aws.amazon.com",
+    "family": "benign",
+    "entropy": 2.97,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "miqanicixo.com",
+    "family": "necurs",
+    "entropy": 3.04,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "moduleupdate84.org",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.google.com",
+    "family": "benign",
+    "entropy": 2.84,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.apache.org",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "fb85f7e77b06.top",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.25,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "oceanhunting.org",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.cnn.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "rnodmrjwmjlbvjtf.in",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.asana.com",
+    "family": "benign",
+    "entropy": 2.93,
+    "vowel_ratio": 0.55,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "www.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.21,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.debian.org",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ginigacaqe.net",
+    "family": "necurs",
+    "entropy": 3.09,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "signal.org",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.telegram.org",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.expedia.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "thunderroaring.com",
+    "family": "matsnu",
+    "entropy": 3.68,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "2e2401da1b0c.online",
+    "family": "mirai",
+    "entropy": 3.72,
+    "vowel_ratio": 0.45,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "streampacket97.com",
+    "family": "suppobox",
+    "entropy": 3.61,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.imdb.com",
+    "family": "benign",
+    "entropy": 2.86,
+    "vowel_ratio": 0.2,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.archive.org",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.adobe.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.55,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.nih.gov",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.telegram.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.render.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "tqpbhrdocqoinsxl.pl",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "gjijqfotwpidsh.biz",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "ahqrsrypudaxofipw.net",
+    "family": "cryptolocker",
+    "entropy": 4.11,
+    "vowel_ratio": 0.3,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "dqmkqijdohbovrbd.ru",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.render.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "xsfkrwxcrcteti.info",
+    "family": "cryptolocker",
+    "entropy": 3.62,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "tripadvisor.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.36,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "archlinux.org",
+    "family": "benign",
+    "entropy": 3.55,
+    "vowel_ratio": 0.33,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.supabase.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "kdatkxozsbybud.net",
+    "family": "cryptolocker",
+    "entropy": 3.73,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "reuters.com",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.4,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "visojihaqina.biz",
+    "family": "necurs",
+    "entropy": 3.38,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.quad9.net",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.45,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.ubuntu.com",
+    "family": "benign",
+    "entropy": 2.99,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "instagram.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.33,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "ebay.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.43,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.jira.atlassian.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.45,
+    "length": 23,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.jira.atlassian.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.37,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.live.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.signal.org",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "xgvclqxytojubkx.ru",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "nuselovipudaho.top",
+    "family": "necurs",
+    "entropy": 3.68,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "xjzrgcevnrfkpsgs.be",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "globaltunnel61.net",
+    "family": "suppobox",
+    "entropy": 3.42,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.quad9.net",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.3,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "telegram.org",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "tigerbreaking.biz",
+    "family": "matsnu",
+    "entropy": 3.34,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.trello.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "qpvsclpfeuobadrx.pl",
+    "family": "locky",
+    "entropy": 3.89,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "e5f0d0b150b6.xyz",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.12,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "tigerbreaking.info",
+    "family": "matsnu",
+    "entropy": 3.46,
+    "vowel_ratio": 0.41,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.tripadvisor.com",
+    "family": "benign",
+    "entropy": 3.62,
+    "vowel_ratio": 0.29,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "api.atlassian.com",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "90f6a06cbc2f.xyz",
+    "family": "mirai",
+    "entropy": 3.5,
+    "vowel_ratio": 0.11,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "lecepusigocu.cc",
+    "family": "necurs",
+    "entropy": 3.11,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "wafipizajido.net",
+    "family": "necurs",
+    "entropy": 3.58,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "api.apple.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.45,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.espn.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.cdnjs.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.86,
+    "vowel_ratio": 0.33,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "upehmzmbejyrwb.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.82,
+    "vowel_ratio": 0.28,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.apple.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "fmciyetzvlrpuspx.info",
+    "family": "locky",
+    "entropy": 4.11,
+    "vowel_ratio": 0.25,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "www.ibm.com",
+    "family": "benign",
+    "entropy": 2.66,
+    "vowel_ratio": 0.22,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "54c3d0eaee06.cc",
+    "family": "mirai",
+    "entropy": 3.14,
+    "vowel_ratio": 0.5,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.docker.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.discord.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "luduradglibgfotkx.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.8,
+    "vowel_ratio": 0.33,
+    "length": 23,
+    "is_dga": true
+  },
+  {
+    "domain": "f27e3266825d.cc",
+    "family": "mirai",
+    "entropy": 3.32,
+    "vowel_ratio": 0.2,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "shadowfalling.biz",
+    "family": "matsnu",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "yhktgpidgdutwr.org",
+    "family": "cryptolocker",
+    "entropy": 3.57,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.office.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "0e82ed13a5cb.link",
+    "family": "mirai",
+    "entropy": 3.97,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "19b9c92d42ae.link",
+    "family": "mirai",
+    "entropy": 3.69,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "suxocofofin.biz",
+    "family": "necurs",
+    "entropy": 3.32,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "bceb123db0bb.online",
+    "family": "mirai",
+    "entropy": 3.43,
+    "vowel_ratio": 0.29,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.figma.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "www.cnet.com",
+    "family": "benign",
+    "entropy": 2.86,
+    "vowel_ratio": 0.2,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "www.target.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.atlassian.com",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.microsoft.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.lyft.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.1,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.cnn.com",
+    "family": "benign",
+    "entropy": 2.41,
+    "vowel_ratio": 0.11,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "www.paramountplus.com",
+    "family": "benign",
+    "entropy": 3.59,
+    "vowel_ratio": 0.32,
+    "length": 21,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.twitch.tv",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "vectorcrypto57.net",
+    "family": "suppobox",
+    "entropy": 3.46,
+    "vowel_ratio": 0.27,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.25,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.youtube.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "fastapi.tiangolo.com",
+    "family": "benign",
+    "entropy": 3.55,
+    "vowel_ratio": 0.44,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "accesssocket51.org",
+    "family": "suppobox",
+    "entropy": 3.42,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "vectorportal8.org",
+    "family": "suppobox",
+    "entropy": 3.41,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mountainstriking.net",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.37,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.zoom.us",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.quad9.net",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.45,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "tigerdrifting.info",
+    "family": "matsnu",
+    "entropy": 3.17,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.alibaba.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.target.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "92a17ab9044b.xyz",
+    "family": "mirai",
+    "entropy": 3.5,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "www.asana.com",
+    "family": "benign",
+    "entropy": 2.82,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "whatsapp.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.27,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "summerbreaking.org",
+    "family": "matsnu",
+    "entropy": 3.57,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.cnet.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.linode.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.reddit.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.engadget.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "beaconglobal94.org",
+    "family": "suppobox",
+    "entropy": 3.46,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.asana.com",
+    "family": "benign",
+    "entropy": 2.82,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "gafazoqezajoca.info",
+    "family": "necurs",
+    "entropy": 3.37,
+    "vowel_ratio": 0.5,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.twitter.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "vuzmfotukhghggag.pl",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.oracle.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "eyexbgwpybcyhtyj.su",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "vtvncayjfodpkneg.pw",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "systemsecure94.net",
+    "family": "suppobox",
+    "entropy": 3.35,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.openai.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.54,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "vknwbkjkjubqv.com",
+    "family": "cryptolocker",
+    "entropy": 3.45,
+    "vowel_ratio": 0.12,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "5da244ee3159.link",
+    "family": "mirai",
+    "entropy": 3.73,
+    "vowel_ratio": 0.5,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "thundergliding.com",
+    "family": "matsnu",
+    "entropy": 3.73,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "modulecrypto41.org",
+    "family": "suppobox",
+    "entropy": 3.79,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.theverge.com",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.netflix.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "dorowowi.cc",
+    "family": "necurs",
+    "entropy": 2.66,
+    "vowel_ratio": 0.4,
+    "length": 11,
+    "is_dga": true
+  },
+  {
+    "domain": "render.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "youtube.com",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.5,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "vopepiji.net",
+    "family": "necurs",
+    "entropy": 3.08,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "api.weather.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.redhat.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.weather.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.apple.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.nytimes.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "8a150f17074c.cc",
+    "family": "mirai",
+    "entropy": 3.19,
+    "vowel_ratio": 0.2,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "genaxufokix.net",
+    "family": "necurs",
+    "entropy": 3.51,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "forestdrifting.info",
+    "family": "matsnu",
+    "entropy": 3.33,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "proxyservice86.net",
+    "family": "suppobox",
+    "entropy": 3.79,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.github.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "yoguyezokemiw.com",
+    "family": "necurs",
+    "entropy": 3.45,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.hulu.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.espn.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.wired.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "eaglefalling.info",
+    "family": "matsnu",
+    "entropy": 3.1,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "imdb.com",
+    "family": "benign",
+    "entropy": 2.75,
+    "vowel_ratio": 0.29,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "adwfuhwfuxozqngzip.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.97,
+    "vowel_ratio": 0.32,
+    "length": 24,
+    "is_dga": true
+  },
+  {
+    "domain": "booking.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.4,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.bloomberg.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.trello.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.atlassian.com",
+    "family": "benign",
+    "entropy": 3.17,
+    "vowel_ratio": 0.44,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "www.google.com",
+    "family": "benign",
+    "entropy": 2.84,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "pantherbreaking.net",
+    "family": "matsnu",
+    "entropy": 3.43,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "beaconstream82.net",
+    "family": "suppobox",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "fakapivotas.com",
+    "family": "necurs",
+    "entropy": 3.46,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "www.doordash.com",
+    "family": "benign",
+    "entropy": 3.16,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "www.walmart.com",
+    "family": "benign",
+    "entropy": 2.97,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.netlify.com",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.cnbc.com",
+    "family": "benign",
+    "entropy": 2.58,
+    "vowel_ratio": 0.1,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.google.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.python.org",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "728b8bc365a4.cc",
+    "family": "mirai",
+    "entropy": 3.32,
+    "vowel_ratio": 0.17,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.slack.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "discord.com",
+    "family": "benign",
+    "entropy": 2.91,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "www.notion.so",
+    "family": "benign",
+    "entropy": 2.66,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "canuliqigob.com",
+    "family": "necurs",
+    "entropy": 3.51,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "targetmatrix8.org",
+    "family": "suppobox",
+    "entropy": 3.29,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "biwatitomakila.top",
+    "family": "necurs",
+    "entropy": 3.27,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.amazon.com",
+    "family": "benign",
+    "entropy": 2.9,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "matrixsocket83.com",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.wsj.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "d1a832710bae.top",
+    "family": "mirai",
+    "entropy": 3.75,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "nukqrutydxirgezf.be",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.quad9.net",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.3,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mountainfalling.biz",
+    "family": "matsnu",
+    "entropy": 3.54,
+    "vowel_ratio": 0.39,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "ioggbudluzpkcljp.pw",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.reddit.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.vultr.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.discord.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "21a4f6b55cf6.top",
+    "family": "mirai",
+    "entropy": 3.62,
+    "vowel_ratio": 0.25,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "1c03bd30da1e.club",
+    "family": "mirai",
+    "entropy": 3.38,
+    "vowel_ratio": 0.3,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "xgzastznwttxmpmg.ru",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.zoom.us",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "thunderstriking.info",
+    "family": "matsnu",
+    "entropy": 3.65,
+    "vowel_ratio": 0.32,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "jgxdehurdwyvedtq.ru",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.25,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "klshkzsfgvglgpar.ru",
+    "family": "cryptolocker",
+    "entropy": 3.58,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "globalserver71.net",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.azure.microsoft.com",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.35,
+    "length": 23,
+    "is_dga": false
+  },
+  {
+    "domain": "oceanstriking.org",
+    "family": "matsnu",
+    "entropy": 3.5,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "odyxggdnuinjwymi.pw",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "oracle.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "www.live.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.hbomax.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "www.cloudflare-dns.com",
+    "family": "benign",
+    "entropy": 3.79,
+    "vowel_ratio": 0.26,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.wsj.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.signal.org",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "unggzcuxmfcefenv.pl",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.dropbox.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "952f16e95e05.link",
+    "family": "mirai",
+    "entropy": 3.57,
+    "vowel_ratio": 0.43,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "tnszfuckwlspjxzu.be",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.gitlab.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.supabase.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "api.yahoo.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.55,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.archive.org",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "streamservice8.info",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.wired.com",
+    "family": "benign",
+    "entropy": 2.93,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "reddit.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "www.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.68,
+    "vowel_ratio": 0.25,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "api.reuters.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "netflix.com",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.openai.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.bloomberg.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "oceanshining.net",
+    "family": "matsnu",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "instagram.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.33,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.vercel.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "meyumuducij.info",
+    "family": "necurs",
+    "entropy": 3.45,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "nlqwfhsqhtzmsojd.su",
+    "family": "locky",
+    "entropy": 3.79,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "rahawezoqudite.info",
+    "family": "necurs",
+    "entropy": 3.83,
+    "vowel_ratio": 0.5,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "lrpskymezzfcrwro.ru",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.techcrunch.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.19,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "powuzafadiq.top",
+    "family": "necurs",
+    "entropy": 3.51,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "api.doordash.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "ynqbsxwrmfcxkjq.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.92,
+    "vowel_ratio": 0.11,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "azure.microsoft.com",
+    "family": "benign",
+    "entropy": 3.58,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.twitch.tv",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "nkbqzvtlxsxusdca.ru",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.zdnet.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "048fac1c4de9.cc",
+    "family": "mirai",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "moqukuqoyacib.org",
+    "family": "necurs",
+    "entropy": 3.57,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "networksocket97.info",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.35,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.cdnjs.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.24,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "pantherhunting.com",
+    "family": "matsnu",
+    "entropy": 3.68,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "vectorcontrol99.com",
+    "family": "suppobox",
+    "entropy": 3.26,
+    "vowel_ratio": 0.31,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "3a399efc85a1.online",
+    "family": "mirai",
+    "entropy": 3.72,
+    "vowel_ratio": 0.55,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.google.com",
+    "family": "benign",
+    "entropy": 2.84,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.arstechnica.com",
+    "family": "benign",
+    "entropy": 3.54,
+    "vowel_ratio": 0.29,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "summerrunning.com",
+    "family": "matsnu",
+    "entropy": 3.29,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "accessagent58.info",
+    "family": "suppobox",
+    "entropy": 3.61,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.reuters.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.imdb.com",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "eagledrifting.info",
+    "family": "matsnu",
+    "entropy": 3.46,
+    "vowel_ratio": 0.41,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "systempacket71.org",
+    "family": "suppobox",
+    "entropy": 3.84,
+    "vowel_ratio": 0.27,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.openai.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "c0c6ba7c88f4.top",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.22,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "nih.gov",
+    "family": "benign",
+    "entropy": 2.81,
+    "vowel_ratio": 0.33,
+    "length": 7,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.bestbuy.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "31b9a0ffb217.link",
+    "family": "mirai",
+    "entropy": 3.73,
+    "vowel_ratio": 0.22,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.28,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "api.ebay.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.canva.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "920088924edf.cc",
+    "family": "mirai",
+    "entropy": 3.24,
+    "vowel_ratio": 0.2,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "centos.org",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.apache.org",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "boquzefezawaca.com",
+    "family": "necurs",
+    "entropy": 3.46,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "quxepixevepi.top",
+    "family": "necurs",
+    "entropy": 3.16,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bsjcholavuxopmrun.info",
+    "family": "cryptolocker",
+    "entropy": 4.06,
+    "vowel_ratio": 0.33,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.airbnb.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ojabafcmhsqmnuqo.su",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "nmlidaporcfvwbtl.pl",
+    "family": "locky",
+    "entropy": 3.89,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.facebook.com",
+    "family": "benign",
+    "entropy": 3.16,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mtilmxgjuxon.net",
+    "family": "cryptolocker",
+    "entropy": 3.5,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "hapiqepoh.biz",
+    "family": "necurs",
+    "entropy": 3.24,
+    "vowel_ratio": 0.42,
+    "length": 13,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.aliexpress.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "globaldirect48.net",
+    "family": "suppobox",
+    "entropy": 3.84,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "packethost77.net",
+    "family": "suppobox",
+    "entropy": 3.45,
+    "vowel_ratio": 0.31,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "tambrwspgqlfapgu.in",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "regoluroje.net",
+    "family": "necurs",
+    "entropy": 3.18,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.theguardian.com",
+    "family": "benign",
+    "entropy": 3.72,
+    "vowel_ratio": 0.35,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "www.render.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.cdc.gov",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.33,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "www.bestbuy.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.azure.microsoft.com",
+    "family": "benign",
+    "entropy": 3.73,
+    "vowel_ratio": 0.35,
+    "length": 23,
+    "is_dga": false
+  },
+  {
+    "domain": "www.oracle.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.jira.atlassian.com",
+    "family": "benign",
+    "entropy": 3.48,
+    "vowel_ratio": 0.37,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "fypsfwvkzmda.biz",
+    "family": "cryptolocker",
+    "entropy": 3.75,
+    "vowel_ratio": 0.13,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "hyhikihgjdmrklgl.su",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "akamai.net",
+    "family": "benign",
+    "entropy": 2.85,
+    "vowel_ratio": 0.56,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "bbc.com",
+    "family": "benign",
+    "entropy": 2.24,
+    "vowel_ratio": 0.17,
+    "length": 7,
+    "is_dga": false
+  },
+  {
+    "domain": "www.aws.amazon.com",
+    "family": "benign",
+    "entropy": 2.97,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "cd7e6031f62e.link",
+    "family": "mirai",
+    "entropy": 3.85,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.bitbucket.org",
+    "family": "benign",
+    "entropy": 3.62,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.digitalocean.com",
+    "family": "benign",
+    "entropy": 3.58,
+    "vowel_ratio": 0.39,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "jofcpgxivirmpmd.info",
+    "family": "cryptolocker",
+    "entropy": 3.68,
+    "vowel_ratio": 0.26,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.wired.com",
+    "family": "benign",
+    "entropy": 2.93,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "spotify.com",
+    "family": "benign",
+    "entropy": 3.28,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "spotify.com",
+    "family": "benign",
+    "entropy": 3.28,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "www.linode.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ehaqrpbmiyxstwzg.su",
+    "family": "locky",
+    "entropy": 4.14,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.ibm.com",
+    "family": "benign",
+    "entropy": 2.86,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "b7560243edd8.cc",
+    "family": "mirai",
+    "entropy": 3.64,
+    "vowel_ratio": 0.17,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "www.discord.com",
+    "family": "benign",
+    "entropy": 3.06,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "pegopaqejenug.com",
+    "family": "necurs",
+    "entropy": 3.45,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "falconroaring.org",
+    "family": "matsnu",
+    "entropy": 3.18,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "thunderhunting.biz",
+    "family": "matsnu",
+    "entropy": 3.46,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "lohigijariqem.info",
+    "family": "necurs",
+    "entropy": 3.61,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "stormflying.org",
+    "family": "matsnu",
+    "entropy": 3.51,
+    "vowel_ratio": 0.21,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "fapovaje.net",
+    "family": "necurs",
+    "entropy": 3.25,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "wordpress.org",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.25,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "hbomax.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "networkupdate10.net",
+    "family": "suppobox",
+    "entropy": 3.64,
+    "vowel_ratio": 0.38,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mhotolsjehafcrshs.ru",
+    "family": "cryptolocker",
+    "entropy": 3.65,
+    "vowel_ratio": 0.26,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "daemonsource99.net",
+    "family": "suppobox",
+    "entropy": 3.57,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "matrixupdate88.com",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bmlcpgtovwvgrwvmzq.ru",
+    "family": "cryptolocker",
+    "entropy": 3.78,
+    "vowel_ratio": 0.1,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "serviceglobal72.info",
+    "family": "suppobox",
+    "entropy": 3.92,
+    "vowel_ratio": 0.41,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.supabase.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "stormroaring.com",
+    "family": "matsnu",
+    "entropy": 3.28,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "packetmodule29.org",
+    "family": "suppobox",
+    "entropy": 3.95,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "linkedin.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "rigycyyyeocpcjrm.in",
+    "family": "locky",
+    "entropy": 3.37,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "itabmxifodij.biz",
+    "family": "cryptolocker",
+    "entropy": 3.38,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "gbolmpwdgxydorqxqz.com",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.14,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.figma.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "ratmtdmsbwgffdpq.pw",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bing.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.29,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "3309cb875d55.top",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.17,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "fdonguxwifuoebme.be",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.44,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "cimayiluhokase.cc",
+    "family": "necurs",
+    "entropy": 3.57,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "wepewociniwiqo.cc",
+    "family": "necurs",
+    "entropy": 3.01,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "5ab8804ce156.online",
+    "family": "mirai",
+    "entropy": 3.83,
+    "vowel_ratio": 0.5,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "kbyfubwlmfqhadmrar.info",
+    "family": "cryptolocker",
+    "entropy": 3.97,
+    "vowel_ratio": 0.23,
+    "length": 23,
+    "is_dga": true
+  },
+  {
+    "domain": "proxytarget37.info",
+    "family": "suppobox",
+    "entropy": 3.84,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.gitlab.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "nwtapqlwfqnkd.info",
+    "family": "cryptolocker",
+    "entropy": 3.57,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.zdnet.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "frostblazing.org",
+    "family": "matsnu",
+    "entropy": 3.62,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.amazon.com",
+    "family": "benign",
+    "entropy": 3.01,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.apple.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "dkbwqrabduqiualj.ru",
+    "family": "locky",
+    "entropy": 3.47,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "telegram.org",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.apache.org",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "csyprglvsnszywzl.in",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "yohulilabaduj.net",
+    "family": "necurs",
+    "entropy": 3.73,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "zutoyakuho.biz",
+    "family": "necurs",
+    "entropy": 3.38,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "hoststream10.org",
+    "family": "suppobox",
+    "entropy": 3.5,
+    "vowel_ratio": 0.31,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "www.cloudflare-dns.com",
+    "family": "benign",
+    "entropy": 3.79,
+    "vowel_ratio": 0.26,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "onvgixmcgvduwrln.info",
+    "family": "locky",
+    "entropy": 3.78,
+    "vowel_ratio": 0.25,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.techcrunch.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.19,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "www.engadget.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.trello.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "zehejukafaz.org",
+    "family": "necurs",
+    "entropy": 3.51,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "citaxamen.info",
+    "family": "necurs",
+    "entropy": 3.38,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "doordash.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.office.com",
+    "family": "benign",
+    "entropy": 3.11,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "streamsecure38.net",
+    "family": "suppobox",
+    "entropy": 3.39,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "api.expedia.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.54,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "vatmdanapingr.biz",
+    "family": "cryptolocker",
+    "entropy": 3.57,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "dejwfgzmjqnap.com",
+    "family": "cryptolocker",
+    "entropy": 3.85,
+    "vowel_ratio": 0.19,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "pejutwrgtivy.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.84,
+    "vowel_ratio": 0.31,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "qlcpihitixexuf.ru",
+    "family": "cryptolocker",
+    "entropy": 3.57,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "7d3a4375e3ed.cc",
+    "family": "mirai",
+    "entropy": 3.06,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "c1ed6df6d7b5.cc",
+    "family": "mirai",
+    "entropy": 3.14,
+    "vowel_ratio": 0.11,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.archlinux.org",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.38,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "gdvwhnpwtqwzzqnc.be",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.pinterest.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.38,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "summerrunning.net",
+    "family": "matsnu",
+    "entropy": 3.15,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.figma.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.45,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "doordash.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "937a89a830ba.cc",
+    "family": "mirai",
+    "entropy": 3.06,
+    "vowel_ratio": 0.5,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "medium.com",
+    "family": "benign",
+    "entropy": 2.85,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "peqijogeya.com",
+    "family": "necurs",
+    "entropy": 3.52,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.techcrunch.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.29,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "api.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.73,
+    "vowel_ratio": 0.38,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.supabase.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "facebook.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "xazspatcrkryrq.com",
+    "family": "cryptolocker",
+    "entropy": 3.68,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "beaconbeacon29.com",
+    "family": "suppobox",
+    "entropy": 3.2,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bc67a2c649d2.link",
+    "family": "mirai",
+    "entropy": 3.73,
+    "vowel_ratio": 0.22,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.bing.com",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.2,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "nlhzphuakrlhwpgy.info",
+    "family": "locky",
+    "entropy": 3.88,
+    "vowel_ratio": 0.2,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "kvqrwtktyrivgza.org",
+    "family": "cryptolocker",
+    "entropy": 3.58,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "modulesource89.com",
+    "family": "suppobox",
+    "entropy": 3.46,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "901f2f1363e6.top",
+    "family": "mirai",
+    "entropy": 3.5,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.doordash.com",
+    "family": "benign",
+    "entropy": 3.16,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "wzcpkzgxsjsbs.ru",
+    "family": "cryptolocker",
+    "entropy": 3.58,
+    "vowel_ratio": 0.07,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "c12dd31e3fb6.online",
+    "family": "mirai",
+    "entropy": 3.72,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.21,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.imdb.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "vuzehefumek.com",
+    "family": "necurs",
+    "entropy": 3.32,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "www.trello.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.bitbucket.org",
+    "family": "benign",
+    "entropy": 3.62,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.paramountplus.com",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "90748951a261.xyz",
+    "family": "mirai",
+    "entropy": 3.75,
+    "vowel_ratio": 0.25,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "qrojytutstglytef.ru",
+    "family": "cryptolocker",
+    "entropy": 3.51,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.ebay.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "56c34e26efe7.top",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cisco.com",
+    "family": "benign",
+    "entropy": 2.42,
+    "vowel_ratio": 0.38,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "noweyani.com",
+    "family": "necurs",
+    "entropy": 3.25,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.atlassian.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "zizipune.cc",
+    "family": "necurs",
+    "entropy": 2.91,
+    "vowel_ratio": 0.4,
+    "length": 11,
+    "is_dga": true
+  },
+  {
+    "domain": "api.redhat.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.canva.com",
+    "family": "benign",
+    "entropy": 2.87,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "api.notion.so",
+    "family": "benign",
+    "entropy": 2.87,
+    "vowel_ratio": 0.55,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "cloudflare.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.38,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.uber.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "telegram.org",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "pknozurczsnmzwpiha.net",
+    "family": "cryptolocker",
+    "entropy": 3.94,
+    "vowel_ratio": 0.24,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "docker.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "google.com",
+    "family": "benign",
+    "entropy": 2.65,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "www.walmart.com",
+    "family": "benign",
+    "entropy": 2.97,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "engadget.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "packetglobal10.org",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "pantherbreaking.biz",
+    "family": "matsnu",
+    "entropy": 3.62,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "winterfalling.net",
+    "family": "matsnu",
+    "entropy": 3.34,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "forestgliding.com",
+    "family": "matsnu",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.jsdelivr.net",
+    "family": "benign",
+    "entropy": 3.62,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "daemonsocket61.net",
+    "family": "suppobox",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "4d9374153831.online",
+    "family": "mirai",
+    "entropy": 3.68,
+    "vowel_ratio": 0.43,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "firebase.google.com",
+    "family": "benign",
+    "entropy": 3.54,
+    "vowel_ratio": 0.47,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.booking.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.engadget.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "netlify.com",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.akamai.net",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.58,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.forbes.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ef93c415315a.link",
+    "family": "mirai",
+    "entropy": 3.73,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mhubahkdydex.net",
+    "family": "cryptolocker",
+    "entropy": 3.62,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "5f90e898a9bf.club",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.47,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "uber.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.43,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.oracle.com",
+    "family": "benign",
+    "entropy": 3.11,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mholebehkzkrkdkxon.org",
+    "family": "cryptolocker",
+    "entropy": 3.61,
+    "vowel_ratio": 0.24,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "bestbuy.com",
+    "family": "benign",
+    "entropy": 3.28,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "kziwbqimjsudsmjw.pw",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "tigerrunning.info",
+    "family": "matsnu",
+    "entropy": 3.1,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "networkagent2.org",
+    "family": "suppobox",
+    "entropy": 3.38,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cuyudanewas.org",
+    "family": "necurs",
+    "entropy": 3.64,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "lmnezuzydcdwlqrgrq.org",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.14,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "144abf42c5c7.xyz",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.12,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "wdongqwowxomeuax.info",
+    "family": "locky",
+    "entropy": 3.59,
+    "vowel_ratio": 0.4,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "wsexjfrsxwfyfsey.su",
+    "family": "locky",
+    "entropy": 3.16,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.nytimes.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "www.quad9.net",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.3,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "www.alibaba.com",
+    "family": "benign",
+    "entropy": 3.01,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "jsdelivr.net",
+    "family": "benign",
+    "entropy": 3.42,
+    "vowel_ratio": 0.27,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "lyft.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.14,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "www.reddit.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.72,
+    "vowel_ratio": 0.35,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.engadget.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.mozilla.org",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "ajnqzrilvmrespjg.ru",
+    "family": "locky",
+    "entropy": 3.89,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "beyajaxaj.cc",
+    "family": "necurs",
+    "entropy": 2.86,
+    "vowel_ratio": 0.36,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "www.booking.com",
+    "family": "benign",
+    "entropy": 3.14,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "alihodytsdczcxy.biz",
+    "family": "cryptolocker",
+    "entropy": 3.72,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "diejclrelinlwosw.ru",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.instagram.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "canva.com",
+    "family": "benign",
+    "entropy": 2.73,
+    "vowel_ratio": 0.38,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "api.zoom.us",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.56,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "331aa31cb6ef.xyz",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.instacart.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.telegram.org",
+    "family": "benign",
+    "entropy": 3.26,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.linkedin.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.adobe.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "zorajmjgxktutixe.org",
+    "family": "cryptolocker",
+    "entropy": 3.72,
+    "vowel_ratio": 0.32,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "tfkydmryuvsnpnmp.info",
+    "family": "locky",
+    "entropy": 3.78,
+    "vowel_ratio": 0.15,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "www.cdc.gov",
+    "family": "benign",
+    "entropy": 2.66,
+    "vowel_ratio": 0.11,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "quora.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.5,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.31,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "servicematrix30.com",
+    "family": "suppobox",
+    "entropy": 3.72,
+    "vowel_ratio": 0.38,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.weather.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.akamai.net",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.akamai.net",
+    "family": "benign",
+    "entropy": 2.99,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.cdnjs.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.74,
+    "vowel_ratio": 0.24,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "servicedaemon19.com",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.44,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "qiqawudezepa.net",
+    "family": "necurs",
+    "entropy": 3.45,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "www.bitbucket.org",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "api.cdc.gov",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.33,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "0bb730e92083.club",
+    "family": "mirai",
+    "entropy": 3.41,
+    "vowel_ratio": 0.29,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.paramountplus.com",
+    "family": "benign",
+    "entropy": 3.56,
+    "vowel_ratio": 0.42,
+    "length": 21,
+    "is_dga": false
+  },
+  {
+    "domain": "tlyydyjsyhqhvddi.be",
+    "family": "locky",
+    "entropy": 3.47,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.linkedin.com",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.amazon.com",
+    "family": "benign",
+    "entropy": 2.9,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "vsjwzihwvynyp.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.83,
+    "vowel_ratio": 0.18,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "openai.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.56,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "falconroaring.com",
+    "family": "matsnu",
+    "entropy": 3.34,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "www.expedia.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "zupiriwidogo.cc",
+    "family": "necurs",
+    "entropy": 3.32,
+    "vowel_ratio": 0.43,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "beaconmodule93.net",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "utezopirorgj.com",
+    "family": "cryptolocker",
+    "entropy": 3.58,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.cnn.com",
+    "family": "benign",
+    "entropy": 2.41,
+    "vowel_ratio": 0.11,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "www.twitter.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.centos.org",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.engadget.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.stripe.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "wordpress.org",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.25,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.slack.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "hostpacket75.org",
+    "family": "suppobox",
+    "entropy": 3.75,
+    "vowel_ratio": 0.31,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "api.salesforce.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.44,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "frostflying.net",
+    "family": "matsnu",
+    "entropy": 3.51,
+    "vowel_ratio": 0.21,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.python.org",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.17,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.jsdelivr.net",
+    "family": "benign",
+    "entropy": 3.62,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "slack.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.25,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "accessdirect36.info",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.38,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "live.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.43,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "ffpzplbxttbwhrql.in",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "accessserver39.org",
+    "family": "suppobox",
+    "entropy": 3.27,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.doordash.com",
+    "family": "benign",
+    "entropy": 3.16,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "eagledrifting.org",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "stormstriking.com",
+    "family": "matsnu",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.vercel.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "figma.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.38,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "riverrunning.net",
+    "family": "matsnu",
+    "entropy": 2.95,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "proxybeacon67.com",
+    "family": "suppobox",
+    "entropy": 3.69,
+    "vowel_ratio": 0.36,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "www.mozilla.org",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "globalsocket57.info",
+    "family": "suppobox",
+    "entropy": 3.89,
+    "vowel_ratio": 0.38,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "who.int",
+    "family": "benign",
+    "entropy": 2.81,
+    "vowel_ratio": 0.33,
+    "length": 7,
+    "is_dga": false
+  },
+  {
+    "domain": "beaconaccess51.info",
+    "family": "suppobox",
+    "entropy": 3.47,
+    "vowel_ratio": 0.44,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "gitlab.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "www.uber.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "amazon.com",
+    "family": "benign",
+    "entropy": 2.72,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "github.io",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.5,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.supabase.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.47,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.reddit.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "notion.so",
+    "family": "benign",
+    "entropy": 2.42,
+    "vowel_ratio": 0.5,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "systemvector18.info",
+    "family": "suppobox",
+    "entropy": 3.83,
+    "vowel_ratio": 0.31,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.booking.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "wsj.com",
+    "family": "benign",
+    "entropy": 2.81,
+    "vowel_ratio": 0.17,
+    "length": 7,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.adobe.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "modulepacket40.com",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "zinqnevadibib.net",
+    "family": "cryptolocker",
+    "entropy": 3.29,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "www.bestbuy.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.twitter.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "etxpqzpiylncmutq.in",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "cyfqohkudeznafae.pl",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.33,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "0dcf8de053a9.club",
+    "family": "mirai",
+    "entropy": 3.73,
+    "vowel_ratio": 0.3,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mdtqmpejbnhtilup.ru",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ckctzxfcxabmggth.pl",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "sufbtbynrnsbqvwr.be",
+    "family": "locky",
+    "entropy": 3.51,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "5ec52cd542ae.link",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "www.telegram.org",
+    "family": "benign",
+    "entropy": 3.2,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "lfgxdqsntuzlhvpl.info",
+    "family": "locky",
+    "entropy": 3.98,
+    "vowel_ratio": 0.15,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "47e10b78dbe2.club",
+    "family": "mirai",
+    "entropy": 3.57,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "lkfapexcjsjcryjana.com",
+    "family": "cryptolocker",
+    "entropy": 3.81,
+    "vowel_ratio": 0.24,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "www.lyft.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.1,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "zriutkojwzfugxed.info",
+    "family": "locky",
+    "entropy": 3.92,
+    "vowel_ratio": 0.35,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "api.gitlab.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.digitalocean.com",
+    "family": "benign",
+    "entropy": 3.48,
+    "vowel_ratio": 0.39,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "hostaccess49.com",
+    "family": "suppobox",
+    "entropy": 3.28,
+    "vowel_ratio": 0.31,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "discord.com",
+    "family": "benign",
+    "entropy": 2.91,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "winterbreaking.org",
+    "family": "matsnu",
+    "entropy": 3.46,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.twitch.tv",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.theverge.com",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "xepchafclajs.info",
+    "family": "cryptolocker",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "matrixsource3.org",
+    "family": "suppobox",
+    "entropy": 3.69,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "systemstream72.net",
+    "family": "suppobox",
+    "entropy": 3.27,
+    "vowel_ratio": 0.27,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "eagleshining.net",
+    "family": "matsnu",
+    "entropy": 3.16,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.wordpress.org",
+    "family": "benign",
+    "entropy": 3.34,
+    "vowel_ratio": 0.2,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "www.twitter.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "proxystream98.org",
+    "family": "suppobox",
+    "entropy": 3.69,
+    "vowel_ratio": 0.29,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "2745e64a1846.link",
+    "family": "mirai",
+    "entropy": 3.69,
+    "vowel_ratio": 0.5,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "forestshining.info",
+    "family": "matsnu",
+    "entropy": 3.31,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.shopify.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "jexifeyidepu.com",
+    "family": "necurs",
+    "entropy": 3.58,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "live.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.43,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "api.cnet.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.ibm.com",
+    "family": "benign",
+    "entropy": 2.86,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "falconshining.net",
+    "family": "matsnu",
+    "entropy": 3.5,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.booking.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "systemsystem80.org",
+    "family": "suppobox",
+    "entropy": 3.28,
+    "vowel_ratio": 0.2,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdc.gov",
+    "family": "benign",
+    "entropy": 2.52,
+    "vowel_ratio": 0.17,
+    "length": 7,
+    "is_dga": false
+  },
+  {
+    "domain": "jduqirvkjrnmslbw.pl",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.hbomax.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.redhat.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "klitudylmlghmb.ru",
+    "family": "cryptolocker",
+    "entropy": 3.57,
+    "vowel_ratio": 0.19,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "887ce1cf5f28.xyz",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.12,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "stormbreaking.com",
+    "family": "matsnu",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.forbes.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.vultr.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "espn.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.29,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "api.paypal.com",
+    "family": "benign",
+    "entropy": 2.99,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "wired.com",
+    "family": "benign",
+    "entropy": 3.17,
+    "vowel_ratio": 0.38,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.cnbc.com",
+    "family": "benign",
+    "entropy": 2.58,
+    "vowel_ratio": 0.1,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "forestrunning.info",
+    "family": "matsnu",
+    "entropy": 3.28,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.netlify.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "hawazipojewaru.org",
+    "family": "necurs",
+    "entropy": 3.57,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.discord.com",
+    "family": "benign",
+    "entropy": 3.06,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "radocogi.com",
+    "family": "necurs",
+    "entropy": 3.02,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "balqdybapkdgrqdk.com",
+    "family": "cryptolocker",
+    "entropy": 3.68,
+    "vowel_ratio": 0.16,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "stormrunning.com",
+    "family": "matsnu",
+    "entropy": 3.33,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "api.nih.gov",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.44,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.46,
+    "vowel_ratio": 0.31,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.disneyplus.com",
+    "family": "benign",
+    "entropy": 3.72,
+    "vowel_ratio": 0.35,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "mnkzmtufwpide.biz",
+    "family": "cryptolocker",
+    "entropy": 3.73,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "74b2a5f63a44.club",
+    "family": "mirai",
+    "entropy": 3.57,
+    "vowel_ratio": 0.38,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cnbc.com",
+    "family": "benign",
+    "entropy": 2.41,
+    "vowel_ratio": 0.14,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.debian.org",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "api.target.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "whatsapp.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.27,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "api.accuweather.com",
+    "family": "benign",
+    "entropy": 3.54,
+    "vowel_ratio": 0.47,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "targetproxy69.info",
+    "family": "suppobox",
+    "entropy": 3.84,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.slack.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "vqxobwduzwfa.ru",
+    "family": "cryptolocker",
+    "entropy": 3.64,
+    "vowel_ratio": 0.29,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.stackoverflow.com",
+    "family": "benign",
+    "entropy": 3.84,
+    "vowel_ratio": 0.26,
+    "length": 21,
+    "is_dga": false
+  },
+  {
+    "domain": "www.trello.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "digitalocean.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "pantherstriking.org",
+    "family": "matsnu",
+    "entropy": 3.58,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "fgdnxcakndflarus.pw",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "rixusibesobacu.biz",
+    "family": "necurs",
+    "entropy": 3.42,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.lyft.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.reddit.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "idlnspopnqbvykvk.pw",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.11,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "03c55732e357.club",
+    "family": "mirai",
+    "entropy": 3.29,
+    "vowel_ratio": 0.33,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "gqfocbenoxxnjzot.su",
+    "family": "locky",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "whatsapp.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.27,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "www.vmware.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "nytimes.com",
+    "family": "benign",
+    "entropy": 3.28,
+    "vowel_ratio": 0.3,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.stripe.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "fiwopuxica.com",
+    "family": "necurs",
+    "entropy": 3.38,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.trello.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.firebase.google.com",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.48,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.discord.com",
+    "family": "benign",
+    "entropy": 3.01,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.nih.gov",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.22,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "salesforce.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.38,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "3c03f4db0994.xyz",
+    "family": "mirai",
+    "entropy": 3.5,
+    "vowel_ratio": 0.0,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "256bb16f22fc.online",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.27,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "tojecudu.com",
+    "family": "necurs",
+    "entropy": 3.08,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.signal.org",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mountainflying.biz",
+    "family": "matsnu",
+    "entropy": 3.64,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "czjswglrdflphzzq.pw",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.0,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "canva.com",
+    "family": "benign",
+    "entropy": 2.73,
+    "vowel_ratio": 0.38,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.kernel.org",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "www.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.21,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.telegram.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.29,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "api.medium.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.zoom.us",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.56,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "winterdrifting.net",
+    "family": "matsnu",
+    "entropy": 3.16,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bmmabtcmxoazaldb.info",
+    "family": "locky",
+    "entropy": 3.62,
+    "vowel_ratio": 0.3,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "www.supabase.io",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "imdb.com",
+    "family": "benign",
+    "entropy": 2.75,
+    "vowel_ratio": 0.29,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "api.who.int",
+    "family": "benign",
+    "entropy": 3.1,
+    "vowel_ratio": 0.44,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.vercel.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "packetbeacon61.org",
+    "family": "suppobox",
+    "entropy": 3.73,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "riverrunning.org",
+    "family": "matsnu",
+    "entropy": 2.95,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.google.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.reddit.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.42,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "jmlcrapgxedex.org",
+    "family": "cryptolocker",
+    "entropy": 3.62,
+    "vowel_ratio": 0.25,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "serviceproxy77.org",
+    "family": "suppobox",
+    "entropy": 3.57,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.doordash.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "yjsfipidkxitytufg.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.8,
+    "vowel_ratio": 0.29,
+    "length": 23,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.nytimes.com",
+    "family": "benign",
+    "entropy": 3.37,
+    "vowel_ratio": 0.23,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "shadowhunting.org",
+    "family": "matsnu",
+    "entropy": 3.62,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.hulu.com",
+    "family": "benign",
+    "entropy": 3.08,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "proxyhost85.com",
+    "family": "suppobox",
+    "entropy": 3.59,
+    "vowel_ratio": 0.25,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "tigergliding.biz",
+    "family": "matsnu",
+    "entropy": 3.2,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.uber.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.twitter.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.debian.org",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "tujamavudebogo.net",
+    "family": "necurs",
+    "entropy": 3.61,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "1c303e3dc4aa.xyz",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "hbomax.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "shadowdrifting.biz",
+    "family": "matsnu",
+    "entropy": 3.79,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.booking.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "www.redhat.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "daemoncloud96.net",
+    "family": "suppobox",
+    "entropy": 3.62,
+    "vowel_ratio": 0.43,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "signal.org",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "api.hulu.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.5,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "wrmrknuhyfgjipmlqd.biz",
+    "family": "cryptolocker",
+    "entropy": 4.19,
+    "vowel_ratio": 0.14,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "yegiqohobado.net",
+    "family": "necurs",
+    "entropy": 3.58,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mountainroaring.com",
+    "family": "matsnu",
+    "entropy": 3.33,
+    "vowel_ratio": 0.44,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "07f4eb0e0d1c.online",
+    "family": "mirai",
+    "entropy": 3.64,
+    "vowel_ratio": 0.42,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "signal.org",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.redhat.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "slack.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.25,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "slyfmlilwfklspejyx.com",
+    "family": "cryptolocker",
+    "entropy": 3.73,
+    "vowel_ratio": 0.14,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.trello.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.target.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "digitalocean.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "farilmdejitkjen.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.92,
+    "vowel_ratio": 0.37,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "api.weather.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "xjtrkkzydlhknlvp.pl",
+    "family": "locky",
+    "entropy": 3.64,
+    "vowel_ratio": 0.0,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "securetunnel49.net",
+    "family": "suppobox",
+    "entropy": 3.24,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.bbc.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.engadget.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "wjkrirsbunmhqful.net",
+    "family": "cryptolocker",
+    "entropy": 4.02,
+    "vowel_ratio": 0.21,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "a4eff18fd66d.xyz",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.2,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "ryjatadyfclovaz.biz",
+    "family": "cryptolocker",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.archive.org",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "api.cloud.google.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.47,
+    "length": 20,
+    "is_dga": false
+  },
+  {
+    "domain": "www.apache.org",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "nusedomeni.com",
+    "family": "necurs",
+    "entropy": 3.24,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.archlinux.org",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.38,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "summerrising.net",
+    "family": "matsnu",
+    "entropy": 3.25,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.booking.com",
+    "family": "benign",
+    "entropy": 3.33,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "gofitoliwava.net",
+    "family": "necurs",
+    "entropy": 3.5,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.render.com",
+    "family": "benign",
+    "entropy": 2.95,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.netflix.com",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "streamproxy11.org",
+    "family": "suppobox",
+    "entropy": 3.57,
+    "vowel_ratio": 0.29,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "ozijyfoxirmvc.info",
+    "family": "cryptolocker",
+    "entropy": 3.53,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.booking.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.31,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "riverstriking.com",
+    "family": "matsnu",
+    "entropy": 3.53,
+    "vowel_ratio": 0.31,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "5089dbf408c0.online",
+    "family": "mirai",
+    "entropy": 3.79,
+    "vowel_ratio": 0.3,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.medium.com",
+    "family": "benign",
+    "entropy": 2.99,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.engadget.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "mbudglidkvwjeh.org",
+    "family": "cryptolocker",
+    "entropy": 3.95,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.heroku.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "qakevili.top",
+    "family": "necurs",
+    "entropy": 3.42,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.youtube.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "api.apple.com",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.45,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "stvgwkkecxheoxor.pw",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "wovofoseziriw.org",
+    "family": "necurs",
+    "entropy": 3.26,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.alibaba.com",
+    "family": "benign",
+    "entropy": 2.88,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "dffaf27a1f72.club",
+    "family": "mirai",
+    "entropy": 3.26,
+    "vowel_ratio": 0.27,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "docker.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.33,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "twjghoncfqdure.co.uk",
+    "family": "cryptolocker",
+    "entropy": 3.92,
+    "vowel_ratio": 0.28,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "www.amazon.com",
+    "family": "benign",
+    "entropy": 2.9,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.hbomax.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.aliexpress.com",
+    "family": "benign",
+    "entropy": 3.73,
+    "vowel_ratio": 0.31,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.reuters.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "daemonclient80.org",
+    "family": "suppobox",
+    "entropy": 3.84,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "fulofocoxogos.cc",
+    "family": "necurs",
+    "entropy": 2.85,
+    "vowel_ratio": 0.4,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "ezclovsronupydqbe.info",
+    "family": "cryptolocker",
+    "entropy": 4.06,
+    "vowel_ratio": 0.33,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "c4bccdd66681.club",
+    "family": "mirai",
+    "entropy": 3.1,
+    "vowel_ratio": 0.1,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "rulakise.com",
+    "family": "necurs",
+    "entropy": 3.58,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "google.com",
+    "family": "benign",
+    "entropy": 2.65,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.yahoo.com",
+    "family": "benign",
+    "entropy": 3.04,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.alibaba.com",
+    "family": "benign",
+    "entropy": 3.19,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.techcrunch.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.31,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbph.com",
+    "family": "banjori",
+    "entropy": 3.42,
+    "vowel_ratio": 0.18,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.apple.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "hofuyasok.net",
+    "family": "necurs",
+    "entropy": 3.55,
+    "vowel_ratio": 0.42,
+    "length": 13,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.bbc.com",
+    "family": "benign",
+    "entropy": 2.66,
+    "vowel_ratio": 0.11,
+    "length": 11,
+    "is_dga": false
+  },
+  {
+    "domain": "api.firebase.google.com",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.5,
+    "length": 23,
+    "is_dga": false
+  },
+  {
+    "domain": "api.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.44,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "www.expedia.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "yzjegyphtdbfjggh.pw",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "f927a9edf773.online",
+    "family": "mirai",
+    "entropy": 3.58,
+    "vowel_ratio": 0.45,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "tigerfalling.org",
+    "family": "matsnu",
+    "entropy": 3.33,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "6ed51ca63f72.cc",
+    "family": "mirai",
+    "entropy": 3.46,
+    "vowel_ratio": 0.29,
+    "length": 15,
+    "is_dga": true
+  },
+  {
+    "domain": "api.cnbc.com",
+    "family": "benign",
+    "entropy": 3.02,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "hostglobal76.info",
+    "family": "suppobox",
+    "entropy": 3.69,
+    "vowel_ratio": 0.36,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "fitatovic.net",
+    "family": "necurs",
+    "entropy": 3.18,
+    "vowel_ratio": 0.42,
+    "length": 13,
+    "is_dga": true
+  },
+  {
+    "domain": "hegitaruma.com",
+    "family": "necurs",
+    "entropy": 3.52,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "securecloud24.com",
+    "family": "suppobox",
+    "entropy": 3.45,
+    "vowel_ratio": 0.43,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.lyft.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.27,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "pinterest.com",
+    "family": "benign",
+    "entropy": 3.39,
+    "vowel_ratio": 0.33,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.jira.atlassian.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.37,
+    "length": 22,
+    "is_dga": false
+  },
+  {
+    "domain": "raqaxosugikex.biz",
+    "family": "necurs",
+    "entropy": 3.73,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "techcrunch.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.23,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "packetstream58.net",
+    "family": "suppobox",
+    "entropy": 3.53,
+    "vowel_ratio": 0.33,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "www.whatsapp.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.21,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "vultr.com",
+    "family": "benign",
+    "entropy": 3.17,
+    "vowel_ratio": 0.25,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "www.github.io",
+    "family": "benign",
+    "entropy": 3.03,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "jnjwcbbregocxaww.su",
+    "family": "locky",
+    "entropy": 3.68,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "qdipylgnqvmrwdyhc.co.uk",
+    "family": "cryptolocker",
+    "entropy": 4.09,
+    "vowel_ratio": 0.14,
+    "length": 23,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.ubuntu.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.aliexpress.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "cdn.zdnet.com",
+    "family": "benign",
+    "entropy": 3.09,
+    "vowel_ratio": 0.18,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "fopuxadoyiyum.info",
+    "family": "necurs",
+    "entropy": 3.46,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bffhoauogepcdisr.info",
+    "family": "locky",
+    "entropy": 3.84,
+    "vowel_ratio": 0.4,
+    "length": 21,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.shopify.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.vultr.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "tigerflying.info",
+    "family": "matsnu",
+    "entropy": 3.33,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.debian.org",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "tkdotpgwbtqhboqh.su",
+    "family": "locky",
+    "entropy": 3.58,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "5c585590b9d5.club",
+    "family": "mirai",
+    "entropy": 3.05,
+    "vowel_ratio": 0.14,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "qzglwpwpyvulgjknuz.com",
+    "family": "cryptolocker",
+    "entropy": 3.91,
+    "vowel_ratio": 0.14,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.weather.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "sgvyvkhbyeunetqs.in",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.centos.org",
+    "family": "benign",
+    "entropy": 3.64,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.nytimes.com",
+    "family": "benign",
+    "entropy": 3.45,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.aws.amazon.com",
+    "family": "benign",
+    "entropy": 3.22,
+    "vowel_ratio": 0.44,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.net",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "wvwpktedefgzinshst.info",
+    "family": "cryptolocker",
+    "entropy": 3.91,
+    "vowel_ratio": 0.23,
+    "length": 23,
+    "is_dga": true
+  },
+  {
+    "domain": "mountainrunning.com",
+    "family": "matsnu",
+    "entropy": 3.22,
+    "vowel_ratio": 0.39,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "tripadvisor.com",
+    "family": "benign",
+    "entropy": 3.51,
+    "vowel_ratio": 0.36,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "thunderfalling.biz",
+    "family": "matsnu",
+    "entropy": 3.84,
+    "vowel_ratio": 0.29,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cloudflare.com",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.38,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "api.google.com",
+    "family": "benign",
+    "entropy": 3.18,
+    "vowel_ratio": 0.5,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "ajstkxwlubmhyn.biz",
+    "family": "cryptolocker",
+    "entropy": 4.06,
+    "vowel_ratio": 0.18,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "ibahovspkdyvclw.biz",
+    "family": "cryptolocker",
+    "entropy": 3.93,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "jzzovfturjxatwuc.be",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "api.arstechnica.com",
+    "family": "benign",
+    "entropy": 3.54,
+    "vowel_ratio": 0.41,
+    "length": 19,
+    "is_dga": false
+  },
+  {
+    "domain": "oracle.com",
+    "family": "benign",
+    "entropy": 2.92,
+    "vowel_ratio": 0.44,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.azure.microsoft.com",
+    "family": "benign",
+    "entropy": 3.66,
+    "vowel_ratio": 0.43,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.reuters.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.43,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "daemonportal94.com",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "09f44b1f120c.xyz",
+    "family": "mirai",
+    "entropy": 3.5,
+    "vowel_ratio": 0.0,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "mlfuksgnfzkavseo.in",
+    "family": "locky",
+    "entropy": 3.83,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.techcrunch.com",
+    "family": "benign",
+    "entropy": 3.24,
+    "vowel_ratio": 0.19,
+    "length": 18,
+    "is_dga": false
+  },
+  {
+    "domain": "seyotumuwe.biz",
+    "family": "necurs",
+    "entropy": 3.52,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "www.firebase.google.com",
+    "family": "benign",
+    "entropy": 3.61,
+    "vowel_ratio": 0.4,
+    "length": 23,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.cdc.gov",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.3,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "gosicowovafuc.com",
+    "family": "necurs",
+    "entropy": 3.34,
+    "vowel_ratio": 0.44,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "api.vultr.com",
+    "family": "benign",
+    "entropy": 3.55,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.office.com",
+    "family": "benign",
+    "entropy": 3.11,
+    "vowel_ratio": 0.46,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "teyatecex.info",
+    "family": "necurs",
+    "entropy": 3.32,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "lyft.com",
+    "family": "benign",
+    "entropy": 3.0,
+    "vowel_ratio": 0.14,
+    "length": 8,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.google.com",
+    "family": "benign",
+    "entropy": 2.84,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "hcpwbwtkjidebslqpa.org",
+    "family": "cryptolocker",
+    "entropy": 4.19,
+    "vowel_ratio": 0.19,
+    "length": 22,
+    "is_dga": true
+  },
+  {
+    "domain": "efaf53bc98bc.top",
+    "family": "mirai",
+    "entropy": 3.62,
+    "vowel_ratio": 0.27,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.info",
+    "family": "banjori",
+    "entropy": 3.79,
+    "vowel_ratio": 0.28,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "summergliding.info",
+    "family": "matsnu",
+    "entropy": 3.57,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "469d333bd28b.online",
+    "family": "mirai",
+    "entropy": 3.68,
+    "vowel_ratio": 0.3,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "wusozeliya.com",
+    "family": "necurs",
+    "entropy": 3.66,
+    "vowel_ratio": 0.46,
+    "length": 14,
+    "is_dga": true
+  },
+  {
+    "domain": "bahynucobjlvdkjw.pl",
+    "family": "locky",
+    "entropy": 3.93,
+    "vowel_ratio": 0.17,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "www.github.com",
+    "family": "benign",
+    "entropy": 3.32,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "www.cdnjs.cloudflare.com",
+    "family": "benign",
+    "entropy": 3.74,
+    "vowel_ratio": 0.24,
+    "length": 24,
+    "is_dga": false
+  },
+  {
+    "domain": "mountainflying.org",
+    "family": "matsnu",
+    "entropy": 3.57,
+    "vowel_ratio": 0.35,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "secureportal70.org",
+    "family": "suppobox",
+    "entropy": 3.68,
+    "vowel_ratio": 0.4,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.asana.com",
+    "family": "benign",
+    "entropy": 2.87,
+    "vowel_ratio": 0.36,
+    "length": 13,
+    "is_dga": false
+  },
+  {
+    "domain": "qepajakad.com",
+    "family": "necurs",
+    "entropy": 3.33,
+    "vowel_ratio": 0.42,
+    "length": 13,
+    "is_dga": true
+  },
+  {
+    "domain": "api.python.org",
+    "family": "benign",
+    "entropy": 3.38,
+    "vowel_ratio": 0.33,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "mail.youtube.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.5,
+    "length": 16,
+    "is_dga": false
+  },
+  {
+    "domain": "forestrising.biz",
+    "family": "matsnu",
+    "entropy": 3.45,
+    "vowel_ratio": 0.33,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "abbeedee22cb.club",
+    "family": "mirai",
+    "entropy": 2.91,
+    "vowel_ratio": 0.43,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "vmrqborwnsluxcho.net",
+    "family": "cryptolocker",
+    "entropy": 4.02,
+    "vowel_ratio": 0.21,
+    "length": 20,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.stripe.com",
+    "family": "benign",
+    "entropy": 3.52,
+    "vowel_ratio": 0.25,
+    "length": 14,
+    "is_dga": false
+  },
+  {
+    "domain": "zdnet.com",
+    "family": "benign",
+    "entropy": 3.17,
+    "vowel_ratio": 0.25,
+    "length": 9,
+    "is_dga": false
+  },
+  {
+    "domain": "www.alibaba.com",
+    "family": "benign",
+    "entropy": 3.01,
+    "vowel_ratio": 0.38,
+    "length": 15,
+    "is_dga": false
+  },
+  {
+    "domain": "meyefelexetoke.biz",
+    "family": "necurs",
+    "entropy": 3.31,
+    "vowel_ratio": 0.47,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.com",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "api.espn.com",
+    "family": "benign",
+    "entropy": 3.25,
+    "vowel_ratio": 0.4,
+    "length": 12,
+    "is_dga": false
+  },
+  {
+    "domain": "hmrmtftabubgguwc.ru",
+    "family": "locky",
+    "entropy": 3.47,
+    "vowel_ratio": 0.22,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "dvvcdlcqkqwntfyn.ru",
+    "family": "locky",
+    "entropy": 3.72,
+    "vowel_ratio": 0.06,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "shadowroaring.info",
+    "family": "matsnu",
+    "entropy": 3.46,
+    "vowel_ratio": 0.41,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "cdn.wikipedia.org",
+    "family": "benign",
+    "entropy": 3.57,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "naloluzogolu.com",
+    "family": "necurs",
+    "entropy": 3.08,
+    "vowel_ratio": 0.47,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "161e7a2a566b.club",
+    "family": "mirai",
+    "entropy": 3.45,
+    "vowel_ratio": 0.5,
+    "length": 17,
+    "is_dga": true
+  },
+  {
+    "domain": "2e709c7fd05d.top",
+    "family": "mirai",
+    "entropy": 3.62,
+    "vowel_ratio": 0.25,
+    "length": 16,
+    "is_dga": true
+  },
+  {
+    "domain": "openai.com",
+    "family": "benign",
+    "entropy": 3.12,
+    "vowel_ratio": 0.56,
+    "length": 10,
+    "is_dga": false
+  },
+  {
+    "domain": "bankdbphigumsn.org",
+    "family": "banjori",
+    "entropy": 3.84,
+    "vowel_ratio": 0.24,
+    "length": 18,
+    "is_dga": true
+  },
+  {
+    "domain": "xawolesa.top",
+    "family": "necurs",
+    "entropy": 3.25,
+    "vowel_ratio": 0.45,
+    "length": 12,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.engadget.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.4,
+    "length": 17,
+    "is_dga": false
+  },
+  {
+    "domain": "serviceaccess35.net",
+    "family": "suppobox",
+    "entropy": 3.33,
+    "vowel_ratio": 0.38,
+    "length": 19,
+    "is_dga": true
+  },
+  {
+    "domain": "mail.spotify.com",
+    "family": "benign",
+    "entropy": 3.5,
+    "vowel_ratio": 0.36,
+    "length": 16,
+    "is_dga": false
+  }
+]

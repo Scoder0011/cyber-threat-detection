@@ -1,0 +1,3502 @@
+[
+  {
+    "session_id": "s0001",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[28.5, 5.4, 43.0, 6.2, 33.9, 43.7, 54.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0002",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[292.5, 291.2, 297.5, 287.4, 324.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0003",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[28.2, 36.1, 51.7, 18.4, 13.6, 15.9, 34.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0004",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[120.0, 128.4, 120.3, 118.8, 128.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0005",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[6.8, 116.6, 16.0, 4.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0006",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[61.3, 62.6, 58.9, 58.3, 60.3, 58.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0007",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[9.1, 18.0, 23.8, 13.6, 25.2, 29.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0008",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[112.4, 119.6, 123.2, 114.7, 129.7, 116.1, 120.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0009",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[7.1, 27.9, 28.2, 15.7, 16.0, 6.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0010",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[125.1, 119.2, 117.5, 122.0, 119.5, 115.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0011",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[5.8, 28.7, 14.8, 33.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0012",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[125.5, 123.8, 122.8, 119.8, 116.0, 113.2, 124.3, 115.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0013",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[26.8, 18.3, 54.5, 14.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0014",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[65.5, 58.6, 63.3, 56.7, 62.5, 60.1, 60.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0015",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[9.2, 9.7, 10.6, 101.2, 87.9, 7.7, 14.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0016",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[59.3, 60.5, 59.8, 63.7, 61.9, 58.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0017",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[37.5, 40.2, 12.7, 78.8, 1.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0018",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[118.9, 117.1, 118.1, 119.2, 120.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0019",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[56.0, 25.9, 49.8, 75.7, 10.2, 4.5, 39.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0020",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[122.2, 121.2, 121.3, 122.9, 122.7, 123.4, 119.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0021",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[13.8, 23.3, 20.5, 49.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0022",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[57.6, 56.5, 59.2, 61.7, 61.1, 61.5, 59.8, 60.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0023",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[10.7, 12.2, 34.1, 33.9, 13.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0024",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[303.1, 315.4, 306.9, 313.1, 298.2, 316.5, 302.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0025",
+    "src_ip": "10.0.0.13",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[23.8, 26.5, 63.1, 3.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0026",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[117.5, 120.3, 117.8, 120.6, 118.6, 119.0, 118.0, 122.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0027",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[4.8, 5.1, 15.5, 17.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0028",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.5, 56.8, 58.9, 62.1, 57.6, 59.9, 59.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0029",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[18.4, 9.4, 16.8, 19.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0030",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[115.9, 118.8, 121.6, 124.2, 122.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0031",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[29.7, 13.0, 28.9, 25.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0032",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[291.3, 319.1, 295.3, 305.1, 300.0, 295.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0033",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[72.0, 57.2, 55.8, 42.1, 4.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0034",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[286.7, 295.0, 303.8, 281.2, 305.2, 285.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0035",
+    "src_ip": "10.0.0.28",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[23.6, 14.3, 4.9, 5.3, 31.9, 77.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0036",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[115.1, 125.0, 113.1, 118.2, 118.1, 118.9, 124.9, 119.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0037",
+    "src_ip": "10.0.0.27",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[8.4, 7.6, 14.3, 29.4, 11.9, 4.0, 7.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0038",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[304.2, 295.0, 304.3, 302.6, 306.2, 306.0, 329.1, 281.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0039",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[10.4, 16.0, 10.8, 20.5, 75.7, 12.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0040",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[317.0, 275.2, 289.4, 305.1, 305.1, 289.4, 304.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0041",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[7.1, 23.4, 68.8, 5.3, 17.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0042",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[121.6, 121.5, 119.7, 115.0, 128.4, 120.0, 117.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0043",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[7.7, 61.5, 5.5, 4.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0044",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[117.6, 115.9, 124.8, 121.9, 122.1, 120.1, 117.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0045",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[25.7, 115.9, 8.6, 4.8, 5.9, 29.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0046",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[124.4, 116.3, 111.0, 120.8, 112.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0047",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[5.4, 10.1, 17.0, 16.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0048",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[60.6, 57.4, 60.5, 58.4, 58.5, 60.8, 64.7, 60.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0049",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[23.5, 4.5, 13.0, 17.5, 14.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0050",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.8, 59.0, 58.5, 60.7, 59.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0051",
+    "src_ip": "10.0.0.18",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[13.1, 28.5, 9.2, 29.7, 19.4, 11.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0052",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[117.1, 123.1, 116.8, 117.8, 112.7, 121.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0053",
+    "src_ip": "10.0.0.48",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[26.4, 10.1, 23.4, 81.4, 15.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0054",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[299.6, 284.2, 279.5, 306.4, 342.1, 319.3, 276.8, 289.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0055",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[30.9, 8.1, 22.7, 26.2, 22.4, 4.5, 11.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0056",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[292.7, 301.8, 296.8, 298.5, 296.5, 293.2, 301.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0057",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[27.5, 29.5, 25.3, 35.4, 20.3, 1.1, 31.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0058",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[293.8, 297.6, 305.2, 297.4, 305.3, 299.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0059",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[15.7, 37.7, 2.6, 1.5, 64.2, 15.7, 4.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0060",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[316.2, 283.1, 308.8, 307.1, 307.4, 276.2, 297.6, 310.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0061",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[5.4, 5.6, 54.2, 64.7, 65.8, 27.6, 16.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0062",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[118.5, 114.1, 118.8, 127.5, 122.3, 128.3, 120.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0063",
+    "src_ip": "10.0.0.49",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[8.7, 17.0, 26.6, 19.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0064",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[288.4, 301.4, 275.4, 319.2, 320.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0065",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[17.4, 53.3, 16.7, 7.3, 12.1, 24.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0066",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[59.7, 56.6, 62.9, 61.2, 59.3, 60.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0067",
+    "src_ip": "10.0.0.46",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[16.4, 4.1, 34.4, 24.9, 28.4, 9.9, 14.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0068",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[61.8, 59.8, 63.7, 60.4, 58.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0069",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[5.0, 8.1, 14.7, 9.1, 45.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0070",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[272.1, 322.1, 300.4, 302.0, 295.6, 293.7, 316.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0071",
+    "src_ip": "10.0.0.15",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[11.5, 19.3, 77.1, 42.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0072",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[62.8, 60.3, 56.7, 61.2, 63.4, 59.7, 57.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0073",
+    "src_ip": "10.0.0.27",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[11.0, 59.7, 34.5, 21.5, 14.9, 3.2, 18.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0074",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[56.9, 57.4, 62.0, 61.4, 52.3, 57.6, 60.4, 59.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0075",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[8.3, 6.4, 13.4, 15.4, 1.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0076",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[60.9, 60.5, 59.5, 59.6, 59.7, 62.9, 59.6, 59.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0077",
+    "src_ip": "10.0.0.49",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[32.9, 27.8, 11.6, 6.6, 10.8, 19.9, 27.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0078",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[60.4, 56.7, 61.1, 58.8, 64.2, 58.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0079",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[18.7, 14.0, 13.2, 24.6, 65.0, 27.5, 17.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0080",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[121.5, 118.9, 120.3, 114.3, 122.3, 122.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0081",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[17.1, 18.7, 33.0, 65.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0082",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[299.6, 300.9, 315.2, 300.1, 290.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0083",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[37.2, 16.0, 7.6, 34.9, 13.4, 13.4, 12.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0084",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[117.2, 118.8, 126.9, 123.5, 119.4, 108.8, 121.5, 125.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0085",
+    "src_ip": "10.0.0.39",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[21.8, 1.3, 10.0, 23.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0086",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[128.3, 119.4, 119.5, 120.4, 119.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0087",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[2.8, 55.2, 4.7, 12.2, 17.1, 12.2, 19.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0088",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[300.1, 287.3, 298.0, 289.3, 290.0, 311.4, 291.8, 289.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0089",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[18.1, 28.7, 47.3, 9.5, 22.2, 10.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0090",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[61.4, 57.9, 58.8, 61.8, 57.7, 60.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0091",
+    "src_ip": "10.0.0.40",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[3.1, 9.1, 13.8, 5.2, 25.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0092",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[121.7, 121.7, 115.6, 117.0, 121.3, 120.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0093",
+    "src_ip": "10.0.0.49",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.5, 14.5, 19.1, 11.1, 20.1, 58.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0094",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.3, 58.6, 60.7, 59.3, 63.0, 59.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0095",
+    "src_ip": "10.0.0.27",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[47.3, 30.2, 17.8, 40.7, 2.3, 38.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0096",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[287.8, 298.0, 300.7, 291.5, 286.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0097",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[93.4, 63.1, 21.6, 8.2, 17.3, 14.5, 2.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0098",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[303.5, 323.3, 296.5, 300.5, 279.8, 288.4, 342.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0099",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[21.2, 24.6, 103.6, 1.4, 60.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0100",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[290.2, 312.5, 306.6, 310.1, 301.0, 313.0, 298.0, 305.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0101",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[4.9, 11.0, 44.2, 66.1, 9.9, 20.8, 23.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0102",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[305.6, 300.3, 298.3, 303.9, 299.6, 299.9, 302.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0103",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[19.8, 64.6, 16.2, 1.3, 5.3, 22.6, 2.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0104",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[124.1, 121.6, 112.0, 123.6, 128.0, 116.1, 119.5, 111.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0105",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[11.4, 20.3, 6.4, 9.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0106",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[304.0, 298.4, 299.7, 291.1, 296.5, 282.6, 299.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0107",
+    "src_ip": "10.0.0.39",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[13.2, 18.9, 24.8, 13.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0108",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[117.6, 129.2, 116.4, 127.9, 113.0, 111.6, 112.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0109",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[2.5, 41.5, 26.2, 18.1, 18.7, 10.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0110",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[120.7, 121.3, 114.2, 120.8, 120.3, 119.5, 122.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0111",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[3.5, 69.1, 20.0, 12.8, 6.0, 38.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0112",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[311.5, 307.3, 307.5, 300.8, 295.4, 292.4, 318.5, 305.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0113",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[3.5, 20.4, 16.2, 51.6, 3.6, 11.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0114",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[119.5, 112.2, 117.2, 116.2, 125.8, 121.5, 121.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0115",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[8.6, 5.7, 36.2, 2.9, 30.1, 4.6, 10.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0116",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[115.4, 117.1, 122.1, 113.7, 114.9, 119.5, 116.4, 122.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0117",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[30.2, 31.9, 20.3, 16.1, 9.9, 27.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0118",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[64.7, 60.6, 62.5, 62.9, 60.3, 64.5, 59.1, 65.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0119",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[50.5, 23.2, 23.2, 19.3, 3.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0120",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[117.1, 117.3, 121.1, 122.8, 116.9, 125.0, 124.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0121",
+    "src_ip": "10.0.0.49",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[14.2, 7.0, 49.6, 18.3, 20.9, 7.9, 3.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0122",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[59.5, 59.3, 58.8, 62.0, 60.5, 59.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0123",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[64.5, 10.5, 7.2, 12.5, 10.0, 12.2, 9.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0124",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[299.2, 288.4, 310.8, 299.0, 285.5, 277.2, 302.1, 293.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0125",
+    "src_ip": "10.0.0.26",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[19.3, 18.9, 5.8, 39.9, 15.5, 61.9, 9.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0126",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[59.3, 63.6, 59.3, 61.8, 60.2, 58.0, 60.8, 57.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0127",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[5.7, 11.4, 18.9, 66.7, 40.4, 7.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0128",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[117.8, 118.9, 124.9, 117.7, 116.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0129",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[13.7, 16.1, 54.5, 17.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0130",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[57.5, 58.9, 60.9, 63.0, 60.6, 59.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0131",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[5.8, 14.6, 47.3, 16.1, 14.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0132",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[292.4, 277.8, 287.7, 301.3, 283.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0133",
+    "src_ip": "10.0.0.40",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[33.3, 6.1, 9.5, 35.3, 17.5, 19.0, 42.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0134",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[306.3, 296.0, 292.8, 304.9, 290.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0135",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[2.7, 30.7, 47.8, 21.7, 11.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0136",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[60.7, 60.7, 57.8, 60.5, 59.5, 61.6, 60.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0137",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[5.8, 20.5, 46.4, 19.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0138",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[59.5, 62.7, 61.3, 58.9, 59.4, 59.8, 59.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0139",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[2.3, 14.5, 42.5, 11.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0140",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[60.1, 60.6, 58.4, 62.3, 59.3, 59.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0141",
+    "src_ip": "10.0.0.33",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[48.3, 72.6, 35.9, 2.9, 3.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0142",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[118.1, 120.9, 119.5, 125.0, 125.8, 118.5, 119.8, 126.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0143",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[18.6, 14.2, 7.7, 34.1, 40.2, 3.3, 69.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0144",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[299.9, 308.6, 304.9, 300.7, 302.2, 287.9, 288.7, 302.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0145",
+    "src_ip": "10.0.0.15",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[7.6, 17.2, 96.1, 17.2, 11.5, 24.5, 43.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0146",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[59.9, 63.7, 56.9, 62.0, 62.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0147",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[21.7, 7.4, 7.4, 23.2, 9.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0148",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[116.5, 119.9, 118.2, 124.3, 118.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0149",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[30.8, 14.2, 99.0, 9.5, 12.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0150",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[120.5, 113.5, 118.2, 119.4, 120.7, 119.5, 111.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0151",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[29.9, 35.1, 49.7, 35.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0152",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[124.0, 123.3, 118.1, 116.4, 119.9, 121.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0153",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[4.3, 28.8, 56.8, 3.9, 5.1, 79.2, 19.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0154",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[61.0, 58.4, 60.8, 60.8, 63.1, 61.1, 60.7, 61.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0155",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[26.8, 36.3, 16.8, 4.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0156",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[64.1, 60.1, 60.9, 57.9, 56.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0157",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[135.9, 12.3, 14.2, 8.1, 64.9, 8.3, 19.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0158",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[61.3, 60.0, 59.6, 59.7, 61.1, 61.4, 63.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0159",
+    "src_ip": "10.0.0.40",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[3.4, 3.1, 16.3, 5.3, 29.0, 43.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0160",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[59.1, 62.0, 62.3, 58.6, 63.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0161",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[14.3, 44.4, 79.4, 70.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0162",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[289.8, 296.0, 314.6, 297.0, 307.4, 297.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0163",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[16.6, 17.4, 28.4, 49.3, 14.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0164",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[306.3, 288.2, 301.8, 300.3, 300.7, 313.1, 312.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0165",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[48.0, 1.5, 23.7, 3.3, 6.6, 5.9, 24.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0166",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[57.2, 60.5, 62.9, 59.2, 61.0, 60.1, 64.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0167",
+    "src_ip": "10.0.0.32",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[36.5, 30.8, 21.6, 42.8, 13.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0168",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[123.9, 122.3, 116.2, 125.1, 120.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0169",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[63.9, 55.2, 6.8, 3.4, 110.0, 33.1, 14.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0170",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[62.7, 61.9, 58.8, 59.0, 62.0, 58.9, 59.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0171",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[7.7, 58.0, 16.0, 20.7, 15.6, 24.3, 5.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0172",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[60.8, 57.5, 57.0, 60.8, 56.8, 60.0, 59.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0173",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[24.8, 21.8, 11.6, 3.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0174",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[57.1, 56.7, 58.7, 58.5, 60.7, 58.9, 59.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0175",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[15.1, 3.6, 17.1, 41.6, 8.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0176",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[121.8, 120.5, 118.3, 125.6, 120.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0177",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[23.8, 27.7, 3.1, 4.7, 31.1, 12.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0178",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[296.4, 301.2, 298.3, 301.3, 310.2, 296.4, 292.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0179",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[14.9, 3.8, 10.2, 31.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0180",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[57.8, 56.9, 59.8, 59.7, 56.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0181",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[3.0, 74.2, 16.1, 23.9, 6.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0182",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[58.4, 63.0, 60.1, 60.2, 58.0, 54.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0183",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[4.0, 14.5, 74.5, 8.3, 25.5, 5.0, 17.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0184",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[59.9, 59.6, 60.0, 60.6, 55.7, 57.1, 59.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0185",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[23.8, 4.1, 44.8, 21.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0186",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[312.7, 311.3, 286.9, 283.7, 320.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0187",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[24.5, 22.4, 25.6, 7.8, 14.6, 29.0, 74.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0188",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[298.5, 303.1, 302.2, 298.1, 298.7, 298.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0189",
+    "src_ip": "10.0.0.13",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[8.4, 25.9, 10.5, 9.5, 34.4, 29.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0190",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[309.6, 287.8, 288.3, 295.6, 293.8, 299.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0191",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[8.5, 4.6, 94.9, 20.2, 18.3, 5.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0192",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[297.4, 302.6, 336.1, 301.5, 290.2, 293.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0193",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[3.8, 18.7, 22.5, 33.9, 2.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0194",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[319.4, 313.3, 281.4, 306.6, 288.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0195",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[10.2, 18.7, 4.0, 56.7, 65.5, 46.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0196",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[296.8, 293.6, 288.7, 289.2, 295.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0197",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[37.1, 54.6, 18.4, 35.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0198",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[308.0, 303.8, 300.5, 295.8, 312.4, 288.9, 301.4, 315.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0199",
+    "src_ip": "10.0.0.40",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[14.5, 17.7, 25.8, 33.2, 5.6, 3.6, 3.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0200",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[115.1, 116.7, 118.6, 110.4, 119.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0201",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[79.6, 67.2, 23.2, 15.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0202",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[61.0, 62.7, 59.7, 62.2, 62.3, 61.0, 57.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0203",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[5.0, 9.1, 7.1, 56.6, 13.8, 6.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0204",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[311.7, 268.9, 295.0, 295.0, 315.2, 302.3, 316.2, 325.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0205",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[17.6, 77.5, 8.8, 27.2, 85.3, 23.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0206",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[123.7, 118.8, 125.5, 119.9, 118.6, 119.7, 119.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0207",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.4, 25.9, 83.8, 59.3, 15.3, 9.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0208",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[58.1, 61.0, 56.8, 58.5, 58.9, 60.5, 59.7, 60.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0209",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[12.1, 3.9, 1.2, 9.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0210",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[123.3, 120.7, 119.9, 120.9, 119.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0211",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[8.2, 23.3, 36.1, 78.9, 11.3, 4.4, 20.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0212",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[118.9, 120.6, 120.3, 120.8, 117.5, 120.5, 127.5, 124.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0213",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[36.5, 7.1, 4.2, 11.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0214",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[57.5, 61.0, 61.4, 58.0, 59.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0215",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[46.6, 27.4, 41.0, 3.0, 73.5, 41.0, 5.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0216",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[62.6, 61.8, 61.3, 61.3, 59.3, 58.7, 59.2, 60.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0217",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[26.1, 25.3, 18.8, 47.8, 38.4, 23.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0218",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[111.7, 121.2, 113.7, 116.7, 104.3, 129.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0219",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[1.0, 25.6, 45.4, 8.4, 50.3, 6.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0220",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[306.7, 300.1, 293.0, 295.4, 292.0, 289.0, 301.6, 304.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0221",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[10.0, 4.4, 4.7, 3.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0222",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[116.4, 114.4, 122.5, 118.9, 120.8, 115.9, 116.6, 113.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0223",
+    "src_ip": "10.0.0.22",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[5.5, 24.2, 16.6, 18.8, 3.6, 15.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0224",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[57.1, 59.8, 58.4, 62.4, 58.0, 56.9, 54.3, 56.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0225",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[78.1, 115.4, 11.7, 45.2, 5.1, 124.7, 28.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0226",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[301.2, 292.7, 302.0, 281.5, 319.7, 301.4, 306.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0227",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[12.8, 30.0, 14.3, 32.7, 7.8, 8.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0228",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[65.0, 58.4, 59.3, 58.4, 63.0, 58.5, 55.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0229",
+    "src_ip": "10.0.0.21",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[21.5, 49.0, 67.0, 107.0, 46.9, 24.8, 12.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0230",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[297.9, 285.6, 306.2, 299.6, 304.7, 308.6, 294.1, 310.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0231",
+    "src_ip": "10.0.0.24",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[4.9, 22.2, 4.1, 17.9, 16.2, 5.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0232",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[260.2, 272.3, 323.0, 287.9, 305.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0233",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[22.3, 4.9, 12.1, 18.8, 16.9, 15.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0234",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[60.9, 58.1, 62.4, 63.0, 58.9, 60.1, 60.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0235",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[2.8, 29.1, 26.1, 21.8, 28.6, 11.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0236",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[57.2, 51.1, 56.9, 61.9, 58.7, 63.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0237",
+    "src_ip": "10.0.0.18",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[1.8, 9.1, 31.1, 13.9, 93.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0238",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.9, 60.9, 58.2, 60.5, 61.8, 61.7, 58.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0239",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[12.9, 15.9, 20.8, 2.6, 40.3, 47.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0240",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[116.6, 122.5, 123.8, 118.7, 121.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0241",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[46.3, 11.2, 18.7, 7.2, 31.1, 18.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0242",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[306.7, 310.8, 286.1, 292.5, 302.8, 292.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0243",
+    "src_ip": "10.0.0.46",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[1.7, 14.0, 36.3, 48.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0244",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[60.4, 61.9, 61.4, 60.7, 63.9, 60.5, 60.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0245",
+    "src_ip": "10.0.0.13",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[27.3, 38.5, 6.4, 10.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0246",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[57.2, 61.5, 62.2, 58.9, 55.8, 63.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0247",
+    "src_ip": "10.0.0.32",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[21.0, 54.1, 1.6, 10.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0248",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[61.3, 56.9, 58.4, 55.6, 58.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0249",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[6.0, 13.6, 39.6, 4.0, 29.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0250",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[110.9, 121.7, 115.7, 125.7, 123.3, 124.7, 120.2, 123.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0251",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[42.5, 22.1, 47.9, 26.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0252",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[59.3, 58.5, 62.6, 57.0, 58.0, 63.3, 61.1, 59.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0253",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[17.8, 9.3, 3.9, 46.2, 2.3, 4.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0254",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[61.0, 55.8, 56.5, 64.4, 58.9, 56.1, 62.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0255",
+    "src_ip": "10.0.0.21",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[21.3, 51.8, 39.0, 17.2, 13.3, 12.4, 42.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0256",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[121.5, 122.8, 124.1, 115.4, 114.3, 124.9, 117.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0257",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.5, 4.8, 17.4, 36.2, 21.2, 12.4, 21.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0258",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[282.9, 290.8, 312.0, 287.6, 295.4, 299.0, 287.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0259",
+    "src_ip": "10.0.0.32",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[8.5, 54.8, 8.2, 80.8, 5.4, 35.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0260",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[315.5, 306.7, 301.9, 313.4, 286.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0261",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[50.1, 14.5, 8.4, 20.5, 11.2, 59.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0262",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[108.9, 118.3, 120.8, 119.5, 125.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0263",
+    "src_ip": "10.0.0.48",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[25.8, 33.6, 14.0, 26.9, 5.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0264",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[59.5, 60.2, 60.7, 58.8, 60.0, 59.4, 59.9, 57.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0265",
+    "src_ip": "10.0.0.12",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[18.9, 9.1, 14.3, 25.3, 15.1, 13.2, 5.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0266",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[120.0, 120.7, 114.7, 114.0, 122.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0267",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[23.8, 8.6, 17.6, 34.5, 18.8, 7.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0268",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[121.8, 112.0, 114.9, 126.1, 119.6, 126.1, 123.9, 124.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0269",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[14.9, 45.6, 5.8, 26.9, 45.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0270",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[317.2, 291.8, 302.2, 292.5, 307.8, 285.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0271",
+    "src_ip": "10.0.0.18",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[14.6, 32.8, 15.7, 14.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0272",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[312.9, 304.9, 305.4, 307.5, 299.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0273",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[39.1, 7.9, 13.1, 116.9, 12.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0274",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[310.4, 277.7, 321.8, 285.4, 294.0, 300.1, 315.7, 275.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0275",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[91.4, 14.3, 9.1, 74.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0276",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[58.3, 60.8, 61.8, 55.5, 60.0, 59.9, 56.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0277",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.6, 27.4, 22.0, 10.9, 86.2, 67.8, 38.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0278",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[59.3, 61.2, 61.9, 59.9, 61.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0279",
+    "src_ip": "10.0.0.24",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[11.2, 4.6, 52.0, 70.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0280",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[118.1, 119.5, 118.9, 122.9, 116.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0281",
+    "src_ip": "10.0.0.12",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[10.6, 3.2, 73.7, 10.3, 2.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0282",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[119.8, 117.1, 119.0, 120.3, 115.4, 122.5, 120.2, 121.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0283",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[2.6, 33.8, 2.9, 30.9, 17.6, 2.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0284",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[127.6, 121.4, 126.6, 114.0, 121.0, 124.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0285",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[15.4, 41.2, 19.5, 13.6, 22.1, 3.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0286",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[123.7, 122.5, 115.4, 120.5, 121.7, 122.1, 116.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0287",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[20.2, 22.1, 12.4, 6.2, 77.4, 26.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0288",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[289.3, 311.0, 300.9, 285.9, 300.5, 280.5, 332.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0289",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[38.1, 4.6, 19.8, 12.9, 85.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0290",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[59.8, 60.1, 61.2, 57.6, 59.7, 60.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0291",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[11.3, 28.6, 0.9, 34.5, 43.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0292",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[312.8, 304.8, 288.3, 289.1, 309.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0293",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[31.7, 68.2, 17.2, 80.1, 20.1, 36.7, 4.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0294",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[59.6, 61.5, 59.0, 58.9, 61.7, 61.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0295",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[2.3, 24.9, 40.9, 6.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0296",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[310.8, 289.8, 298.4, 299.2, 282.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0297",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[46.8, 21.1, 45.9, 18.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0298",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[126.3, 117.4, 114.7, 122.0, 123.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0299",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[1.1, 20.3, 9.8, 24.9, 12.4, 8.9, 15.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0300",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[56.4, 59.1, 57.4, 60.7, 60.4, 60.4, 60.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0301",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[14.1, 30.1, 11.2, 49.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0302",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[60.5, 60.0, 59.7, 59.3, 57.6, 63.0, 65.7, 60.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0303",
+    "src_ip": "10.0.0.27",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[6.1, 48.0, 4.5, 5.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0304",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[277.5, 302.2, 323.6, 301.8, 305.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0305",
+    "src_ip": "10.0.0.22",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[26.2, 5.4, 24.2, 7.6, 6.5, 5.1, 37.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0306",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[112.7, 118.7, 123.8, 118.0, 118.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0307",
+    "src_ip": "10.0.0.28",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.9, 13.3, 5.4, 17.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0308",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[315.7, 296.9, 294.8, 299.2, 309.1, 293.1, 303.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0309",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[113.5, 91.2, 21.7, 25.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0310",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[59.0, 55.2, 57.0, 58.9, 53.7, 59.0, 57.1, 57.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0311",
+    "src_ip": "10.0.0.46",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[5.0, 48.8, 17.3, 21.8, 90.3, 11.6, 9.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0312",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.9, 56.2, 58.1, 59.0, 57.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0313",
+    "src_ip": "10.0.0.12",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[3.8, 5.5, 47.0, 22.9, 36.1, 21.1, 53.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0314",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[120.6, 116.7, 128.5, 122.6, 118.9, 124.1, 121.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0315",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[6.1, 16.4, 34.3, 36.4, 24.0, 29.2, 27.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0316",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[61.2, 61.8, 56.9, 62.3, 62.2, 58.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0317",
+    "src_ip": "10.0.0.18",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[3.7, 27.4, 2.4, 16.3, 54.2, 4.1, 1.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0318",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[120.3, 130.7, 114.2, 112.4, 117.3, 121.6, 112.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0319",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[81.1, 51.2, 7.5, 12.7, 12.8, 12.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0320",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[122.4, 124.2, 117.8, 119.9, 118.7, 119.1, 114.6, 121.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0321",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[32.3, 45.5, 65.5, 3.3, 25.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0322",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[118.0, 117.5, 116.8, 121.1, 127.8, 124.7, 126.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0323",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[20.2, 57.2, 32.5, 5.2, 54.0, 5.8, 34.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0324",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.8, 58.1, 59.7, 59.9, 54.7, 61.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0325",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[22.0, 11.5, 22.0, 19.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0326",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.5, 60.8, 61.5, 59.6, 60.6, 56.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0327",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[2.8, 16.5, 5.2, 42.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0328",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[295.6, 306.0, 315.4, 320.4, 292.3, 332.5, 296.3, 323.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0329",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[16.4, 43.5, 63.2, 11.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0330",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[123.8, 115.3, 119.9, 117.0, 117.0, 112.3, 121.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0331",
+    "src_ip": "10.0.0.18",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[13.7, 5.0, 3.2, 36.1, 16.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0332",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[61.0, 61.4, 58.2, 56.4, 56.5, 59.5, 57.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0333",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[6.4, 62.0, 49.1, 7.0, 13.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0334",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[113.0, 120.8, 122.5, 110.5, 120.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0335",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[25.0, 78.7, 21.6, 41.4, 39.4, 9.3, 5.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0336",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[319.3, 329.5, 295.0, 304.9, 307.0, 308.4, 278.1, 314.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0337",
+    "src_ip": "10.0.0.34",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[22.9, 7.7, 16.3, 43.1, 71.4, 10.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0338",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[301.2, 313.4, 306.4, 288.3, 285.7, 295.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0339",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[34.0, 13.2, 6.7, 38.9, 6.5, 10.7, 21.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0340",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[62.2, 61.0, 60.9, 58.6, 62.8, 57.0, 55.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0341",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[21.5, 54.3, 41.4, 21.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0342",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[293.5, 275.4, 283.2, 300.2, 305.2, 281.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0343",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[9.2, 31.9, 27.4, 7.3, 43.7, 11.3, 30.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0344",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[123.1, 112.1, 114.9, 116.6, 117.8, 116.5, 114.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0345",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[26.8, 2.7, 62.6, 34.1, 27.5, 16.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0346",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[278.4, 312.5, 304.9, 304.1, 296.8, 316.7, 310.4, 305.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0347",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[17.3, 16.8, 10.4, 12.3, 56.1, 39.1, 28.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0348",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[54.3, 60.0, 60.1, 66.4, 63.6, 58.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0349",
+    "src_ip": "10.0.0.41",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[15.6, 25.8, 59.7, 14.6, 6.0, 15.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0350",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[61.2, 57.4, 57.7, 60.4, 58.9, 60.1, 62.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0351",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[5.7, 25.8, 43.5, 67.9, 45.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0352",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[122.2, 123.6, 124.7, 118.5, 126.0, 122.8, 116.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0353",
+    "src_ip": "10.0.0.15",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[6.1, 17.8, 3.0, 11.8, 16.0, 3.8, 7.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0354",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[123.0, 124.8, 123.7, 118.9, 124.8, 114.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0355",
+    "src_ip": "10.0.0.15",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[8.9, 2.6, 24.2, 7.7, 33.0, 10.3, 44.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0356",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[117.0, 116.9, 124.3, 114.9, 119.0, 113.3, 104.0, 116.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0357",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[3.5, 3.8, 3.1, 16.4, 97.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0358",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[121.0, 119.7, 118.3, 122.0, 116.6, 120.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0359",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[20.6, 6.0, 40.9, 24.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0360",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[116.7, 122.0, 120.7, 117.5, 116.9, 120.8, 116.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0361",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[24.5, 20.3, 5.6, 22.6, 16.6, 9.4, 36.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0362",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[119.4, 123.0, 120.8, 114.1, 116.6, 119.0, 117.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0363",
+    "src_ip": "10.0.0.28",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[21.7, 178.5, 85.7, 27.5, 43.2, 2.7, 114.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0364",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[297.1, 299.0, 302.5, 305.6, 295.8, 299.5, 297.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0365",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[41.1, 79.3, 44.8, 78.2, 20.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0366",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[119.7, 128.7, 110.9, 120.9, 125.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0367",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[143.2, 2.1, 4.7, 44.9, 11.8, 15.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0368",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[298.8, 289.0, 306.1, 305.6, 304.1, 307.9, 298.3, 294.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0369",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[2.9, 45.4, 9.0, 43.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0370",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[299.7, 283.5, 296.7, 304.6, 293.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0371",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[24.2, 31.2, 27.5, 34.9, 16.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0372",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[290.9, 306.2, 328.9, 320.9, 304.4, 295.3, 283.3, 283.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0373",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[7.5, 14.5, 33.9, 8.2, 53.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0374",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[59.8, 59.3, 60.4, 61.5, 59.9, 57.0, 61.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0375",
+    "src_ip": "10.0.0.39",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[18.5, 10.8, 30.7, 10.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0376",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[117.0, 116.7, 117.2, 112.2, 121.2, 122.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0377",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[19.3, 22.4, 31.0, 15.4, 23.6, 17.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0378",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[61.8, 59.3, 60.9, 59.0, 58.0, 60.2, 55.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0379",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[10.8, 3.1, 7.0, 34.2, 6.9, 5.9, 11.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0380",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[121.5, 126.1, 120.5, 125.9, 114.3, 116.4, 121.4, 120.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0381",
+    "src_ip": "10.0.0.33",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[19.6, 30.3, 5.3, 34.9, 26.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0382",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[300.9, 285.3, 300.6, 289.9, 298.5, 306.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0383",
+    "src_ip": "10.0.0.32",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[62.7, 20.7, 6.5, 12.9, 10.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0384",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.1, 60.7, 61.1, 59.0, 61.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0385",
+    "src_ip": "10.0.0.49",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[21.9, 5.5, 26.0, 17.1, 5.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0386",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[59.1, 58.3, 60.2, 56.9, 60.1, 60.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0387",
+    "src_ip": "10.0.0.24",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[12.4, 26.0, 12.9, 24.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0388",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[58.9, 60.9, 61.6, 58.4, 58.6, 61.0, 58.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0389",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[34.0, 5.8, 15.1, 33.7, 6.9, 10.1, 18.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0390",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[122.5, 129.5, 121.7, 121.9, 121.8, 125.3, 122.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0391",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[47.1, 9.4, 28.4, 56.9, 10.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0392",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[56.1, 57.3, 58.7, 62.4, 59.4, 59.6, 58.0, 61.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0393",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[8.3, 5.9, 49.6, 5.7, 23.3, 12.1, 4.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0394",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[121.5, 120.2, 119.2, 121.4, 122.9, 125.4, 126.5, 114.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0395",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[21.9, 12.4, 8.5, 5.2, 46.9, 49.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0396",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[59.7, 62.9, 60.3, 61.7, 60.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0397",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[9.2, 5.3, 24.0, 27.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0398",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[305.1, 291.1, 323.6, 312.0, 297.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0399",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[37.9, 14.8, 15.5, 31.7, 28.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0400",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[126.9, 116.1, 110.2, 117.8, 123.0, 120.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0401",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[13.7, 3.1, 40.9, 63.5, 4.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0402",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[303.3, 305.7, 320.5, 314.3, 302.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0403",
+    "src_ip": "10.0.0.24",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[8.1, 10.9, 7.4, 27.0, 8.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0404",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.4, 60.2, 57.5, 58.0, 60.3, 59.7, 64.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0405",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[5.2, 10.7, 10.5, 24.4, 13.8, 34.8, 9.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0406",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[301.6, 284.3, 313.2, 297.3, 296.6, 278.9, 299.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0407",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[5.8, 12.1, 22.6, 22.3, 2.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0408",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[64.2, 64.0, 58.9, 59.4, 60.9, 57.9, 57.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0409",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[50.4, 26.7, 55.1, 8.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0410",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[114.7, 120.5, 117.7, 120.2, 120.3, 125.3, 112.2, 121.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0411",
+    "src_ip": "10.0.0.13",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[35.3, 9.2, 9.1, 36.9, 30.4, 6.4, 64.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0412",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[59.9, 57.7, 58.8, 66.8, 58.1, 63.7, 61.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0413",
+    "src_ip": "10.0.0.13",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[9.2, 12.0, 9.8, 28.2, 7.7, 4.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0414",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[119.7, 123.8, 119.7, 121.0, 121.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0415",
+    "src_ip": "10.0.0.40",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[18.1, 1.4, 5.7, 57.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0416",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[115.5, 105.7, 127.7, 109.4, 116.8, 113.4, 129.5, 116.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0417",
+    "src_ip": "10.0.0.14",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.2, 22.7, 20.0, 19.8, 22.2, 44.5, 24.9]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0418",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[300.4, 295.7, 301.9, 306.5, 284.2, 307.5, 297.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0419",
+    "src_ip": "10.0.0.29",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[43.9, 12.5, 39.2, 9.5, 8.4, 30.8, 48.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0420",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[285.6, 318.3, 310.8, 289.9, 305.7, 310.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0421",
+    "src_ip": "10.0.0.12",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[25.0, 3.8, 25.8, 26.3, 10.0, 27.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0422",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[305.8, 293.0, 301.2, 298.5, 294.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0423",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[43.5, 2.4, 6.0, 25.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0424",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[314.1, 322.9, 302.7, 289.8, 288.0, 293.6, 304.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0425",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[30.8, 44.5, 19.6, 11.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0426",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[278.7, 286.3, 305.4, 304.9, 284.8, 299.1, 289.4, 302.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0427",
+    "src_ip": "10.0.0.31",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[36.2, 11.7, 13.7, 12.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0428",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[302.2, 314.7, 304.8, 323.7, 310.3, 296.5, 313.6, 303.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0429",
+    "src_ip": "10.0.0.17",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[10.6, 11.8, 6.3, 2.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0430",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[122.9, 124.1, 116.2, 119.8, 119.5, 118.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0431",
+    "src_ip": "10.0.0.39",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[39.3, 21.4, 3.0, 5.9, 32.5, 30.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0432",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[58.8, 59.8, 59.8, 61.0, 61.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0433",
+    "src_ip": "10.0.0.19",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[12.5, 31.2, 14.2, 1.8, 15.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0434",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[117.5, 124.6, 117.9, 117.9, 121.2, 127.0, 115.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0435",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[35.4, 9.8, 13.5, 29.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0436",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[62.0, 61.9, 58.3, 61.9, 61.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0437",
+    "src_ip": "10.0.0.35",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[20.0, 51.8, 7.5, 26.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0438",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[120.0, 120.8, 117.9, 117.9, 119.6, 122.1, 120.9, 119.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0439",
+    "src_ip": "10.0.0.46",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[33.8, 6.4, 5.6, 4.0, 4.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0440",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[296.9, 299.5, 301.4, 302.9, 321.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0441",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[8.0, 3.4, 14.2, 29.6, 27.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0442",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[56.4, 55.2, 61.8, 62.8, 58.8, 56.5, 57.5, 59.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0443",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[12.3, 10.1, 3.9, 2.1, 8.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0444",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[306.6, 309.7, 298.6, 299.0, 312.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0445",
+    "src_ip": "10.0.0.28",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[3.0, 7.1, 15.2, 19.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0446",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[322.1, 312.7, 291.4, 336.4, 286.1, 304.2, 275.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0447",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[9.5, 7.9, 40.6, 17.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0448",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[121.2, 117.1, 120.8, 119.0, 114.3, 122.6, 122.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0449",
+    "src_ip": "10.0.0.22",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[39.3, 18.4, 20.7, 1.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0450",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[56.6, 59.9, 62.4, 64.6, 59.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0451",
+    "src_ip": "10.0.0.22",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[32.1, 19.1, 10.0, 39.7, 83.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0452",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[60.9, 57.2, 56.6, 62.3, 61.7, 59.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0453",
+    "src_ip": "10.0.0.33",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[28.9, 21.1, 15.4, 10.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0454",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[289.7, 307.1, 295.9, 291.9, 303.9, 293.4, 303.4, 283.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0455",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[7.7, 16.7, 18.8, 27.1, 10.4, 5.6]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0456",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[121.8, 124.5, 121.0, 119.9, 121.9, 122.0]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0457",
+    "src_ip": "10.0.0.12",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[41.2, 23.5, 97.4, 5.8, 73.0, 57.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0458",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[60.3, 61.1, 59.6, 61.4, 61.6, 54.0, 59.9, 59.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0459",
+    "src_ip": "10.0.0.25",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[3.1, 24.1, 63.4, 12.0, 5.1, 33.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0460",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.7, 58.7, 61.3, 60.7, 59.4, 61.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0461",
+    "src_ip": "10.0.0.42",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[8.1, 5.3, 12.1, 10.0, 13.2, 21.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0462",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[302.7, 287.5, 308.0, 291.7, 296.5]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0463",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[19.2, 2.7, 11.4, 49.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0464",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[61.9, 59.6, 60.4, 59.1, 57.7, 59.0, 57.3, 56.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0465",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[8.4, 53.2, 48.3, 10.4, 36.0, 35.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0466",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[60.6, 61.4, 63.7, 56.6, 59.0, 58.9, 62.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0467",
+    "src_ip": "10.0.0.39",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[11.1, 30.3, 31.4, 19.0, 16.7, 5.3, 8.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0468",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[121.1, 116.6, 126.2, 115.9, 123.3, 116.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0469",
+    "src_ip": "10.0.0.22",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[49.1, 27.1, 64.1, 7.2, 10.5]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0470",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[124.6, 117.5, 117.5, 123.8, 124.6]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0471",
+    "src_ip": "10.0.0.43",
+    "dst_ip": "142.250.80.14",
+    "inter_arrival_times": "[4.0, 64.0, 47.7, 13.6, 26.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0472",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[57.8, 56.1, 61.1, 62.2, 60.0, 60.8, 57.8, 58.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0473",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[16.5, 21.7, 10.8, 91.5, 3.3, 11.8, 58.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0474",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[115.9, 117.0, 122.9, 117.9, 121.4, 123.4]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0475",
+    "src_ip": "10.0.0.36",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[34.3, 43.1, 21.9, 3.4, 17.4, 57.7]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0476",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "198.51.100.7",
+    "inter_arrival_times": "[312.6, 282.5, 289.8, 308.1, 294.1, 309.4, 303.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0477",
+    "src_ip": "10.0.0.30",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[9.3, 15.0, 10.0, 16.3, 3.1, 16.3, 19.0]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0478",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[109.5, 111.2, 119.5, 120.5, 116.6, 121.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0479",
+    "src_ip": "10.0.0.47",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[10.6, 23.0, 25.4, 25.0, 17.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0480",
+    "src_ip": "192.168.1.45",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[116.7, 118.3, 121.0, 124.4, 115.0, 114.8]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0481",
+    "src_ip": "10.0.0.37",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[27.4, 26.7, 9.3, 16.5, 17.2, 13.5, 34.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0482",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[60.9, 63.1, 60.3, 66.2, 63.0, 63.7, 62.7, 62.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0483",
+    "src_ip": "10.0.0.45",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[2.0, 14.4, 9.3, 2.3, 12.5, 69.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0484",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[118.4, 117.8, 123.3, 121.0, 121.1]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0485",
+    "src_ip": "10.0.0.23",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[53.7, 4.5, 3.4, 4.5, 8.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0486",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "185.220.101.44",
+    "inter_arrival_times": "[300.7, 290.9, 291.6, 303.6, 300.9, 303.1, 305.6, 316.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0487",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[69.4, 4.5, 15.7, 10.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0488",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[311.3, 296.5, 295.1, 279.3, 306.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0489",
+    "src_ip": "10.0.0.48",
+    "dst_ip": "198.51.100.25",
+    "inter_arrival_times": "[37.2, 40.9, 42.1, 4.5, 10.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0490",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[123.9, 116.6, 124.0, 117.6, 122.6, 120.9]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0491",
+    "src_ip": "10.0.0.16",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[3.4, 26.0, 107.9, 27.0, 11.1]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0492",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[118.4, 128.0, 125.0, 125.2, 127.7, 123.1, 112.2]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0493",
+    "src_ip": "10.0.0.38",
+    "dst_ip": "93.184.216.34",
+    "inter_arrival_times": "[14.1, 4.7, 66.3, 24.1, 18.3]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0494",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "203.0.113.90",
+    "inter_arrival_times": "[117.5, 126.1, 114.1, 122.5, 115.2, 117.6, 109.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0495",
+    "src_ip": "10.0.0.20",
+    "dst_ip": "17.253.144.10",
+    "inter_arrival_times": "[38.9, 19.1, 5.1, 37.5, 10.3, 38.3, 9.4]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0496",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[286.2, 299.7, 313.0, 301.5, 278.3]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0497",
+    "src_ip": "10.0.0.28",
+    "dst_ip": "151.101.1.140",
+    "inter_arrival_times": "[26.1, 9.9, 2.5, 23.9, 23.6, 24.8]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0498",
+    "src_ip": "10.0.0.44",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[58.6, 58.0, 63.7, 60.2, 62.0, 59.7]",
+    "is_attack": true
+  },
+  {
+    "session_id": "s0499",
+    "src_ip": "10.0.0.50",
+    "dst_ip": "104.16.85.20",
+    "inter_arrival_times": "[52.1, 20.3, 7.0, 20.4, 56.4, 4.2]",
+    "is_attack": false
+  },
+  {
+    "session_id": "s0500",
+    "src_ip": "10.0.0.9",
+    "dst_ip": "91.108.4.182",
+    "inter_arrival_times": "[308.9, 307.0, 293.5, 300.9, 302.3]",
+    "is_attack": true
+  }
+]
