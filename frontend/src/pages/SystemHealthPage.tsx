@@ -25,24 +25,24 @@ interface MetricCardProps {
 
 function MetricCard({ label, value, unit, highlight = false }: MetricCardProps) {
   const borderClass = highlight
-    ? "border-amber-400 bg-amber-900/20"
-    : "border-gray-700";
+    ? "border-amber-400 bg-amber-50"
+    : "border-slate-200/80 bg-white";
 
   const hasValue = value !== null && value !== undefined;
 
   return (
     <div
-      className={`rounded-xl border p-5 bg-gray-900 transition-colors duration-300 ${borderClass}`}
+      className={`rounded-2xl border p-5 shadow-sm transition-colors duration-300 ${borderClass}`}
       aria-label={`${label}: ${hasValue ? `${value} ${unit}` : "No data"}`}
     >
-      <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">{label}</p>
+      <p className="text-xs uppercase tracking-widest text-slate-400 font-bold mb-2">{label}</p>
       {hasValue ? (
-        <p className="text-2xl font-bold text-white font-mono">
+        <p className="text-2xl font-bold text-slate-900 font-mono">
           {value}
-          <span className="text-sm font-normal text-gray-400 ml-1">{unit}</span>
+          <span className="text-sm font-normal text-slate-500 ml-1">{unit}</span>
         </p>
       ) : (
-        <p className="text-lg text-gray-500 italic">No data</p>
+        <p className="text-lg text-slate-400 italic">No data</p>
       )}
     </div>
   );
@@ -51,11 +51,11 @@ function MetricCard({ label, value, unit, highlight = false }: MetricCardProps) 
 // ── Page entrance animation variants ─────────────────────────────────────
 
 const pageVariants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "easeOut" },
   },
 };
 
@@ -84,7 +84,6 @@ export function SystemHealthPage() {
         setMetrics(data);
       } catch {
         if (!mountedRef.current) return;
-        // On error set metrics to null so cards show "No data"
         setMetrics(null);
       }
     }
@@ -108,17 +107,17 @@ export function SystemHealthPage() {
   // ── Render ─────────────────────────────────────────────────────────────
   return (
     <motion.div
-      className="p-6 space-y-8"
+      className="space-y-8"
       variants={pageVariants}
       initial="hidden"
       animate="visible"
     >
       {/* Page title */}
-      <h1 className="text-xl font-semibold text-white">System Health</h1>
+      <h1 className="text-xl font-bold text-slate-900 tracking-tight">System & Bot Telemetry</h1>
 
       {/* System metric cards */}
       <section aria-label="System metrics">
-        <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+        <h2 className="text-xs uppercase tracking-widest text-slate-400 font-bold mb-3">
           System Metrics
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -149,7 +148,7 @@ export function SystemHealthPage() {
 
       {/* Bot health panel — detailed variant */}
       <section aria-label="Bot health">
-        <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+        <h2 className="text-xs uppercase tracking-widest text-slate-400 font-bold mb-3">
           Bot Health
         </h2>
         <BotHealthPanel
@@ -162,7 +161,7 @@ export function SystemHealthPage() {
 
       {/* Throughput chart */}
       <section aria-label="Throughput">
-        <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+        <h2 className="text-xs uppercase tracking-widest text-slate-400 font-bold mb-3">
           Network Throughput
         </h2>
         <ThroughputChart dataPoints={throughputPoints} />

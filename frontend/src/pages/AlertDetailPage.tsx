@@ -17,29 +17,29 @@ function LoadingSkeleton() {
     <div className="space-y-6 animate-pulse" aria-busy="true" aria-label="Loading alert details">
       {/* Header skeleton */}
       <div className="flex items-center gap-3">
-        <div className="h-9 w-24 bg-gray-700 rounded-lg" />
-        <div className="h-6 w-48 bg-gray-700 rounded" />
+        <div className="h-9 w-24 bg-slate-200 rounded-lg" />
+        <div className="h-6 w-48 bg-slate-200 rounded" />
       </div>
 
       {/* Main card skeleton */}
-      <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 space-y-4">
-        <div className="h-5 w-32 bg-gray-700 rounded" />
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 space-y-4">
+        <div className="h-5 w-32 bg-slate-200 rounded" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="space-y-1">
-              <div className="h-3 w-20 bg-gray-700 rounded" />
-              <div className="h-4 w-40 bg-gray-700 rounded" />
+              <div className="h-3 w-20 bg-slate-200 rounded" />
+              <div className="h-4 w-40 bg-slate-200 rounded" />
             </div>
           ))}
         </div>
       </div>
 
       {/* Evidence skeleton */}
-      <div className="bg-gray-900 border border-gray-700 rounded-xl p-6">
-        <div className="h-4 w-28 bg-gray-700 rounded mb-4" />
+      <div className="bg-white border border-slate-200 rounded-2xl p-6">
+        <div className="h-4 w-28 bg-slate-200 rounded mb-4" />
         <div className="space-y-3">
           {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="h-12 bg-gray-700 rounded" />
+            <div key={i} className="h-12 bg-slate-200 rounded" />
           ))}
         </div>
       </div>
@@ -58,10 +58,10 @@ interface FieldProps {
 function Field({ label, value, mono = false }: FieldProps) {
   return (
     <div>
-      <dt className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
+      <dt className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-0.5">
         {label}
       </dt>
-      <dd className={`text-sm text-gray-200 break-all ${mono ? "font-mono" : ""}`}>
+      <dd className={`text-sm text-slate-800 break-all ${mono ? "font-mono font-medium" : ""}`}>
         {value}
       </dd>
     </div>
@@ -128,11 +128,11 @@ export function AlertDetailPage() {
   if (error || !alert) {
     return (
       <div
-        className="p-6 max-w-5xl mx-auto flex flex-col items-center justify-center gap-6 py-24"
+        className="p-6 max-w-5xl mx-auto flex flex-col items-center justify-center gap-6 py-24 bg-white border border-slate-200 rounded-2xl"
         role="alert"
       >
         <svg
-          className="w-16 h-16 text-gray-600"
+          className="w-16 h-16 text-slate-400"
           aria-hidden="true"
           fill="none"
           viewBox="0 0 24 24"
@@ -145,13 +145,13 @@ export function AlertDetailPage() {
             d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
           />
         </svg>
-        <h1 className="text-2xl font-semibold text-gray-100">Alert not found</h1>
-        <p className="text-gray-400 text-sm">
+        <h1 className="text-2xl font-semibold text-slate-900">Alert not found</h1>
+        <p className="text-slate-500 text-sm">
           {error?.message ?? "The requested alert does not exist or could not be loaded."}
         </p>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 text-gray-900 text-sm font-semibold hover:bg-cyan-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
         >
           Return to Dashboard
         </Link>
@@ -165,7 +165,7 @@ export function AlertDetailPage() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="p-6 max-w-5xl mx-auto space-y-6"
+      className="max-w-5xl mx-auto space-y-6"
     >
       {/* ── Page header with back button ── */}
       <div className="flex items-center gap-4">
@@ -174,7 +174,7 @@ export function AlertDetailPage() {
           type="button"
           onClick={() => navigate(-1)}
           aria-label="Go back"
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 cursor-pointer"
+          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors shadow-sm cursor-pointer"
         >
           <svg
             className="w-4 h-4"
@@ -190,30 +190,30 @@ export function AlertDetailPage() {
         </button>
 
         <div className="min-w-0">
-          <h1 className="text-xl font-bold text-white truncate">
+          <h1 className="text-xl font-bold text-slate-900 truncate">
             Alert Detail
           </h1>
-          <p className="text-xs text-gray-500 font-mono truncate">{alert.id}</p>
+          <p className="text-xs text-slate-400 font-mono truncate">{alert.id}</p>
         </div>
       </div>
 
       {/* ── Alert metadata card ── */}
       <section
-        className="bg-gray-900 border border-gray-700 rounded-xl p-6 space-y-5"
+        className="bg-white border border-slate-200/80 rounded-2xl p-6 space-y-5 shadow-sm"
         aria-label="Alert details"
       >
         <div className="flex items-center justify-between flex-wrap gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h2 className="text-base font-semibold text-white">{alert.type}</h2>
+            <h2 className="text-base font-bold text-slate-900">{alert.type}</h2>
             {/* Req 7.2: SeverityBadge */}
             <SeverityBadge severity={alert.severity} />
             <span
-              className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${
+              className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${
                 alert.status === "open"
-                  ? "bg-red-900 text-red-300"
+                  ? "bg-rose-50 text-rose-600 border border-rose-200"
                   : alert.status === "investigating"
-                  ? "bg-amber-900 text-amber-300"
-                  : "bg-emerald-900 text-emerald-300"
+                  ? "bg-amber-50 text-amber-600 border border-amber-200"
+                  : "bg-emerald-50 text-emerald-600 border border-emerald-200"
               }`}
             >
               {alert.status}
@@ -221,9 +221,9 @@ export function AlertDetailPage() {
           </div>
 
           {alert.confidenceScore !== undefined && (
-            <div className="bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700 font-mono text-right">
-              <span className="text-[10px] text-gray-400 block uppercase">Confidence Score</span>
-              <span className="text-base font-bold text-red-400">
+            <div className="bg-slate-50 px-3.5 py-1.5 rounded-xl border border-slate-200 font-mono text-right">
+              <span className="text-[10px] text-slate-400 block uppercase font-sans font-bold">Confidence Score</span>
+              <span className="text-base font-extrabold text-blue-600">
                 {(alert.confidenceScore * 100).toFixed(1)}%
               </span>
             </div>
@@ -251,15 +251,15 @@ export function AlertDetailPage() {
 
         {/* 6 Specialist Bots Score Breakdown */}
         {alert.botScores && Object.keys(alert.botScores).length > 0 && (
-          <div className="pt-3 border-t border-gray-800">
-            <dt className="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-2">
+          <div className="pt-3 border-t border-slate-100">
+            <dt className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
               Specialist AI Bots Evaluation
             </dt>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-xs">
               {Object.entries(alert.botScores).map(([botName, score]) => (
-                <div key={botName} className="bg-gray-800/80 p-2 rounded border border-gray-700 flex justify-between items-center">
-                  <span className="text-gray-400 truncate">{botName}:</span>
-                  <span className={`font-bold ${score > 0.7 ? 'text-red-400' : 'text-gray-300'}`}>
+                <div key={botName} className="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80 flex justify-between items-center">
+                  <span className="text-slate-500 text-[11px] truncate">{botName}:</span>
+                  <span className={`font-bold text-[11px] ${score > 0.7 ? 'text-rose-600' : 'text-slate-700'}`}>
                     {(score * 100).toFixed(1)}%
                   </span>
                 </div>
@@ -270,16 +270,16 @@ export function AlertDetailPage() {
 
         {/* Description spans full width */}
         <div>
-          <dt className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+          <dt className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
             Description
           </dt>
-          <dd className="text-sm text-gray-200 leading-relaxed">{alert.description}</dd>
+          <dd className="text-sm text-slate-700 leading-relaxed">{alert.description}</dd>
         </div>
       </section>
 
       {/* ── Req 7.3: Evidence Panel ── */}
       <section aria-label="Evidence">
-        <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <h2 className="text-sm font-bold text-slate-800 tracking-tight mb-3">
           Evidence
         </h2>
         <EvidencePanel evidence={alert.evidence} />
@@ -288,7 +288,7 @@ export function AlertDetailPage() {
       {/* ── Req 7.4, 7.5: Blockchain Section ── */}
       {(alert.blockchainHash !== null) && (
         <section aria-label="Blockchain evidence">
-          <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-bold text-slate-800 tracking-tight mb-3">
             Blockchain
           </h2>
           <BlockchainSection

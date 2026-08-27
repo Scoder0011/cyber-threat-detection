@@ -18,42 +18,42 @@ interface FlowRowProps {
 
 function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps) {
   return (
-    <li className="border-b border-gray-700 last:border-b-0">
+    <li className="border-b border-slate-200/80 last:border-b-0">
       {/* Collapsed row — always visible (Req 8.1) */}
       <button
         type="button"
         aria-expanded={isExpanded}
         aria-controls={`flow-detail-${flow.id}`}
         onClick={() => onToggle(flow.id)}
-        className="w-full flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3 text-left text-sm hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+        className="w-full flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3 text-left text-sm hover:bg-slate-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
       >
         {/* Row index */}
-        <span className="text-gray-500 font-mono text-xs w-5 shrink-0">
+        <span className="text-slate-400 font-mono text-xs w-5 shrink-0">
           {index + 1}
         </span>
 
         {/* 5-tuple */}
-        <span className="text-gray-300 font-mono">
+        <span className="text-slate-800 font-mono font-medium">
           {flow.srcIp}:{flow.srcPort}
         </span>
-        <span className="text-gray-500">→</span>
-        <span className="text-gray-300 font-mono">
+        <span className="text-slate-400">→</span>
+        <span className="text-slate-800 font-mono font-medium">
           {flow.dstIp}:{flow.dstPort}
         </span>
 
         {/* Protocol */}
-        <span className="px-1.5 py-0.5 rounded text-xs font-semibold bg-gray-700 text-cyan-300 uppercase">
+        <span className="px-2 py-0.5 rounded text-xs font-bold bg-slate-100 text-blue-600 uppercase border border-slate-200">
           {flow.protocol}
         </span>
 
         {/* Bytes / Packets */}
-        <span className="text-gray-400 text-xs ml-auto">
+        <span className="text-slate-500 text-xs ml-auto">
           {flow.bytes.toLocaleString()} B &nbsp;·&nbsp; {flow.packets.toLocaleString()} pkts
         </span>
 
         {/* Chevron indicator */}
         <svg
-          className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${
+          className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
             isExpanded ? "rotate-180" : "rotate-0"
           }`}
           aria-hidden="true"
@@ -70,7 +70,7 @@ function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps)
       {isExpanded && (
         <div
           id={`flow-detail-${flow.id}`}
-          className="px-4 pb-4 pt-2 bg-gray-800 text-sm space-y-3"
+          className="px-4 pb-4 pt-2 bg-slate-50 text-sm space-y-3 border-t border-slate-200/60"
         >
           {/* Full flow metadata recap */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
@@ -96,8 +96,8 @@ function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps)
 
           {/* Raw packet metadata (Req 8.2) — or error fallback (Req 8.6) */}
           {rawPacket !== undefined ? (
-            <div className="border-t border-gray-700 pt-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+            <div className="border-t border-slate-200 pt-3 space-y-2">
+              <p className="text-xs font-bold text-slate-600 uppercase tracking-wider">
                 Packet Capture
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
@@ -116,11 +116,11 @@ function FlowRow({ flow, index, isExpanded, rawPacket, onToggle }: FlowRowProps)
           ) : (
             // Req 8.6: error fallback when rawPacket is missing
             <div
-              className="border-t border-gray-700 pt-3"
+              className="border-t border-slate-200 pt-3"
               role="alert"
               aria-label="Packet data unavailable"
             >
-              <p className="text-xs text-amber-400">Packet data unavailable</p>
+              <p className="text-xs text-amber-600">Packet data unavailable</p>
             </div>
           )}
         </div>
@@ -138,8 +138,8 @@ interface DetailFieldProps {
 function DetailField({ label, value, mono = false }: DetailFieldProps) {
   return (
     <div>
-      <p className="text-gray-500 mb-0.5">{label}</p>
-      <p className={`text-gray-200 break-all ${mono ? "font-mono" : ""}`}>{value}</p>
+      <p className="text-slate-400 mb-0.5 text-[11px]">{label}</p>
+      <p className={`text-slate-800 break-all ${mono ? "font-mono font-medium" : "font-medium"}`}>{value}</p>
     </div>
   );
 }
@@ -157,19 +157,19 @@ export function EvidencePanel({ evidence }: EvidencePanelProps) {
   if (evidence.flows.length === 0) {
     return (
       <div
-        className="bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center p-8"
+        className="bg-white border border-slate-200 rounded-2xl flex items-center justify-center p-8 shadow-sm"
         aria-label="No evidence available"
       >
-        <p className="text-gray-400 text-sm">No evidence available</p>
+        <p className="text-slate-400 text-sm">No evidence available</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden">
+    <div className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
       {/* Panel header */}
-      <div className="px-4 py-3 border-b border-gray-700">
-        <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+      <div className="px-4 py-3 border-b border-slate-200 bg-slate-50/50">
+        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
           Network Flows
         </h3>
       </div>

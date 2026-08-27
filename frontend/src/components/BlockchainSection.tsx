@@ -33,19 +33,19 @@ export function BlockchainSection({ hash, verified, txHash, blockNum }: Blockcha
   };
 
   return (
-    <div className="bg-gray-900 border border-gray-700 rounded-xl p-4 space-y-3">
+    <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm space-y-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
           Blockchain Evidence
         </h3>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">
+        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
           AlertLog.sol (Polygon Amoy)
         </span>
       </div>
 
       {/* Hash value — monospace, wraps on long hashes */}
       <p
-        className="font-mono text-sm text-gray-200 break-all"
+        className="font-mono text-xs text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200 break-all"
         aria-label="Blockchain hash"
       >
         {hash}
@@ -57,7 +57,7 @@ export function BlockchainSection({ hash, verified, txHash, blockNum }: Blockcha
           {localVerified ? (
             // Requirement 7.4: verified → green "Verified on-chain" badge
             <span
-              className="inline-block rounded-full px-3 py-1 text-xs font-semibold bg-emerald-500 text-white"
+              className="inline-block rounded-full px-3 py-1 text-xs font-semibold bg-emerald-500 text-white shadow-sm"
               aria-label="Blockchain verification status: Verified on-chain"
             >
               Verified on-chain
@@ -65,7 +65,7 @@ export function BlockchainSection({ hash, verified, txHash, blockNum }: Blockcha
           ) : (
             // Requirement 7.5: pending → amber "Verification Pending" indicator
             <span
-              className="inline-block rounded-full px-3 py-1 text-xs font-semibold bg-amber-400 text-black"
+              className="inline-block rounded-full px-3 py-1 text-xs font-semibold bg-amber-400 text-black shadow-sm"
               aria-label="Blockchain verification status: Verification Pending"
             >
               Verification Pending
@@ -78,7 +78,7 @@ export function BlockchainSection({ hash, verified, txHash, blockNum }: Blockcha
             type="button"
             onClick={handleVerify}
             disabled={isVerifying}
-            className="px-3 py-1 text-xs font-mono font-semibold rounded bg-purple-600 hover:bg-purple-500 text-white transition-colors cursor-pointer"
+            className="px-3.5 py-1.5 text-xs font-semibold rounded-xl bg-purple-600 hover:bg-purple-700 text-white transition-colors cursor-pointer shadow-sm"
           >
             {isVerifying ? 'Verifying...' : 'Verify Proof'}
           </button>
@@ -87,24 +87,24 @@ export function BlockchainSection({ hash, verified, txHash, blockNum }: Blockcha
 
       {/* Enriched on-chain transaction metadata */}
       {localVerified && (
-        <div className="pt-2 border-t border-gray-800 text-[11px] font-mono text-gray-400 space-y-1.5">
+        <div className="pt-2 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1.5">
           <div className="flex justify-between">
-            <span className="text-gray-500">Contract:</span>
-            <span className="text-gray-300 truncate max-w-[200px]">{contractAddress}</span>
+            <span className="text-slate-400">Contract:</span>
+            <span className="text-slate-700 truncate max-w-[240px]">{contractAddress}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-500">Block:</span>
-            <span className="text-purple-300 font-bold">#{blockNumber}</span>
+            <span className="text-slate-400">Block:</span>
+            <span className="text-purple-600 font-bold">#{blockNumber}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-gray-500">Tx Hash:</span>
+            <span className="text-slate-400">Tx Hash:</span>
             <a
               href={`https://amoy.polygonscan.com/tx/${transactionHash}`}
               target="_blank"
               rel="noreferrer"
-              className="text-cyan-400 hover:underline truncate max-w-[200px]"
+              className="text-blue-600 hover:underline truncate max-w-[240px]"
             >
-              {transactionHash.slice(0, 16)}...
+              {transactionHash.slice(0, 18)}...
             </a>
           </div>
         </div>

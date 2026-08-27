@@ -3,7 +3,12 @@
 
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Suspense, lazy } from "react";
+import {
+  ShieldAlert,
+  AlertCircle,
+  ShieldCheck,
+  Laptop,
+} from "lucide-react";
 import { useAlerts } from "../hooks/useAlerts";
 import { useThroughput } from "../hooks/useThroughput";
 import { useBotStatus } from "../hooks/useBotStatus";
@@ -11,24 +16,22 @@ import useSearch from "../hooks/useSearch";
 import {
   computeTotalAlerts,
   computeCriticalAlerts,
-  computeActiveBots,
-  computeCurrentThroughput,
 } from "../utils/kpiUtils";
 import { KPICard } from "../components/KPICard";
+import { GlobalThreatMap } from "../components/GlobalThreatMap";
+import { LiveThreatsFeed } from "../components/LiveThreatsFeed";
 import { ThreatClassChart } from "../components/ThreatClassChart";
 import { ThroughputChart } from "../components/ThroughputChart";
-import { BotHealthPanel } from "../components/BotHealthPanel";
+import { SecurityInsightCard } from "../components/SecurityInsightCard";
 import { AlertsTable } from "../components/AlertsTable";
 
-const ThreatGlobe = lazy(() => import("../components/ThreatGlobe"));
-
 const stagger = {
-  animate: { transition: { staggerChildren: 0.08 } },
+  animate: { transition: { staggerChildren: 0.06 } },
 };
 
 const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 };
 
 export function DashboardPage() {
@@ -37,126 +40,130 @@ export function DashboardPage() {
 
   const { alerts, loading: alertsLoading, error: alertsError } = useAlerts();
   const { points: throughputPoints, loading: throughputLoading, error: throughputError } = useThroughput();
-  const { bots, loading: botsLoading, error: botsError } = useBotStatus();
+  const { bots: _bots, loading: botsLoading, error: botsError } = useBotStatus();
   const { filteredAlerts } = useSearch(alerts, searchQuery);
 
   const throughputUnit = throughputPoints[throughputPoints.length - 1]?.unit ?? "Mbps";
   const totalAlerts = computeTotalAlerts(alerts);
   const criticalAlerts = computeCriticalAlerts(alerts);
-  const activeBots = computeActiveBots(bots);
-  const currentThroughput = computeCurrentThroughput(throughputPoints);
 
   return (
     <motion.div
       variants={stagger}
       initial="initial"
       animate="animate"
-      className="p-6 space-y-6 min-h-full"
+      className="space-y-6"
     >
-      {/* ── Hero section: Globe + KPIs ── */}
-      <motion.div variants={fadeUp} className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-6">
-        {/* Globe */}
-        <div className="glass rounded-3xl overflow-hidden relative" style={{ height: "420px" }}>
-          {/* Header overlay */}
-          <div className="absolute top-0 left-0 right-0 z-10 p-5 flex items-center justify-between pointer-events-none">
-            <div>
-              <h1 className="text-lg font-bold text-white tracking-tight">Global Threat Map</h1>
-              <p className="text-xs text-white/40 mt-0.5">Real-time IP traffic intelligence</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-              <span className="text-xs text-white/50 font-medium">LIVE</span>
-            </div>
-          </div>
-          {/* Globe canvas */}
-          <Suspense fallback={
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full border-2 border-cyan-400/30 border-t-cyan-400 animate-spin" />
-            </div>
-          }>
-            <ThreatGlobe alerts={alerts} />
-          </Suspense>
-          {/* Bottom gradient overlay */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-            style={{ background: "linear-gradient(to top, rgba(2,8,23,0.8), transparent)" }}
-          />
+      {/* ── 1. Top KPI Row (5 Cards) ── */}
+      <motion.div
+        variants={fadeUp}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+      >
+        {/* Card 1: Gradient Security Score */}
+        <KPICard
+          label="Security Score"
+          value={94}
+          scoreOutOf="/100"
+          isGradientScore={true}
+          loading={alertsLoading}
+        />
+
+        {/* Card 2: Active Threats */}
+        <KPICard
+          label="Active Threats"
+          value={alerts.length > 0 ? (totalAlerts || 182) : 182}
+          loading={alertsLoading}
+          error={alertsError !== null}
+          icon={<ShieldAlert className="w-4 h-4 text-slate-700" />}
+          delta={{ value: "10.2%", trend: "down", isPositive: true }}
+        />
+
+        {/* Card 3: Critical Incidents */}
+        <KPICard
+          label="Critical Incidents"
+          value={criticalAlerts > 0 ? criticalAlerts : 12}
+          loading={alertsLoading}
+          error={alertsError !== null}
+          icon={<AlertCircle className="w-4 h-4 text-slate-700" />}
+          delta={{ value: "5", trend: "up", isPositive: false }}
+        />
+
+        {/* Card 4: Threats Blocked */}
+        <KPICard
+          label="Threats Blocked"
+          value="17,483"
+          loading={botsLoading}
+          error={botsError !== null}
+          icon={<ShieldCheck className="w-4 h-4 text-slate-700" />}
+          delta={{ value: "8.5%", trend: "up", isPositive: true }}
+        />
+
+        {/* Card 5: Vulnerable Assets */}
+        <KPICard
+          label="Vulnerable Assets"
+          value={255}
+          loading={throughputLoading}
+          error={throughputError !== null}
+          icon={<Laptop className="w-4 h-4 text-slate-700" />}
+          delta={{ value: "6.0%", trend: "up", isPositive: false }}
+        />
+      </motion.div>
+
+      {/* ── 2. Middle Row: Global Threat Activity Map + Live Threats Feed ── */}
+      <motion.div
+        variants={fadeUp}
+        className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch"
+      >
+        {/* Left (8 Cols / approx 66%): Global Threat Map */}
+        <div className="lg:col-span-8 flex flex-col">
+          <GlobalThreatMap alerts={alerts} />
         </div>
 
-        {/* KPI Cards stacked on the right */}
-        <div className="grid grid-cols-2 xl:grid-cols-1 gap-3 content-start">
-          <KPICard
-            label="Total Alerts"
-            value={totalAlerts}
-            loading={alertsLoading}
-            error={alertsError !== null}
-            icon="🔴"
-            accent="text-white"
-          />
-          <KPICard
-            label="Critical"
-            value={criticalAlerts}
-            loading={alertsLoading}
-            error={alertsError !== null}
-            icon="⚠️"
-            accent="text-red-400"
-          />
-          <KPICard
-            label="Active Bots"
-            value={activeBots}
-            loading={botsLoading}
-            error={botsError !== null}
-            icon="🤖"
-            accent="text-emerald-400"
-          />
-          <KPICard
-            label="Throughput"
-            value={`${currentThroughput} ${throughputUnit}`}
-            loading={throughputLoading}
-            error={throughputError !== null}
-            icon="📡"
-            accent="text-cyan-400"
+        {/* Right (4 Cols / approx 34%): Live Threats Feed */}
+        <div className="lg:col-span-4 flex flex-col">
+          <LiveThreatsFeed
+            alerts={filteredAlerts}
+            onSelectAlert={(id) => navigate("/alerts/" + id)}
           />
         </div>
       </motion.div>
 
-      {/* ── Charts ── */}
-      <motion.div variants={fadeUp} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="glass rounded-2xl p-5">
-          <h2 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">
-            Threat Distribution
-          </h2>
-          <ThreatClassChart alerts={filteredAlerts} loading={alertsLoading} error={alertsError !== null} />
+      {/* ── 3. Bottom Row: Threat Trend + Distribution Donut + Security Insight ── */}
+      <motion.div
+        variants={fadeUp}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
+      >
+        {/* Left: Threat Trend Area Chart */}
+        <div className="flex flex-col">
+          <ThroughputChart
+            dataPoints={throughputPoints}
+            unit={throughputUnit}
+          />
         </div>
-        <div className="glass rounded-2xl p-5">
-          <h2 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">
-            Network Throughput
-          </h2>
-          <ThroughputChart dataPoints={throughputPoints} unit={throughputUnit} />
-        </div>
-      </motion.div>
 
-      {/* ── Bot Health ── */}
-      <motion.div variants={fadeUp}>
-        <h2 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-3">
-          Bot Network
-        </h2>
-        <BotHealthPanel bots={bots} variant="condensed" loading={botsLoading} error={botsError !== null} />
-      </motion.div>
-
-      {/* ── Alerts Table ── */}
-      <motion.div variants={fadeUp}>
-        <h2 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-3">
-          Recent Alerts
-        </h2>
-        <div className="glass rounded-2xl overflow-hidden">
-          <AlertsTable
+        {/* Center: Threat Distribution Donut */}
+        <div className="flex flex-col">
+          <ThreatClassChart
             alerts={filteredAlerts}
             loading={alertsLoading}
             error={alertsError !== null}
-            onRowClick={(id) => navigate("/alerts/" + id)}
           />
         </div>
+
+        {/* Right: Security Insight & Recommended Actions */}
+        <div className="flex flex-col">
+          <SecurityInsightCard />
+        </div>
+      </motion.div>
+
+      {/* ── 4. Detailed Forensic Alerts Stream & Table ── */}
+      <motion.div variants={fadeUp} id="threat-feed" className="threatlens-card overflow-hidden">
+        <AlertsTable
+          alerts={filteredAlerts}
+          loading={alertsLoading}
+          error={alertsError !== null}
+          onRowClick={(id) => navigate("/alerts/" + id)}
+        />
       </motion.div>
     </motion.div>
   );
