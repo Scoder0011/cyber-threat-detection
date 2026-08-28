@@ -1,11 +1,10 @@
-from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 
 from app.db.session import get_db
 from app.db.models import NetworkFlow
 from app.schemas.flow import NetworkFlowCreate, NetworkFlowResponse
-from app.controller.main_controller import evaluate_flow, ACTIVE_BOTS
 
 router = APIRouter()
 
@@ -30,15 +29,9 @@ def get_flow(flow_id: str, db: Session = Depends(get_db)):
 
 
 @router.post("/flows", response_model=NetworkFlowResponse)
-def create_flow(flow: NetworkFlowCreate, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+def create_flow(flow: NetworkFlowCreate, db: Session = Depends(get_db)):
     db_flow = NetworkFlow(**flow.model_dump())
     db.add(db_flow)
     db.commit()
     db.refresh(db_flow)
-    
-    flow_data = flow.model_dump()
-    payload = flow_data.get("extra_metadata") or flow_data
-    for bot in ACTIVE_BOTS:
-        background_tasks.add_task(evaluate_flow, flow_data, bot, payload)
-        
     return db_flow
