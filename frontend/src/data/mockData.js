@@ -510,4 +510,5 @@ export const navTabs = [
   { id: "overview", label: "Overview" },
   { id: "threat-feed", label: "Threat Feed" },
   { id: "incidents", label: "Incidents", count: 12 },
+  { id: "system-status", label: "AI Architecture" },
 ];

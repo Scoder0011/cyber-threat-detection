@@ -9,6 +9,8 @@ import { ThreatTrendChart } from "../components/dashboard/ThreatTrendChart";
 import { ThreatDistributionChart } from "../components/dashboard/ThreatDistributionChart";
 import { SecurityInsightPanel } from "../components/dashboard/SecurityInsightPanel";
 import { IncidentsView } from "../components/views/IncidentsView";
+import { SystemArchitectureView } from "../components/views/SystemArchitectureView";
+
 import { Toast } from "../components/common/Toast";
 import { AIAssistantBot } from "../components/dashboard/AIAssistantBot";
 
@@ -221,6 +223,11 @@ export const DashboardPage = () => {
         {activeTab === "incidents" && (
           <IncidentsView onBackToOverview={() => setActiveTab("overview")} items={feed} />
         )}
+
+        {activeTab === "system-status" && (
+          <SystemArchitectureView />
+        )}
+
 
 
 
