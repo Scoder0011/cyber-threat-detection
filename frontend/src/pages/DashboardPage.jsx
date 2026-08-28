@@ -10,6 +10,8 @@ import { ThreatDistributionChart } from "../components/dashboard/ThreatDistribut
 import { SecurityInsightPanel } from "../components/dashboard/SecurityInsightPanel";
 import { IncidentsView } from "../components/views/IncidentsView";
 import { Toast } from "../components/common/Toast";
+import { AIAssistantBot } from "../components/dashboard/AIAssistantBot";
+
 import { useSocData } from "../hooks/useSocData";
 
 // Framer motion stagger animation variants
@@ -247,6 +249,7 @@ export const DashboardPage = () => {
         onClose={() => setToastMessage(null)}
       />
 
+      <AIAssistantBot />
     </div>
   );
 };
