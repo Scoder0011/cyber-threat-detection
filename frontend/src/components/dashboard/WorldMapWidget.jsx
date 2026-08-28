@@ -408,11 +408,11 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
         ref={svgRef}
       >
         {/* Deep space radial glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,#1E293B_0%,#090D16_80%)] pointer-events-none opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,#E2E8F0_0%,#F8FAFC_80%)] dark:bg-[radial-gradient(circle_at_50%_45%,#1E293B_0%,#090D16_80%)] pointer-events-none opacity-90" />
 
         {/* Ambient coordinate crosshair overlay */}
         <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
+          className="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none"
           style={{
             backgroundImage: `radial-gradient(circle, #38BDF8 1px, transparent 1px)`,
             backgroundSize: "28px 28px",
