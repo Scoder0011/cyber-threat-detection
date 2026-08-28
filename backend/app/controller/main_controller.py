@@ -1,68 +1,69 @@
 """
-Main Controller AI — calls each specialist bot's /predict endpoint,
-and if a bot flags malicious traffic, writes a ThreatAlert.
+Main Controller AI — Score Fusion.
+Consumes predictions from Redis Event Bus, fuses their scores,
+and if a threshold is crossed, generates a ThreatAlert.
 """
-import requests
 import uuid
+from datetime import datetime
 from app.db.session import SessionLocal
 from app.db.models import ThreatAlert
 
-import os
-AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://three-1-1oz2.onrender.com")
-CONFIDENCE_THRESHOLD = 0.7
+CONFIDENCE_THRESHOLD = 0.65
 
-# Bots currently known to work; add scanning_bot once fixed
-ACTIVE_BOTS = [
-    "ddos_bot",
-    "beaconing_bot",
-    "dga_dns_bot",
-    "encrypted_malware_bot",
-    "exfiltration_bot",
-]
+def log_to_blockchain(alert_id, attack_type, confidence):
+    """Mock Blockchain Logger"""
+    import hashlib
+    data_str = f"{alert_id}-{attack_type}-{confidence}-{datetime.utcnow().isoformat()}"
+    tx_hash = hashlib.sha256(data_str.encode()).hexdigest()
+    print(f"[BLOCKCHAIN] Logged Alert Hash to Ledger: 0x{tx_hash}")
+    return f"0x{tx_hash}"
 
-
-def call_bot(bot_name: str, payload: dict) -> dict:
-    resp = requests.post(
-        f"{AI_SERVICE_URL}/predict/{bot_name}",
-        json=payload,
-        timeout=15
-    )
-    resp.raise_for_status()
-    return resp.json()
-
-
-def evaluate_flow(flow_data: dict, bot_name: str, bot_payload: dict):
+def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
     """
-    Calls one bot with the given payload. If malicious, writes an alert.
+    Score Fusion logic based on the bot predictions retrieved from Redis Event Bus.
     """
-    try:
-        result = call_bot(bot_name, bot_payload)
-    except Exception as e:
-        print(f"{bot_name}: call failed - {e}")
-        return None
+    total_confidence = 0.0
+    malicious_votes = 0
 
-    if result.get("malicious") and result.get("confidence", 0) >= CONFIDENCE_THRESHOLD:
-        db = SessionLocal()
-        try:
+    for bot, res in bot_predictions.items():
+        if res.get("malicious"):
+            malicious_votes += 1
+            total_confidence += res.get("confidence", 0.0)
+
+    # 5. Main Controller (Score Fusion)
+    if malicious_votes > 0:
+        fused_confidence = total_confidence / malicious_votes
+        
+        # Boost confidence if multiple bots detected it
+        if malicious_votes > 1:
+            fused_confidence = min(0.99, fused_confidence + (malicious_votes * 0.05))
+
+        if fused_confidence >= CONFIDENCE_THRESHOLD:
+            # Determine primary attack type
+            primary_bot = max(bot_predictions.items(), key=lambda x: x[1].get("confidence", 0))[0]
+            primary_res = bot_predictions[primary_bot]
+
+            alert_id = str(uuid.uuid4())
+            
+            # 6. Log to Blockchain
+            tx_hash = log_to_blockchain(alert_id, primary_res.get("label", "unknown"), fused_confidence)
+
+            # 7. Save Alert in PostgreSQL
             alert = ThreatAlert(
-                alert_id=str(uuid.uuid4()),
-                title=f"{result.get('category', bot_name)} detected",
-                description=f"{bot_name} flagged traffic as {result.get('label')}",
-                severity=result.get("severity", "MEDIUM").upper(),
-                attack_type=result.get("label", "unknown"),
+                alert_id=alert_id,
+                title=f"Multi-Vector {primary_res.get('category', primary_bot).replace('_', ' ').title()} Detected",
+                description=f"Score Fusion engine detected malicious activity flagged by {malicious_votes} specialist bots.",
+                severity="CRITICAL" if fused_confidence > 0.85 else "HIGH",
+                attack_type=primary_res.get("label", "unknown"),
                 source_ip=flow_data.get("src_ip", "unknown"),
                 target_ip=flow_data.get("dst_ip", "unknown"),
-                confidence_score=result.get("confidence", 0.0),
-                contributing_bots=[bot_name],
-                bot_scores={bot_name: result.get("confidence", 0.0)},
-                evidence=result.get("features", {}),
+                confidence_score=fused_confidence,
+                contributing_bots=[b for b, res in bot_predictions.items() if res.get("malicious")],
+                bot_scores={b: res.get("confidence", 0) for b, res in bot_predictions.items()},
+                evidence={"tx_hash": tx_hash, "fused_confidence": fused_confidence}
             )
             db.add(alert)
-            db.commit()
-            print(f"ALERT created: {alert.alert_id} ({bot_name}, {result.get('confidence')})")
+            print(f"[FUSION] ALERT created: {alert.alert_id} (Confidence: {fused_confidence:.2f})")
             return alert
-        finally:
-            db.close()
-    else:
-        print(f"{bot_name}: benign/low-confidence ({result.get('confidence')}), no alert")
-        return None
+    
+    return None
