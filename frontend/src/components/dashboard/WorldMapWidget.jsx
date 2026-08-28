@@ -25,12 +25,7 @@ import {
 import * as d3Geo from "d3-geo";
 import * as topojson from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
-import {
-  mockTopAttackOrigins,
-  mockAttackVectors,
-  mockSOCDestination,
-  mockAuxiliaryDefenseHubs
-} from "../../data/mockData";
+
 import { MapSkeleton } from "../common/SkeletonLoader";
 import { Tooltip } from "../common/Tooltip";
 import { Badge } from "../common/Badge";
@@ -48,7 +43,79 @@ const threatTypeColors = {
   Malware: "#10B981",
 };
 
-export const WorldMapWidget = ({ isLoading }) => {
+export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
+  // Dynamic Map Data Generation
+  const dynamicSOCDestination = { coordinates: [8.6821, 50.1109] }; // Frankfurt, default SOC
+  
+  const { dynamicAttackOrigins, dynamicAttackVectors } = useMemo(() => {
+    if (!alerts || alerts.length === 0) {
+      return { dynamicAttackOrigins: [], dynamicAttackVectors: [] };
+    }
+
+    const originsMap = {};
+    
+    const getColor = (type) => {
+      const t = (type || "").toLowerCase();
+      if (t.includes("ransom")) return "#3B82F6";
+      if (t.includes("phish")) return "#EF4444";
+      if (t.includes("brute") || t.includes("c2")) return "#F97316";
+      if (t.includes("ddos") || t.includes("flood")) return "#EAB308";
+      return "#10B981"; // malware/default
+    };
+
+    const vectors = [];
+
+    alerts.forEach((alert) => {
+      // Deterministic pseudo-random lat/lng based on source IP string
+      let hash = 0;
+      const ip = alert.source || "0.0.0.0";
+      for (let i = 0; i < ip.length; i++) {
+        hash = (hash << 5) - hash + ip.charCodeAt(i);
+        hash |= 0;
+      }
+      
+      const pseudoLat = (Math.abs(hash) % 120) - 60; // -60 to +60
+      const pseudoLng = (Math.abs(hash * 31) % 360) - 180; // -180 to +180
+      
+      const countryCode = "UN"; // Unknown
+      const originKey = `${pseudoLng},${pseudoLat}`;
+
+      if (!originsMap[originKey]) {
+        originsMap[originKey] = {
+          country: "Unknown Region",
+          code: countryCode,
+          flag: "🌍",
+          count: 0,
+          threatType: alert.attackType,
+          color: getColor(alert.attackType),
+          coordinates: [pseudoLng, pseudoLat],
+          topAsn: "Unknown ASN",
+          recentIoc: ip,
+        };
+      }
+      originsMap[originKey].count += 1;
+
+      vectors.push({
+        id: alert.id,
+        originName: "Unknown Region",
+        originCoords: [pseudoLng, pseudoLat],
+        destCoords: dynamicSOCDestination.coordinates,
+        threatType: alert.attackType,
+        severity: alert.severity.toLowerCase(),
+        color: getColor(alert.attackType),
+        ip: ip,
+        target: alert.destination,
+        speed: "live",
+      });
+    });
+
+    const origins = Object.values(originsMap).sort((a, b) => b.count - a.count);
+    const total = alerts.length;
+    origins.forEach((o) => (o.percentage = ((o.count / total) * 100).toFixed(1)));
+
+    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: vectors.slice(0, 50) }; // cap vectors for performance
+  }, [alerts]);
+
   // Pan & Zoom state
   const [zoomLevel, setZoomLevel] = useState(1);
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
@@ -122,12 +189,12 @@ export const WorldMapWidget = ({ isLoading }) => {
 
   // Projected 2D screen positions
   const projectedDestination = useMemo(() => {
-    const coords = projection(mockSOCDestination.coordinates);
+    const coords = projection(dynamicSOCDestination.coordinates);
     return coords ? { x: coords[0], y: coords[1] } : { x: SVG_WIDTH / 2, y: SVG_HEIGHT / 2 };
   }, [projection]);
 
   const projectedOrigins = useMemo(() => {
-    return mockTopAttackOrigins.map((orig) => {
+    return dynamicAttackOrigins.map((orig) => {
       const coords = projection(orig.coordinates);
       return {
         ...orig,
@@ -139,7 +206,7 @@ export const WorldMapWidget = ({ isLoading }) => {
   }, [projection]);
 
   const projectedAttackVectors = useMemo(() => {
-    return mockAttackVectors.map((atk) => {
+    return dynamicAttackVectors.map((atk) => {
       const start = projection(atk.originCoords);
       const end = projection(atk.destCoords);
       if (!start || !end) return null;
@@ -662,7 +729,7 @@ export const WorldMapWidget = ({ isLoading }) => {
 
           {!isTopOriginsCollapsed && (
             <div className="space-y-1.5 mt-2">
-              {mockTopAttackOrigins.map((item) => (
+              {dynamicAttackOrigins.map((item) => (
                 <div
                   key={item.code}
                   onMouseEnter={() => setHoveredOrigin(item)}

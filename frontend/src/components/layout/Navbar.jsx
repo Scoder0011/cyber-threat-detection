@@ -22,7 +22,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Tooltip } from "../common/Tooltip";
 import { navTabs } from "../../data/mockData";
 
-export const Navbar = ({ activeTab, onTabChange }) => {
+export const Navbar = ({ activeTab, onTabChange, activeIncidents = 0 }) => {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
 
@@ -70,9 +70,9 @@ export const Navbar = ({ activeTab, onTabChange }) => {
     navigate("/login");
   };
 
-  const userName = user?.user_metadata?.full_name || "Alex Morgan";
-  const userRole = user?.user_metadata?.role || "SOC Analyst";
-  const userEmail = user?.email || "alex.morgan@thethirdeye.sec";
+  const userName = user?.user_metadata?.full_name || "DarkTheUnk";
+  const userRole = user?.user_metadata?.role || "Administrator";
+  const userEmail = user?.email || "dark@thethirdeye.sec";
   const avatarUrl =
     user?.user_metadata?.avatar_url ||
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256";
@@ -123,7 +123,7 @@ export const Navbar = ({ activeTab, onTabChange }) => {
                     }`}
                   >
                     <span>{tab.label}</span>
-                    {tab.count !== undefined && (
+                    { (tab.id === 'incidents' ? activeIncidents > 0 : tab.count !== undefined) && (
                       <span
                         className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
                           isActive
@@ -131,7 +131,7 @@ export const Navbar = ({ activeTab, onTabChange }) => {
                             : "bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
                         }`}
                       >
-                        {tab.count}
+                        {tab.id === 'incidents' ? activeIncidents : tab.count}
                       </span>
                     )}
                     {isActive && (
@@ -345,13 +345,13 @@ export const Navbar = ({ activeTab, onTabChange }) => {
                 }`}
               >
                 <span>{tab.label}</span>
-                {tab.count !== undefined && (
+                { (tab.id === 'incidents' ? activeIncidents > 0 : tab.count !== undefined) && (
                   <span
                     className={`text-[10px] px-1.5 py-0.2 rounded-full ${
                       isActive ? "bg-blue-600 text-white" : "bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
                     }`}
                   >
-                    {tab.count}
+                    {tab.id === 'incidents' ? activeIncidents : tab.count}
                   </span>
                 )}
               </button>

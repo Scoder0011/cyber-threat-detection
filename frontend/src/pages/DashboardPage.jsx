@@ -103,7 +103,7 @@ export const DashboardPage = () => {
       <div className="fixed bottom-0 right-1/4 w-96 h-96 bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none z-0" />
 
       {/* TOP NAVBAR */}
-      <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
+      <Navbar activeTab={activeTab} onTabChange={setActiveTab} activeIncidents={insight?.active || 0} />
 
       {/* MAIN CONTENT WRAPPER */}
       <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
@@ -156,7 +156,7 @@ export const DashboardPage = () => {
                 
                 {/* Left (Larger): Global Threat Activity World Map */}
                 <div className="lg:col-span-7 xl:col-span-8 flex flex-col">
-                  <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} />
+                  <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} alerts={feed} />
                 </div>
 
                 {/* Right (Smaller): Live Threats Feed */}
@@ -210,7 +210,7 @@ export const DashboardPage = () => {
                 <ThreatFeed isLoading={isLoading || isLoadingSkeletons} items={feed} />
               </div>
               <div className="lg:col-span-7">
-                <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} />
+                <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} alerts={feed} />
               </div>
             </div>
           </div>
