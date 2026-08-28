@@ -101,7 +101,7 @@ export const LoginPage = () => {
       </div>
 
       {/* LEFT HALF: BRANDED HIGH-TECH CYBER PANEL */}
-      <div className="lg:w-1/2 relative bg-gradient-to-br from-slate-900 via-[#0B1120] to-[#070A12] text-white p-8 sm:p-12 lg:p-16 flex flex-col justify-between overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
+      <div className="lg:w-1/2 relative bg-gradient-to-br from-blue-50/50 via-white to-slate-50 dark:from-slate-900 dark:via-[#0B1120] dark:to-[#070A12] text-slate-900 dark:text-white p-8 sm:p-12 lg:p-16 flex flex-col justify-between overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800">
         
         {/* Animated Background Cyber Mesh & Blobs */}
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none animate-blob-float" />
@@ -125,14 +125,14 @@ export const LoginPage = () => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-slate-100 to-blue-200 bg-clip-text text-transparent">
+                <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 dark:from-white dark:via-slate-100 dark:to-blue-200 bg-clip-text text-transparent">
                   TheThirdEYE
                 </span>
-                <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30 uppercase tracking-wider">
+                <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-400/30 uppercase tracking-wider">
                   ENTERPRISE SOC
                 </span>
               </div>
-              <p className="text-xs text-slate-400 font-medium">
+              <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
                 Unified Autonomous Cyber Operations & Telemetry
               </p>
             </div>
@@ -141,41 +141,41 @@ export const LoginPage = () => {
 
         {/* MIDDLE HERO CONTENT */}
         <div className="relative z-10 my-12 max-w-lg">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold mb-6 shadow-glow-blue backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-semibold mb-6 shadow-glow-blue backdrop-blur-md">
             <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
             <span>GLOBAL THREAT MATRIX ONLINE • 99.99% DEFENSE RATIO</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-4">
             Real-time threat intelligence,{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 dark:from-blue-400 dark:via-indigo-300 dark:to-sky-400 bg-clip-text text-transparent">
               unified.
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
             Correlate ingress packets, track nation-state threat vectors in 3D cartography, and orchestrate zero-touch SOAR containment across 4,800+ endpoints.
           </p>
 
           {/* Mini Security Metrics Live Preview */}
-          <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.08] backdrop-blur-md shadow-2xl">
+          <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.08] backdrop-blur-md shadow-2xl">
             <div className="p-2">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">SCORE</span>
-              <span className="text-xl font-extrabold text-blue-400 font-mono">94/100</span>
+              <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">SCORE</span>
+              <span className="text-xl font-extrabold text-blue-600 dark:text-blue-400 font-mono">94/100</span>
             </div>
-            <div className="p-2 border-x border-white/10">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">MITIGATED</span>
-              <span className="text-xl font-extrabold text-emerald-400 font-mono">17,483</span>
+            <div className="p-2 border-x border-slate-200 dark:border-white/10">
+              <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">MITIGATED</span>
+              <span className="text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">17,483</span>
             </div>
             <div className="p-2">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">TELEMETRY</span>
-              <span className="text-xl font-extrabold text-amber-400 font-mono">24h LIVE</span>
+              <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">TELEMETRY</span>
+              <span className="text-xl font-extrabold text-amber-600 dark:text-amber-400 font-mono">24h LIVE</span>
             </div>
           </div>
         </div>
 
         {/* BOTTOM FOOTER BADGES */}
-        <div className="relative z-10 flex items-center justify-between text-xs text-slate-500 font-mono pt-4 border-t border-slate-800/80">
+        <div className="relative z-10 flex items-center justify-between text-xs text-slate-500 font-mono pt-4 border-t border-slate-200 dark:border-slate-800/80">
           <span>ISO 27001 • SOC2 TYPE II CERTIFIED</span>
           <span>BUILD: v4.8.2-SEC</span>
         </div>
@@ -389,7 +389,7 @@ export const LoginPage = () => {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-slate-200 dark:border-slate-700/80" />
               </div>
-              <span className="relative px-3 bg-white dark:bg-[#1A1E27] text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+              <span className="relative px-3 bg-white dark:bg-[#1A1E27] text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 or continue with
               </span>
             </div>
