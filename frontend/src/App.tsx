@@ -1,20 +1,7 @@
-import { Route, Routes } from "react-router-dom";
-import { Sidebar } from "@/pages/Sidebar";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Sidebar } from "@/components/Sidebar";
 import { Dashboard } from "@/pages/Dashboard";
-import { AlertDetail } from "@/pages/AlertDetail";
-import { SystemHealth } from "@/pages/SystemHealth";
-
-export default function App() {
-  return (
-    <div className="flex min-h-screen bg-void">
-      <Sidebar />
-      <div className="flex flex-1 flex-col">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/alerts/:id" element={<AlertDetail />} />
-          <Route path="/system" element={<SystemHealth />} />
-        </Routes>
-      </div>
-    </div>
-  );
-}
+import { AlertsPage, BlockchainPage, BotsPage, SettingsPage, TrafficPage } from "@/pages/OperationalPages";
+function initialDark(): boolean { const saved = localStorage.getItem("threatlens-theme"); return saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches; }
+export default function App() { const [dark, setDark] = useState(initialDark); const location = useLocation(); const navigate = useNavigate(); const toggle = () => setDark(value => !value); useEffect(() => { document.documentElement.classList.toggle("dark", dark); localStorage.setItem("threatlens-theme", dark ? "dark" : "light"); }, [dark]); return <div className="flex min-h-screen bg-slate-50 text-slate-900 dark:bg-[#09111d] dark:text-slate-100"><Sidebar active={location.pathname} onSelect={navigate}/><Routes><Route path="/" element={<Dashboard dark={dark} onToggleTheme={toggle}/>}/><Route path="/live-traffic" element={<TrafficPage/>}/><Route path="/alerts" element={<AlertsPage/>}/><Route path="/bots" element={<BotsPage/>}/><Route path="/blockchain" element={<BlockchainPage/>}/><Route path="/settings" element={<SettingsPage dark={dark} toggle={toggle}/>}/><Route path="*" element={<Dashboard dark={dark} onToggleTheme={toggle}/>}/></Routes></div>; }
