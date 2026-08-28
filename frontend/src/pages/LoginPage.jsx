@@ -62,25 +62,28 @@ export const LoginPage = () => {
     if (!validate()) return;
 
     if (isSignUp) {
-      // TODO: replace with actual Supabase client call — supabase.auth.signUp({ email, password, options: { data: { full_name: fullName } } })
       const res = await signUpWithEmail(email, password, fullName);
       if (!res.error) {
         navigate("/dashboard");
+      } else {
+        setErrors({ submit: res.error.message || "Failed to sign up" });
       }
     } else {
-      // TODO: replace with actual Supabase client call — supabase.auth.signInWithPassword({ email, password })
       const res = await signInWithEmail(email, password);
       if (!res.error) {
         navigate("/dashboard");
+      } else {
+        setErrors({ submit: res.error.message || "Invalid login credentials" });
       }
     }
   };
 
   const handleOAuth = async (provider) => {
-    // TODO: replace with actual Supabase client call — supabase.auth.signInWithOAuth({ provider })
     const res = await signInWithOAuth(provider);
     if (!res.error) {
       navigate("/dashboard");
+    } else {
+      setErrors({ submit: res.error.message || `Failed to sign in with ${provider}` });
     }
   };
 
@@ -194,6 +197,13 @@ export const LoginPage = () => {
                   : "Enter your verified security analyst credentials to access the console."}
               </p>
             </div>
+
+            {errors.submit && (
+              <div className="mb-6 p-3 rounded-xl bg-rose-50/50 dark:bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-sm flex items-start gap-2.5 animate-in fade-in slide-in-from-top-2">
+                <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                <span>{errors.submit}</span>
+              </div>
+            )}
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
