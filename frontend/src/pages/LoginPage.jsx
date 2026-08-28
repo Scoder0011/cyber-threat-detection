@@ -21,7 +21,13 @@ import { Button } from "../components/common/Button";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
-  const { signInWithEmail, signUpWithEmail, signInWithOAuth, isLoading } = useAuth();
+  const { signInWithEmail, signUpWithEmail, signInWithOAuth, isLoading, isAuthenticated } = useAuth();
+
+  React.useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/dashboard");
+    }
+  }, [isAuthenticated, navigate]);
 
   const [isSignUp, setIsSignUp] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -80,11 +86,10 @@ export const LoginPage = () => {
 
   const handleOAuth = async (provider) => {
     const res = await signInWithOAuth(provider);
-    if (!res.error) {
-      navigate("/dashboard");
-    } else {
+    if (res.error) {
       setErrors({ submit: res.error.message || `Failed to sign in with ${provider}` });
     }
+    // Note: Do not navigate here, as beginOAuth will redirect the browser to Supabase
   };
 
   return (
