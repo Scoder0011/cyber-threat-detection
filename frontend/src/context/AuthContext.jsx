@@ -13,7 +13,21 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const restore = async () => {
       try {
-        const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+        let saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+        
+        // Handle OAuth callback hash
+        const hash = window.location.hash;
+        if (hash && hash.includes("access_token=")) {
+          const params = new URLSearchParams(hash.substring(1));
+          const access_token = params.get("access_token");
+          const refresh_token = params.get("refresh_token");
+          if (access_token) {
+            saved = { access_token, refresh_token };
+            storeSession(saved);
+            window.location.hash = ""; // Clear hash for clean URL
+          }
+        }
+
         if (!saved?.access_token) return;
         const nextUser = await getUser(saved.access_token);
         setSession(saved);
