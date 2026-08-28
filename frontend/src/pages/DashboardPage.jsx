@@ -9,8 +9,6 @@ import { ThreatTrendChart } from "../components/dashboard/ThreatTrendChart";
 import { ThreatDistributionChart } from "../components/dashboard/ThreatDistributionChart";
 import { SecurityInsightPanel } from "../components/dashboard/SecurityInsightPanel";
 import { IncidentsView } from "../components/views/IncidentsView";
-import { VulnerabilitiesView } from "../components/views/VulnerabilitiesView";
-import { EndpointsView } from "../components/views/EndpointsView";
 import { Toast } from "../components/common/Toast";
 import { useSocData } from "../hooks/useSocData";
 
@@ -145,7 +143,6 @@ export const DashboardPage = () => {
                     isLoading={isLoading || isLoadingSkeletons}
                     onClick={() => {
                       if (stat.id === "critical_incidents") setActiveTab("incidents");
-                      if (stat.id === "vulnerable_assets") setActiveTab("vulnerabilities");
                       if (stat.id === "active_threats") setActiveTab("threat-feed");
                     }}
                   />
@@ -220,16 +217,10 @@ export const DashboardPage = () => {
         )}
 
         {activeTab === "incidents" && (
-          <IncidentsView onBackToOverview={() => setActiveTab("overview")} />
+          <IncidentsView onBackToOverview={() => setActiveTab("overview")} items={feed} />
         )}
 
-        {activeTab === "vulnerabilities" && (
-          <VulnerabilitiesView onBackToOverview={() => setActiveTab("overview")} />
-        )}
 
-        {activeTab === "endpoints" && (
-          <EndpointsView onBackToOverview={() => setActiveTab("overview")} />
-        )}
 
       </main>
 

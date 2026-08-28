@@ -7,7 +7,9 @@ import uuid
 from app.db.session import SessionLocal
 from app.db.models import ThreatAlert
 
-AI_SERVICE_URL = "https://three-1-1oz2.onrender.com"
+import os
+
+AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://three-1-1oz2.onrender.com")
 CONFIDENCE_THRESHOLD = 0.7
 
 # Bots currently known to work; add scanning_bot once fixed

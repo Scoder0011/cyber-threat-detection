@@ -7,13 +7,8 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
--- Clean existing tables if needed (in reverse dependency order)
-DROP TABLE IF EXISTS blockchain_logs CASCADE;
-DROP TABLE IF EXISTS bot_metrics CASCADE;
-DROP TABLE IF EXISTS threat_alerts CASCADE;
-DROP TABLE IF EXISTS network_flows CASCADE;
-DROP TABLE IF EXISTS dga_domains CASCADE;
-DROP TABLE IF EXISTS dns_queries CASCADE;
+-- This file is intended for an empty Supabase project.  Do not drop existing
+-- production tables here: use an explicit, reviewed migration instead.
 
 -- ----------------------------------------------------------------------------
 -- 1. Table: network_flows
@@ -193,18 +188,39 @@ ALTER TABLE blockchain_logs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dga_domains ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dns_queries ENABLE ROW LEVEL SECURITY;
 
--- Allow read access to all users (authenticated + anon for dashboard demo)
-CREATE POLICY "Allow public read on network_flows" ON network_flows FOR SELECT USING (true);
-CREATE POLICY "Allow public read on threat_alerts" ON threat_alerts FOR SELECT USING (true);
-CREATE POLICY "Allow public read on bot_metrics" ON bot_metrics FOR SELECT USING (true);
-CREATE POLICY "Allow public read on blockchain_logs" ON blockchain_logs FOR SELECT USING (true);
-CREATE POLICY "Allow public read on dga_domains" ON dga_domains FOR SELECT USING (true);
-CREATE POLICY "Allow public read on dns_queries" ON dns_queries FOR SELECT USING (true);
+-- Dashboard users may read telemetry after authenticating.  All writes are
+-- performed by the backend service-role connection, which bypasses RLS.
+CREATE POLICY "Authenticated read network flows" ON network_flows FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read threat alerts" ON threat_alerts FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read bot metrics" ON bot_metrics FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read blockchain logs" ON blockchain_logs FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read dga domains" ON dga_domains FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read dns queries" ON dns_queries FOR SELECT TO authenticated USING (true);
+-- Apply this once to an existing Supabase project after reviewing the
+-- dashboard access model. It removes anonymous write access granted by the
+-- original bootstrap schema.
+DROP POLICY IF EXISTS "Allow public read on network_flows" ON network_flows;
+DROP POLICY IF EXISTS "Allow public read on threat_alerts" ON threat_alerts;
+DROP POLICY IF EXISTS "Allow public read on bot_metrics" ON bot_metrics;
+DROP POLICY IF EXISTS "Allow public read on blockchain_logs" ON blockchain_logs;
+DROP POLICY IF EXISTS "Allow public read on dga_domains" ON dga_domains;
+DROP POLICY IF EXISTS "Allow public read on dns_queries" ON dns_queries;
+DROP POLICY IF EXISTS "Allow service_role full access on network_flows" ON network_flows;
+DROP POLICY IF EXISTS "Allow service_role full access on threat_alerts" ON threat_alerts;
+DROP POLICY IF EXISTS "Allow service_role full access on bot_metrics" ON bot_metrics;
+DROP POLICY IF EXISTS "Allow service_role full access on blockchain_logs" ON blockchain_logs;
+DROP POLICY IF EXISTS "Allow service_role full access on dga_domains" ON dga_domains;
+DROP POLICY IF EXISTS "Allow service_role full access on dns_queries" ON dns_queries;
+DROP POLICY IF EXISTS "Authenticated read network flows" ON network_flows;
+DROP POLICY IF EXISTS "Authenticated read threat alerts" ON threat_alerts;
+DROP POLICY IF EXISTS "Authenticated read bot metrics" ON bot_metrics;
+DROP POLICY IF EXISTS "Authenticated read blockchain logs" ON blockchain_logs;
+DROP POLICY IF EXISTS "Authenticated read dga domains" ON dga_domains;
+DROP POLICY IF EXISTS "Authenticated read dns queries" ON dns_queries;
 
--- Allow full access for service_role and backend insert/update operations
-CREATE POLICY "Allow service_role full access on network_flows" ON network_flows FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
-CREATE POLICY "Allow service_role full access on threat_alerts" ON threat_alerts FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
-CREATE POLICY "Allow service_role full access on bot_metrics" ON bot_metrics FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
-CREATE POLICY "Allow service_role full access on blockchain_logs" ON blockchain_logs FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
-CREATE POLICY "Allow service_role full access on dga_domains" ON dga_domains FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
-CREATE POLICY "Allow service_role full access on dns_queries" ON dns_queries FOR ALL USING (auth.role() = 'service_role' OR auth.role() = 'anon');
+CREATE POLICY "Authenticated read network flows" ON network_flows FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read threat alerts" ON threat_alerts FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read bot metrics" ON bot_metrics FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read blockchain logs" ON blockchain_logs FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read dga domains" ON dga_domains FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Authenticated read dns queries" ON dns_queries FOR SELECT TO authenticated USING (true);

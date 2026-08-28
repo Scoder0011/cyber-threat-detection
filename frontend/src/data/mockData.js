@@ -510,6 +510,4 @@ export const navTabs = [
   { id: "overview", label: "Overview" },
   { id: "threat-feed", label: "Threat Feed" },
   { id: "incidents", label: "Incidents", count: 12 },
-  { id: "vulnerabilities", label: "Vulnerabilities", count: 255 },
-  { id: "endpoints", label: "Endpoints" },
 ];

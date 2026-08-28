@@ -89,7 +89,7 @@ def upgrade() -> None:
     sa.Column('is_attack', sa.Boolean(), nullable=False),
     sa.Column('attack_type', sa.String(length=64), nullable=True),
     sa.Column('timestamp', sa.DateTime(timezone=True), nullable=True),
-    sa.Column('extra_metadata', sa.JSON(), nullable=True),
+    sa.Column('metadata', sa.JSON(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('flow_id')
     )
