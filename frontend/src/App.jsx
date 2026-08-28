@@ -43,7 +43,7 @@ export default function App() {
           <PageTransition>
             <Routes>
               {/* Login Page Route */}
-              <Route path="/login" element={<LoginRoute />} />
+              <Route path="/login" element={<dashboard />} />
 
               {/* Protected Dashboard Route */}
               <Route
