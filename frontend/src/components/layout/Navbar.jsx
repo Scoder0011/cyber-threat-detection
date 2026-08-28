@@ -72,7 +72,7 @@ export const Navbar = ({ activeTab, onTabChange }) => {
 
   const userName = user?.user_metadata?.full_name || "Alex Morgan";
   const userRole = user?.user_metadata?.role || "SOC Analyst";
-  const userEmail = user?.email || "alex.morgan@threatlens.sec";
+  const userEmail = user?.email || "alex.morgan@thethirdeye.sec";
   const avatarUrl =
     user?.user_metadata?.avatar_url ||
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256";
@@ -95,7 +95,7 @@ export const Navbar = ({ activeTab, onTabChange }) => {
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
                   <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-slate-900 via-slate-800 to-blue-900 dark:from-white dark:via-slate-100 dark:to-blue-300 bg-clip-text text-transparent">
-                    ThreatLens
+                    TheThirdEYE
                   </span>
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800/60 uppercase tracking-wide">
                     SOC

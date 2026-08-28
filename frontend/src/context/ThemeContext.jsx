@@ -9,7 +9,7 @@ const ThemeContext = createContext({
 export const ThemeProvider = ({ children }) => {
   const [theme, setThemeState] = useState(() => {
     // 1. Check saved localStorage
-    const savedTheme = localStorage.getItem("threatlens_theme");
+    const savedTheme = localStorage.getItem("thethirdeye_theme");
     if (savedTheme === "dark" || savedTheme === "light") {
       return savedTheme;
     }
@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }) => {
     } else {
       root.classList.remove("dark");
     }
-    localStorage.setItem("threatlens_theme", theme);
+    localStorage.setItem("thethirdeye_theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

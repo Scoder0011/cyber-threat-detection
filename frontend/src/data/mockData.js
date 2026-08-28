@@ -1,5 +1,5 @@
 /**
- * ThreatLens SOC Dashboard - Central Mock Data Store
+ * TheThirdEYE SOC Dashboard - Central Mock Data Store
  * 
  * NOTE FOR BACKEND ENGINEERS:
  * All structures and keys in this file represent the expected API response schemas.
@@ -171,7 +171,7 @@ export const mockTopAttackOrigins = [
 ];
 
 // Active live attack vectors for the animated map trajectories
-// TODO: replace with WebSocket stream: wss://soc.threatlens.io/stream/attacks
+// TODO: replace with WebSocket stream: wss://soc.thethirdeye.io/stream/attacks
 export const mockAttackVectors = [
   {
     id: "atk-01",
@@ -262,7 +262,7 @@ export const mockAttackVectors = [
 // ==========================================
 // 3. LIVE THREATS FEED
 // ==========================================
-// TODO: replace with WebSocket stream: wss://soc.threatlens.io/stream/feed
+// TODO: replace with WebSocket stream: wss://soc.thethirdeye.io/stream/feed
 export const mockThreatFeed = [
   {
     id: "tf-101",

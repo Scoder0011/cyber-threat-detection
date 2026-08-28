@@ -13,7 +13,7 @@ const configurationError = () =>
 
 const sessionToken = () => {
   try {
-    return JSON.parse(localStorage.getItem("threatlens_session") || "null")?.access_token;
+    return JSON.parse(localStorage.getItem("thethirdeye_session") || "null")?.access_token;
   } catch {
     return null;
   }
