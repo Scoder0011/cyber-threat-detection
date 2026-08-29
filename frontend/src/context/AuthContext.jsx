@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { beginOAuth, getUser, signInWithPassword, signOut as supabaseSignOut, signUp } from "../api/supabase";
 
 const AuthContext = createContext(null);
-const storageKey = "threatlens_session";
+const storageKey = "thethirdeye_session";
 const storeSession = (session) => localStorage.setItem(storageKey, JSON.stringify(session));
 
 export function AuthProvider({ children }) {

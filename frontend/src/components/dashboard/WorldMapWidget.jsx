@@ -25,12 +25,7 @@ import {
 import * as d3Geo from "d3-geo";
 import * as topojson from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
-import {
-  mockTopAttackOrigins,
-  mockAttackVectors,
-  mockSOCDestination,
-  mockAuxiliaryDefenseHubs
-} from "../../data/mockData";
+
 import { MapSkeleton } from "../common/SkeletonLoader";
 import { Tooltip } from "../common/Tooltip";
 import { Badge } from "../common/Badge";
@@ -48,7 +43,79 @@ const threatTypeColors = {
   Malware: "#10B981",
 };
 
-export const WorldMapWidget = ({ isLoading }) => {
+export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
+  // Dynamic Map Data Generation
+  const dynamicSOCDestination = { coordinates: [8.6821, 50.1109] }; // Frankfurt, default SOC
+  
+  const { dynamicAttackOrigins, dynamicAttackVectors } = useMemo(() => {
+    if (!alerts || alerts.length === 0) {
+      return { dynamicAttackOrigins: [], dynamicAttackVectors: [] };
+    }
+
+    const originsMap = {};
+    
+    const getColor = (type) => {
+      const t = (type || "").toLowerCase();
+      if (t.includes("ransom")) return "#3B82F6";
+      if (t.includes("phish")) return "#EF4444";
+      if (t.includes("brute") || t.includes("c2")) return "#F97316";
+      if (t.includes("ddos") || t.includes("flood")) return "#EAB308";
+      return "#10B981"; // malware/default
+    };
+
+    const vectors = [];
+
+    alerts.forEach((alert) => {
+      // Deterministic pseudo-random lat/lng based on source IP string
+      let hash = 0;
+      const ip = alert.source || "0.0.0.0";
+      for (let i = 0; i < ip.length; i++) {
+        hash = (hash << 5) - hash + ip.charCodeAt(i);
+        hash |= 0;
+      }
+      
+      const pseudoLat = (Math.abs(hash) % 120) - 60; // -60 to +60
+      const pseudoLng = (Math.abs(hash * 31) % 360) - 180; // -180 to +180
+      
+      const countryCode = "UN"; // Unknown
+      const originKey = `${pseudoLng},${pseudoLat}`;
+
+      if (!originsMap[originKey]) {
+        originsMap[originKey] = {
+          country: "Unknown Region",
+          code: countryCode,
+          flag: "🌍",
+          count: 0,
+          threatType: alert.attackType,
+          color: getColor(alert.attackType),
+          coordinates: [pseudoLng, pseudoLat],
+          topAsn: "Unknown ASN",
+          recentIoc: ip,
+        };
+      }
+      originsMap[originKey].count += 1;
+
+      vectors.push({
+        id: alert.id,
+        originName: "Unknown Region",
+        originCoords: [pseudoLng, pseudoLat],
+        destCoords: dynamicSOCDestination.coordinates,
+        threatType: alert.attackType,
+        severity: alert.severity.toLowerCase(),
+        color: getColor(alert.attackType),
+        ip: ip,
+        target: alert.destination,
+        speed: "live",
+      });
+    });
+
+    const origins = Object.values(originsMap).sort((a, b) => b.count - a.count);
+    const total = alerts.length;
+    origins.forEach((o) => (o.percentage = ((o.count / total) * 100).toFixed(1)));
+
+    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: vectors.slice(0, 50) }; // cap vectors for performance
+  }, [alerts]);
+
   // Pan & Zoom state
   const [zoomLevel, setZoomLevel] = useState(1);
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
@@ -122,12 +189,12 @@ export const WorldMapWidget = ({ isLoading }) => {
 
   // Projected 2D screen positions
   const projectedDestination = useMemo(() => {
-    const coords = projection(mockSOCDestination.coordinates);
+    const coords = projection(dynamicSOCDestination.coordinates);
     return coords ? { x: coords[0], y: coords[1] } : { x: SVG_WIDTH / 2, y: SVG_HEIGHT / 2 };
   }, [projection]);
 
   const projectedOrigins = useMemo(() => {
-    return mockTopAttackOrigins.map((orig) => {
+    return dynamicAttackOrigins.map((orig) => {
       const coords = projection(orig.coordinates);
       return {
         ...orig,
@@ -139,7 +206,7 @@ export const WorldMapWidget = ({ isLoading }) => {
   }, [projection]);
 
   const projectedAttackVectors = useMemo(() => {
-    return mockAttackVectors.map((atk) => {
+    return dynamicAttackVectors.map((atk) => {
       const start = projection(atk.originCoords);
       const end = projection(atk.destCoords);
       if (!start || !end) return null;
@@ -341,11 +408,11 @@ export const WorldMapWidget = ({ isLoading }) => {
         ref={svgRef}
       >
         {/* Deep space radial glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,#1E293B_0%,#090D16_80%)] pointer-events-none opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,#E2E8F0_0%,#F8FAFC_80%)] dark:bg-[radial-gradient(circle_at_50%_45%,#1E293B_0%,#090D16_80%)] pointer-events-none opacity-90" />
 
         {/* Ambient coordinate crosshair overlay */}
         <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
+          className="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none"
           style={{
             backgroundImage: `radial-gradient(circle, #38BDF8 1px, transparent 1px)`,
             backgroundSize: "28px 28px",
@@ -386,7 +453,7 @@ export const WorldMapWidget = ({ isLoading }) => {
             <path
               d={geoPath(graticuleLines)}
               fill="none"
-              stroke="#1E293B"
+              className="stroke-slate-200 dark:stroke-[#1E293B]"
               strokeWidth="0.6"
               strokeDasharray="2 3"
               opacity="0.75"
@@ -401,10 +468,8 @@ export const WorldMapWidget = ({ isLoading }) => {
                 <path
                   key={country.id || idx}
                   d={geoPath(country)}
-                  fill={isHovered ? "#2C384E" : "#1A2234"}
-                  stroke="#2E3C56"
+                  className={`transition-colors duration-150 cursor-pointer stroke-slate-300 dark:stroke-[#2E3C56] ${isHovered ? "fill-slate-200 dark:fill-[#2C384E]" : "fill-slate-100 dark:fill-[#1A2234]"}`}
                   strokeWidth="0.45"
-                  className="transition-colors duration-150 cursor-pointer"
                   onMouseEnter={() => setHoveredCountry(country.id)}
                   onMouseLeave={() => setHoveredCountry(null)}
                 />
@@ -415,7 +480,7 @@ export const WorldMapWidget = ({ isLoading }) => {
               <path
                 d={geoPath(bordersMesh)}
                 fill="none"
-                stroke="#334155"
+                className="stroke-slate-300 dark:stroke-[#334155]"
                 strokeWidth="0.5"
                 strokeOpacity="0.75"
               />
@@ -637,18 +702,18 @@ export const WorldMapWidget = ({ isLoading }) => {
 
         {/* COLLAPSIBLE TOP ATTACK ORIGIN OVERLAY CARD (Top-Right) */}
         <div
-          className={`absolute top-3 right-3 z-20 bg-slate-900/90 dark:bg-[#12151C]/90 backdrop-blur-md rounded-xl border border-slate-800/90 p-3 shadow-2xl transition-all duration-200 pointer-events-auto ${
+          className={`absolute top-3 right-3 z-20 bg-white/90 dark:bg-[#12151C]/90 backdrop-blur-md rounded-xl border border-slate-200 dark:border-slate-800/90 p-3 shadow-2xl transition-all duration-200 pointer-events-auto ${
             isTopOriginsCollapsed ? "w-44" : "w-56 sm:w-64"
           }`}
         >
-          <div className="flex items-center justify-between pb-1.5 border-b border-slate-800">
-            <span className="text-[10px] font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+          <div className="flex items-center justify-between pb-1.5 border-b border-slate-200 dark:border-slate-800">
+            <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
               <Zap className="w-3 h-3 text-amber-400" /> TOP ATTACK ORIGIN
             </span>
             <Tooltip content={isTopOriginsCollapsed ? "Expand panel" : "Collapse panel"} position="left">
               <button
                 onClick={() => setIsTopOriginsCollapsed(!isTopOriginsCollapsed)}
-                className="p-1 text-slate-400 hover:text-white rounded hover:bg-slate-800 transition-colors"
+                className="p-1 text-slate-400 hover:text-slate-900 dark:hover:text-white rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                 aria-label="Toggle panel collapse"
               >
                 {isTopOriginsCollapsed ? (
@@ -662,7 +727,7 @@ export const WorldMapWidget = ({ isLoading }) => {
 
           {!isTopOriginsCollapsed && (
             <div className="space-y-1.5 mt-2">
-              {mockTopAttackOrigins.map((item) => (
+              {dynamicAttackOrigins.map((item) => (
                 <div
                   key={item.code}
                   onMouseEnter={() => setHoveredOrigin(item)}
@@ -682,7 +747,7 @@ export const WorldMapWidget = ({ isLoading }) => {
                   }}
                   className={`flex items-center justify-between py-1 px-1.5 rounded-lg transition-colors cursor-pointer text-xs ${
                     hoveredOrigin?.code === item.code
-                      ? "bg-slate-800 text-white"
+                      ? "bg-slate-100 dark:bg-slate-800 text-white"
                       : "hover:bg-slate-800/60 text-slate-300"
                   }`}
                 >
@@ -691,7 +756,7 @@ export const WorldMapWidget = ({ isLoading }) => {
                     <span className="font-medium truncate max-w-[95px]">{item.country}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-10 h-1.5 rounded-full bg-slate-800 overflow-hidden hidden sm:block">
+                    <div className="w-10 h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden hidden sm:block">
                       <div
                         className="h-full rounded-full transition-all duration-300"
                         style={{
@@ -700,7 +765,7 @@ export const WorldMapWidget = ({ isLoading }) => {
                         }}
                       />
                     </div>
-                    <span className="font-mono text-slate-200 font-bold text-[11px]">
+                    <span className="font-mono text-slate-800 dark:text-slate-200 font-bold text-[11px]">
                       {item.count.toLocaleString()}
                     </span>
                   </div>
@@ -711,12 +776,12 @@ export const WorldMapWidget = ({ isLoading }) => {
         </div>
 
         {/* MAP CONTROLS TOOLBAR (Responsive bottom-left or bottom center on mobile) */}
-        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-1 bg-slate-900/90 dark:bg-[#12151C]/90 backdrop-blur-md p-1.5 rounded-xl border border-slate-800 shadow-xl pointer-events-auto">
+        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-1 bg-slate-900/90 dark:bg-[#12151C]/90 backdrop-blur-md p-1.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl pointer-events-auto">
           <Tooltip content="Zoom in (+)" position="top">
             <button
               onClick={handleZoomIn}
               aria-label="Zoom in"
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <Plus className="w-3.5 h-3.5" />
             </button>
@@ -726,19 +791,19 @@ export const WorldMapWidget = ({ isLoading }) => {
             <button
               onClick={handleZoomOut}
               aria-label="Zoom out"
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <Minus className="w-3.5 h-3.5" />
             </button>
           </Tooltip>
 
-          <div className="w-[1px] h-4 bg-slate-800 my-auto" />
+          <div className="w-[1px] h-4 bg-slate-100 dark:bg-slate-800 my-auto" />
 
           <Tooltip content="Reset default view" position="top">
             <button
               onClick={handleReset}
               aria-label="Reset view"
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <Navigation className="w-3.5 h-3.5" />
             </button>
@@ -749,7 +814,7 @@ export const WorldMapWidget = ({ isLoading }) => {
               onClick={() => setIsGlobeView(!isGlobeView)}
               aria-label="Toggle globe projection"
               className={`p-1.5 rounded-lg transition-colors ${
-                isGlobeView ? "text-indigo-400 bg-indigo-500/20" : "text-slate-400 hover:text-white"
+                isGlobeView ? "text-indigo-400 bg-indigo-500/20" : "text-slate-400 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               <Globe className="w-3.5 h-3.5" />
@@ -761,7 +826,7 @@ export const WorldMapWidget = ({ isLoading }) => {
               onClick={() => setShowAttackRoutes(!showAttackRoutes)}
               aria-label="Toggle attack trajectories"
               className={`p-1.5 rounded-lg transition-colors ${
-                showAttackRoutes ? "text-blue-400 bg-blue-500/20" : "text-slate-500 hover:text-white"
+                showAttackRoutes ? "text-blue-400 bg-blue-500/20" : "text-slate-500 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               <GitCommit className="w-3.5 h-3.5" />
@@ -772,7 +837,7 @@ export const WorldMapWidget = ({ isLoading }) => {
         {/* HOVER TOOLTIP */}
         {hoveredOrigin && !selectedNodeDetails && (
           <div
-            className="absolute z-30 pointer-events-none bg-slate-950/95 text-white p-2.5 rounded-xl border border-slate-700 shadow-2xl text-xs backdrop-blur-md animate-in fade-in zoom-in-95"
+            className="absolute z-30 pointer-events-none bg-white/95 dark:bg-slate-950/95 text-slate-900 dark:text-white p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xl text-xs backdrop-blur-md animate-in fade-in zoom-in-95"
             style={{
               left: Math.min(Math.max(tooltipPos.x + 12, 10), 650),
               top: Math.min(Math.max(tooltipPos.y - 60, 10), 320),
@@ -791,21 +856,21 @@ export const WorldMapWidget = ({ isLoading }) => {
         {selectedNodeDetails && (
           <div
             ref={popoverRef}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-80 bg-slate-900/98 text-white p-4 rounded-2xl border border-slate-700 shadow-2xl backdrop-blur-xl animate-in zoom-in-95 duration-200"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-80 bg-white/98 dark:bg-slate-900/98 text-slate-900 dark:text-white p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xl backdrop-blur-xl animate-in zoom-in-95 duration-200"
           >
-            <div className="flex items-start justify-between pb-2 mb-3 border-b border-slate-800">
+            <div className="flex items-start justify-between pb-2 mb-3 border-b border-slate-200 dark:border-slate-800">
               <div className="flex items-center gap-2">
                 <div className="p-1.5 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500/30">
                   <Shield className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-bold text-slate-100">{selectedNodeDetails.title}</h3>
+                  <h3 className="text-xs font-bold text-slate-900 dark:text-slate-100">{selectedNodeDetails.title}</h3>
                   <span className="text-[10px] font-mono text-slate-400">STATUS: {selectedNodeDetails.status}</span>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedNodeDetails(null)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"
+                className="text-slate-400 hover:text-slate-900 dark:hover:text-white p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
                 aria-label="Close intelligence popover"
               >
                 <X className="w-4 h-4" />
@@ -823,7 +888,7 @@ export const WorldMapWidget = ({ isLoading }) => {
               </div>
               <div className="flex justify-between text-slate-400">
                 <span>Autonomous System:</span>
-                <span className="text-slate-300 truncate max-w-[140px]">{selectedNodeDetails.asn}</span>
+                <span className="text-slate-700 dark:text-slate-300 truncate max-w-[140px]">{selectedNodeDetails.asn}</span>
               </div>
               <div className="flex justify-between text-slate-400">
                 <span>Observed Ingress:</span>
@@ -835,10 +900,10 @@ export const WorldMapWidget = ({ isLoading }) => {
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 flex gap-2">
+            <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
               <button
                 onClick={() => setSelectedNodeDetails(null)}
-                className="flex-1 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors"
+                className="flex-1 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-800 dark:text-slate-200 transition-colors"
               >
                 Dismiss
               </button>
