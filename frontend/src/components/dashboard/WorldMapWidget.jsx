@@ -645,7 +645,7 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
             })}
           </g>
 
-          {/* 5. CENTRAL SOC DEFENSE HUB (Frankfurt Core Hub) */}
+          {/* 5. CENTRAL SOC DEFENSE HUB (India Core Hub) */}
           <g
             className="defense-soc-core cursor-pointer interactive-node"
             transform={`translate(${projectedDestination.x}, ${projectedDestination.y})`}
@@ -653,7 +653,7 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
               e.stopPropagation();
               setSelectedNodeDetails({
                 type: "destination",
-                title: "🇩🇪 Global Defense Core (Frankfurt HQ)",
+                title: "🇮🇳 Global Defense Core (India HQ)",
                 count: 17483,
                 threatType: "Multi-vector Shield",
                 lastSeen: "Real-time Stream",
@@ -712,7 +712,7 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
                 textAnchor="middle"
                 fontFamily="Inter, sans-serif"
               >
-                SOC CORE 🇩🇪
+                SOC CORE 🇮🇳
               </text>
             </g>
           </g>
