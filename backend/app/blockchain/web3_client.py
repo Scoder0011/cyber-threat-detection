@@ -1,8 +1,15 @@
 import json
 import os
-from web3 import Web3
-from web3.exceptions import Web3Exception
 from app.config import settings
+
+try:
+    from web3 import Web3
+    from web3.exceptions import Web3Exception
+    WEB3_AVAILABLE = True
+except ImportError:
+    Web3 = None
+    Web3Exception = Exception
+    WEB3_AVAILABLE = False
 
 # A minimal ABI for the AlertLog contract
 ALERT_LOG_ABI = json.loads("""
@@ -45,7 +52,7 @@ class BlockchainClient:
         self.contract_address = settings.SMART_CONTRACT_ADDRESS
         self.private_key = settings.SIGNER_PRIVATE_KEY
         
-        if self.enabled and self.rpc_url and self.private_key:
+        if self.enabled and WEB3_AVAILABLE and self.rpc_url and self.private_key and Web3 is not None:
             self.w3 = Web3(Web3.HTTPProvider(self.rpc_url))
             self.account = self.w3.eth.account.from_key(self.private_key)
             self.contract = self.w3.eth.contract(address=self.contract_address, abi=ALERT_LOG_ABI)

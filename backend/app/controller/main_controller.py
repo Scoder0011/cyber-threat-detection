@@ -9,6 +9,7 @@ import requests
 from datetime import datetime
 from app.db.session import SessionLocal
 from app.db.models import ThreatAlert
+from app.notifications.service import notification_service
 
 AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://bots3-a8ta.onrender.com")
 CONFIDENCE_THRESHOLD = 0.65
@@ -71,6 +72,7 @@ def evaluate_flow(flow_data: dict, bot_name: str, bot_payload: dict):
             db.add(alert)
             db.commit()
             print(f"ALERT created: {alert.alert_id} ({bot_name}, {result.get('confidence')})")
+            notification_service.notify_alert_background(alert)
             return alert
         finally:
             db.close()
@@ -130,6 +132,7 @@ def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
             )
             db.add(alert)
             print(f"[FUSION] ALERT created: {alert.alert_id} (Type: {display_attack_type})")
+            notification_service.notify_alert_background(alert)
             return alert
     
     # If benign (no malicious votes, or below threshold)

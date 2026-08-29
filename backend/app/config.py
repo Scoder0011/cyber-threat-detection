@@ -36,4 +36,27 @@ class Settings:
     REPLAY_SPEED_MULTIPLIER = float(os.getenv("REPLAY_SPEED_MULTIPLIER", "1.0"))
     CAPTURE_INTERFACE = os.getenv("CAPTURE_INTERFACE", "eth0")
 
+    # --- Email & Alert Notifications ---
+    EMAIL_NOTIFICATIONS_ENABLED = os.getenv("EMAIL_NOTIFICATIONS_ENABLED", "true").lower() == "true"
+    EMAIL_PROVIDER = os.getenv("EMAIL_PROVIDER", "console").lower()  # console | smtp | resend | sendgrid
+    
+    # SMTP Provider Settings
+    SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
+    SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+    SMTP_USER = os.getenv("SMTP_USER", "")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+    SMTP_USE_TLS = os.getenv("SMTP_USE_TLS", "true").lower() == "true"
+    SMTP_FROM_EMAIL = os.getenv("SMTP_FROM_EMAIL", "alerts@thethirdeye.sec")
+    SMTP_FROM_NAME = os.getenv("SMTP_FROM_NAME", "TheThirdEYE SOC Alerts")
+
+    # Modern API Providers (Resend / SendGrid)
+    RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
+    SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "")
+
+    # Notification Defaults & Rate Limits
+    DEFAULT_ALERT_EMAILS = [e.strip() for e in os.getenv("DEFAULT_ALERT_EMAILS", "security-team@thethirdeye.sec").split(",") if e.strip()]
+    NOTIFICATION_RATE_LIMIT_PER_HOUR = int(os.getenv("NOTIFICATION_RATE_LIMIT_PER_HOUR", "20"))
+    NOTIFICATION_RETRY_ATTEMPTS = int(os.getenv("NOTIFICATION_RETRY_ATTEMPTS", "3"))
+    FRONTEND_BASE_URL = os.getenv("FRONTEND_BASE_URL", "https://cyber-threat-detection.vercel.app").rstrip("/")
+
 settings = Settings()
