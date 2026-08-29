@@ -11,6 +11,7 @@ from app.api.routes.alerts import router as alerts_router
 from app.api.routes.bots import router as bots_router
 from app.api.routes.flows import router as flows_router
 from app.api.routes.blockchain import router as blockchain_router
+from app.api.routes.mode import router as mode_router
 from app.db.models import NetworkFlow
 from app.db.session import SessionLocal, get_db
 from app.services.bot_health import refresh_bot_metrics
@@ -21,6 +22,7 @@ app.include_router(alerts_router, prefix="/api")
 app.include_router(bots_router, prefix="/api")
 app.include_router(flows_router, prefix="/api")
 app.include_router(blockchain_router, prefix="/api/blockchain")
+app.include_router(mode_router, prefix="/api/mode")
 
 default_origins = [
     "https://cyber-threat-detection.vercel.app",
