@@ -29,7 +29,7 @@ class BotRegistry:
             response = requests.post(
                 f"{self.ai_service_url}/predict", 
                 json={"flow": flow_data},
-                timeout=2.0
+                timeout=15.0
             )
             if response.status_code == 200:
                 results = response.json().get("predictions", [])
