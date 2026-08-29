@@ -11,7 +11,7 @@ SUPABASE_KEY = os.environ.get("VITE_SUPABASE_ANON_KEY", os.environ.get("SUPABASE
 # fallback to checking frontend env if not set in backend
 if not SUPABASE_URL:
     try:
-        with open("../frontend/.env.example", "r") as f:
+        with open(os.path.join(os.path.dirname(__file__), "../frontend/.env"), "r") as f:
             for line in f:
                 if line.startswith("VITE_SUPABASE_URL="):
                     SUPABASE_URL = line.strip().split("=")[1].rstrip("/")
@@ -51,20 +51,26 @@ def push_flows():
         
         # Ensure data types match Supabase schema requirements
         for flow in batch:
-            flow.pop("id", None)  # Let Supabase generate the ID
-        
-        req = urllib.request.Request(
-            endpoint, 
-            data=json.dumps(batch).encode("utf-8"), 
-            headers=headers, 
-            method="POST"
-        )
+            import uuid
+            flow["id"] = str(uuid.uuid4())
+            flow["flow_id"] = str(uuid.uuid4())[:16]
+            if "metadata" in flow:
+                flow["extra_metadata"] = flow.pop("metadata")
         
         try:
-            with urllib.request.urlopen(req) as resp:
-                print(f"  [✓] Batch {i//batch_size + 1} pushed successfully ({len(batch)} flows).")
-        except urllib.error.HTTPError as e:
-            print(f"  [!] HTTP Error pushing batch: {e.code} - {e.read().decode('utf-8')}")
+            import requests
+            resp = requests.post(
+                endpoint,
+                json=batch,
+                headers=headers,
+                timeout=30
+            )
+            if not resp.ok:
+                print(f"  [!] HTTP Error pushing batch: {resp.status_code} - {resp.text}")
+                break
+            print(f"  [✓] Batch {i//batch_size + 1} pushed successfully ({len(batch)} flows).")
+        except Exception as e:
+            print(f"  [!] HTTP Error pushing batch: {e}")
             break
             
         time.sleep(0.5)
