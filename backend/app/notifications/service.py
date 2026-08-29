@@ -33,11 +33,17 @@ class NotificationService:
         """
         Renders HTML and plain-text email templates for a threat alert.
         """
-        alert_id = getattr(alert_data, "alert_id", "") or alert_data.get("alert_id", "")
-        severity = getattr(alert_data, "severity", "MEDIUM") or alert_data.get("severity", "MEDIUM")
-        title = getattr(alert_data, "title", "Threat Alert") or alert_data.get("title", "Threat Alert")
+        if isinstance(alert_data, dict):
+            alert_id = alert_data.get("alert_id", "")
+            severity = alert_data.get("severity", "MEDIUM")
+            title = alert_data.get("title", "Threat Alert")
+            created_at = alert_data.get("created_at")
+        else:
+            alert_id = getattr(alert_data, "alert_id", "")
+            severity = getattr(alert_data, "severity", "MEDIUM")
+            title = getattr(alert_data, "title", "Threat Alert")
+            created_at = getattr(alert_data, "created_at", None)
 
-        created_at = getattr(alert_data, "created_at", None)
         if isinstance(created_at, datetime):
             timestamp_utc = created_at.strftime("%Y-%m-%d %H:%M:%S UTC")
         else:
