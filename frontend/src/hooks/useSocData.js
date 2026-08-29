@@ -84,7 +84,7 @@ export function useSocData() {
     const active = alerts.filter((alert) => ["NEW", "INVESTIGATING"].includes(alert.status));
     const critical = active.filter((alert) => alert.severity === "CRITICAL");
     const resolved = alerts.filter((alert) => alert.status === "RESOLVED");
-    const healthyBots = botMetrics.filter((bot) => bot.status === "HEALTHY").length;
+    const healthyBots = botMetrics.filter((bot) => ["HEALTHY", "ONLINE"].includes((bot.status || "").toUpperCase())).length;
     const stats = [
       { id: "security_score", label: "Security Score", value: String(Math.max(0, 100 - critical.length * 8 - active.filter((a) => a.severity === "HIGH").length * 3)), totalPossible: "100", displayValue: `${Math.max(0, 100 - critical.length * 8 - active.filter((a) => a.severity === "HIGH").length * 3)}/100`, isPrimaryHighlight: true, trend: "Live", trendDirection: "up", trendSentiment: "positive", trendLabel: "from current alerts", iconName: "ShieldCheck", details: "Calculated from active alert severity.", linkHref: "#" },
       { id: "active_threats", label: "Active Threats", value: String(active.length), displayValue: String(active.length), trend: "Live", trendDirection: "up", trendSentiment: active.length ? "negative" : "positive", trendLabel: "open alerts", iconName: "Flame", details: "New and investigating alerts.", linkHref: "#" },
