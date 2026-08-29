@@ -112,26 +112,27 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
         };
       }
       originsMap[originKey].count += 1;
-
-      vectors.push({
-        id: alert.id,
-        originName: origin.country,
-        originCoords: origin.coordinates,
-        destCoords: dynamicSOCDestination.coordinates,
-        threatType: alert.attackType,
-        severity: alert.severity.toLowerCase(),
-        color: getColor(alert.attackType),
-        ip: ip,
-        target: alert.destination,
-        speed: "live",
-      });
     });
 
     const origins = Object.values(originsMap).sort((a, b) => b.count - a.count);
     const total = alerts.length;
     origins.forEach((o) => (o.percentage = ((o.count / total) * 100).toFixed(1)));
 
-    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: vectors }; // show all vectors without capping
+    // Generate exactly one trajectory vector per origin country
+    const uniqueVectors = origins.map((origin) => ({
+      id: origin.code,
+      originName: origin.country,
+      originCoords: origin.coordinates,
+      destCoords: dynamicSOCDestination.coordinates,
+      threatType: origin.threatType,
+      severity: "high", // proxy severity
+      color: origin.color,
+      ip: origin.recentIoc,
+      target: "SOC HQ",
+      speed: "live",
+    }));
+
+    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: uniqueVectors }; 
   }, [alerts]);
 
   // Pan & Zoom state
