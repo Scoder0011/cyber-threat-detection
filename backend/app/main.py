@@ -87,10 +87,11 @@ async def flow_stream(websocket: WebSocket):
 
 
 from app.db.session import SessionLocal, get_db, Base, engine
+from app.services.pipeline import process_flows_pipeline
 
 
 @app.on_event("startup")
-async def start_health_monitor() -> None:
+async def start_background_tasks() -> None:
     # Ensure database schema exists (useful for SQLite local dev or new DBs)
     try:
         Base.metadata.create_all(bind=engine)
@@ -106,3 +107,4 @@ async def start_health_monitor() -> None:
             await asyncio.sleep(30)
 
     asyncio.create_task(monitor())
+    asyncio.create_task(process_flows_pipeline())
