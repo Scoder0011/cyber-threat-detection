@@ -11,7 +11,7 @@ from app.streaming.redis_client import get_redis_client
 
 r = get_redis_client()
 STREAM_NAME = "bot:predictions"
-AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://three-1-1oz2.onrender.com")
+AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://bots3-a8ta.onrender.com")
 ACTIVE_BOTS = ["ddos_bot", "beaconing_bot", "dga_dns_bot", "encrypted_malware_bot", "exfiltration_bot"]
 
 def generate_mock_flow():
