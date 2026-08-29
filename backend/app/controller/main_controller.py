@@ -10,13 +10,15 @@ from app.db.models import ThreatAlert
 
 CONFIDENCE_THRESHOLD = 0.65
 
-def log_to_blockchain(alert_id, attack_type, confidence):
-    """Mock Blockchain Logger"""
-    import hashlib
-    data_str = f"{alert_id}-{attack_type}-{confidence}-{datetime.utcnow().isoformat()}"
-    tx_hash = hashlib.sha256(data_str.encode()).hexdigest()
-    print(f"[BLOCKCHAIN] Logged Alert Hash to Ledger: 0x{tx_hash}")
-    return f"0x{tx_hash}"
+# All 6 specialist bots active for multi-bot threat detection
+ACTIVE_BOTS = [
+    "ddos_bot",
+    "beaconing_bot",
+    "dga_dns_bot",
+    "encrypted_malware_bot",
+    "scanning_bot",
+    "exfiltration_bot",
+]
 
 def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
     """
