@@ -4,11 +4,13 @@ from threading import Thread
 from time import perf_counter
 from typing import Any
 
+import os
 import requests
 
-from app.controller.main_controller import AI_SERVICE_URL
 from app.db.models import BotMetric
 from app.db.session import SessionLocal
+
+AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://three-1-1oz2.onrender.com")
 
 SPECIALIST_BOTS = {
     "ddos_bot": "DDoS Detection",
