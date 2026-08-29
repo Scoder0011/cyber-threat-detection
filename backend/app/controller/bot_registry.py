@@ -23,22 +23,32 @@ class BotRegistry:
         Send a flow or aggregated window to all registered bots for inference.
         Returns a list of predictions.
         """
+        import concurrent.futures
         predictions = []
-        try:
-            # Assuming AI service has a batch predict endpoint
-            response = requests.post(
-                f"{self.ai_service_url}/predict", 
-                json={"flow": flow_data},
-                timeout=2.0
-            )
-            if response.status_code == 200:
-                results = response.json().get("predictions", [])
-                predictions.extend(results)
-            else:
-                logger.error(f"Failed to get prediction: {response.status_code}")
-        except Exception as e:
-            logger.error(f"Error dispatching to bots: {e}")
-            
+
+        def call_single_bot(bot_name: str):
+            try:
+                response = requests.post(
+                    f"{self.ai_service_url}/predict/{bot_name}", 
+                    json=flow_data,
+                    timeout=5.0
+                )
+                if response.status_code == 200:
+                    res = response.json()
+                    res["bot_name"] = bot_name
+                    return res
+                else:
+                    logger.error(f"Failed to get prediction for {bot_name}: {response.status_code}")
+            except Exception as e:
+                logger.error(f"Error dispatching to {bot_name}: {e}")
+            return None
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.active_bots)) as executor:
+            results = executor.map(call_single_bot, self.active_bots)
+            for res in results:
+                if res:
+                    predictions.append(res)
+                    
         return predictions
 
 bot_registry = BotRegistry()
