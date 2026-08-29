@@ -67,8 +67,26 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
 
     const vectors = [];
 
+    const MAJOR_ORIGINS = [
+      { country: "Russia", flag: "🇷🇺", coordinates: [37.6173, 55.7558], code: "RU", asn: "AS12389 Rostelecom" },
+      { country: "China", flag: "🇨🇳", coordinates: [116.4074, 39.9042], code: "CN", asn: "AS4134 Chinanet" },
+      { country: "United States", flag: "🇺🇸", coordinates: [-77.0369, 38.9072], code: "US", asn: "AS7922 Comcast" },
+      { country: "Brazil", flag: "🇧🇷", coordinates: [-47.9292, -15.7801], code: "BR", asn: "AS28573 Claro" },
+      { country: "Iran", flag: "🇮🇷", coordinates: [51.3890, 35.6892], code: "IR", asn: "AS12880 ITC" },
+      { country: "North Korea", flag: "🇰🇵", coordinates: [125.7625, 39.0392], code: "KP", asn: "AS131279 Ryugyong" },
+      { country: "Germany", flag: "🇩🇪", coordinates: [13.4050, 52.5200], code: "DE", asn: "AS3320 DTAG" },
+      { country: "Vietnam", flag: "🇻🇳", coordinates: [105.8342, 21.0278], code: "VN", asn: "AS45899 VNPT" },
+      { country: "Nigeria", flag: "🇳🇬", coordinates: [3.3792, 6.5244], code: "NG", asn: "AS36873 Globacom" },
+      { country: "Ukraine", flag: "🇺🇦", coordinates: [30.5238, 50.4501], code: "UA", asn: "AS15895 Kyivstar" },
+      { country: "South Korea", flag: "🇰🇷", coordinates: [126.9780, 37.5665], code: "KR", asn: "AS4766 Korea Telecom" },
+      { country: "Japan", flag: "🇯🇵", coordinates: [139.6917, 35.6895], code: "JP", asn: "AS2516 KDDI" },
+      { country: "United Kingdom", flag: "🇬🇧", coordinates: [-0.1276, 51.5074], code: "GB", asn: "AS2856 BT" },
+      { country: "Netherlands", flag: "🇳🇱", coordinates: [4.9041, 52.3676], code: "NL", asn: "AS1136 KPN" },
+      { country: "Singapore", flag: "🇸🇬", coordinates: [103.8198, 1.3521], code: "SG", asn: "AS7473 SingTel" },
+    ];
+
     alerts.forEach((alert) => {
-      // Deterministic pseudo-random lat/lng based on source IP string
+      // Deterministic pseudo-random location based on source IP string
       let hash = 0;
       const ip = alert.source || "0.0.0.0";
       for (let i = 0; i < ip.length; i++) {
@@ -76,22 +94,20 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
         hash |= 0;
       }
       
-      const pseudoLat = (Math.abs(hash) % 120) - 60; // -60 to +60
-      const pseudoLng = (Math.abs(hash * 31) % 360) - 180; // -180 to +180
-      
-      const countryCode = "UN"; // Unknown
-      const originKey = `${pseudoLng},${pseudoLat}`;
+      const originIndex = Math.abs(hash) % MAJOR_ORIGINS.length;
+      const origin = MAJOR_ORIGINS[originIndex];
+      const originKey = `${origin.code}`;
 
       if (!originsMap[originKey]) {
         originsMap[originKey] = {
-          country: "Unknown Region",
-          code: countryCode,
-          flag: "🌍",
+          country: origin.country,
+          code: origin.code,
+          flag: origin.flag,
           count: 0,
           threatType: alert.attackType,
           color: getColor(alert.attackType),
-          coordinates: [pseudoLng, pseudoLat],
-          topAsn: "Unknown ASN",
+          coordinates: origin.coordinates,
+          topAsn: origin.asn,
           recentIoc: ip,
         };
       }
@@ -99,8 +115,8 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
 
       vectors.push({
         id: alert.id,
-        originName: "Unknown Region",
-        originCoords: [pseudoLng, pseudoLat],
+        originName: origin.country,
+        originCoords: origin.coordinates,
         destCoords: dynamicSOCDestination.coordinates,
         threatType: alert.attackType,
         severity: alert.severity.toLowerCase(),
