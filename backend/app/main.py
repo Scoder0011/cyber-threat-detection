@@ -21,14 +21,8 @@ app.include_router(bots_router, prefix="/api")
 app.include_router(flows_router, prefix="/api")
 
 default_origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:4173",
-    "http://127.0.0.1:4173",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
+    "https://cyber-threat-detection.vercel.app",
+    "https://cyber-threat-detection.onrender.com",
 ]
 configured_origins = [origin.strip() for origin in os.getenv("CORS_ORIGINS", "").split(",") if origin.strip()]
 allowed_origins = list(set(default_origins + configured_origins))
@@ -36,7 +30,7 @@ allowed_origins = list(set(default_origins + configured_origins))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
-    allow_origin_regex=r"https://.*\.vercel\.app|https://.*\.onrender\.com|http://localhost(:\d+)?|http://127\.0\.0\.1(:\d+)?",
+    allow_origin_regex=r"https://.*\.vercel\.app|https://.*\.onrender\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
