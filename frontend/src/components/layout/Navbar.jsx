@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { ThemeToggle } from "./ThemeToggle";
+import { ModeToggle } from "./ModeToggle";
 import { Tooltip } from "../common/Tooltip";
 import { navTabs } from "../../data/mockData";
 
@@ -146,14 +147,8 @@ export const Navbar = ({ activeTab, onTabChange, activeIncidents = 0 }) => {
           {/* RIGHT: Live Pulse, Theme Toggle, Notification Bell, User Avatar */}
           <div className="flex items-center gap-2.5 sm:gap-3">
             
-            {/* Live Telemetry Pulse */}
-            <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-400 text-xs font-bold shadow-xs">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="tracking-wide">LIVE TELEMETRY</span>
-            </div>
+            {/* Live Telemetry Pulse / Mode Toggle */}
+            <ModeToggle />
 
             {/* THEME TOGGLE BUTTON (Sun/Moon) */}
             <ThemeToggle />
