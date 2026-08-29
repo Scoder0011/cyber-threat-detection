@@ -30,17 +30,13 @@ async def process_flows_pipeline():
                 flows = query.order_by(NetworkFlow.timestamp.asc()).limit(50).all()
                 
                 for flow in flows:
-                    flow_dict = {
-                        "id": flow.id,
-                        "flow_id": flow.flow_id,
-                        "src_ip": flow.src_ip,
-                        "dst_ip": flow.dst_ip,
-                        "src_port": flow.src_port,
-                        "dst_port": flow.dst_port,
-                        "protocol": flow.protocol,
-                        "bytes_out": flow.bytes_out,
-                        "duration": float(flow.duration) if flow.duration else 0.0,
-                    }
+                    # Convert sqlalchemy model to dict
+                    flow_dict = {c.name: getattr(flow, c.name) for c.name in flow.__table__.columns.keys()}
+                    # Convert decimals to floats
+                    if flow_dict.get("duration"): flow_dict["duration"] = float(flow_dict["duration"])
+                    if flow_dict.get("flow_rate_bps"): flow_dict["flow_rate_bps"] = float(flow_dict["flow_rate_bps"])
+                    if flow_dict.get("packet_rate_pps"): flow_dict["packet_rate_pps"] = float(flow_dict["packet_rate_pps"])
+                    if flow_dict.get("entropy"): flow_dict["entropy"] = float(flow_dict["entropy"])
                     
                     # 1. Send to AI Bots
                     predictions = bot_registry.dispatch_to_bots(flow_dict)

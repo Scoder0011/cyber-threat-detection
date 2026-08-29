@@ -34,18 +34,19 @@ const SVG_WIDTH = 960;
 const SVG_HEIGHT = 480;
 
 // Threat type color lookup per requirement:
-// Ransomware=blue (#3B82F6), Phishing=red (#EF4444), Brute Force=orange (#F97316), DDoS=yellow (#EAB308), Malware=green (#10B981)
+// Ransomware=blue (#3B82F6), Phishing=red (#EF4444), Brute Force=orange (#F97316), DDoS=yellow (#EAB308), Malware=green (#10B981), Benign=slate (#94A3B8)
 const threatTypeColors = {
   Ransomware: "#3B82F6",
   Phishing: "#EF4444",
   "Brute Force": "#F97316",
   DDoS: "#EAB308",
   Malware: "#10B981",
+  Benign: "#94A3B8",
 };
 
 export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
   // Dynamic Map Data Generation
-  const dynamicSOCDestination = { coordinates: [8.6821, 50.1109] }; // Frankfurt, default SOC
+  const dynamicSOCDestination = { coordinates: [78.9629, 20.5937] }; // India, default SOC
   
   const { dynamicAttackOrigins, dynamicAttackVectors } = useMemo(() => {
     if (!alerts || alerts.length === 0) {
@@ -56,9 +57,10 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
     
     const getColor = (type) => {
       const t = (type || "").toLowerCase();
+      if (t.includes("benign")) return "#94A3B8";
       if (t.includes("ransom")) return "#3B82F6";
       if (t.includes("phish")) return "#EF4444";
-      if (t.includes("brute") || t.includes("c2")) return "#F97316";
+      if (t.includes("brute") || t.includes("c2") || t.includes("beaconing")) return "#F97316";
       if (t.includes("ddos") || t.includes("flood")) return "#EAB308";
       return "#10B981"; // malware/default
     };
@@ -923,6 +925,9 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
       <div className="px-5 py-2.5 bg-slate-50 dark:bg-[#12151C] border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-2">
         <div className="flex items-center gap-4 flex-wrap">
           <span className="text-[11px] font-bold text-slate-400 uppercase">Threat Legend:</span>
+          <span className="flex items-center gap-1.5 text-xs text-slate-700 dark:text-slate-300">
+            <span className="w-2 h-2 rounded-full bg-[#94A3B8] shadow-xs" /> Benign (Slate)
+          </span>
           <span className="flex items-center gap-1.5 text-xs text-slate-700 dark:text-slate-300">
             <span className="w-2 h-2 rounded-full bg-[#3B82F6] shadow-xs" /> Ransomware (Blue)
           </span>

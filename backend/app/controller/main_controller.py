@@ -100,9 +100,10 @@ def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
             fused_confidence = min(0.99, fused_confidence + (malicious_votes * 0.05))
 
         if fused_confidence >= CONFIDENCE_THRESHOLD:
-            # Determine primary attack type
-            primary_bot = max(bot_predictions.items(), key=lambda x: x[1].get("confidence", 0))[0]
-            primary_res = bot_predictions[primary_bot]
+            # Determine primary attack type (only from bots that predicted malicious)
+            malicious_preds = {k: v for k, v in bot_predictions.items() if v.get("malicious")}
+            primary_bot = max(malicious_preds.items(), key=lambda x: x[1].get("confidence", 0))[0]
+            primary_res = malicious_preds[primary_bot]
 
             alert_id = str(uuid.uuid4())
             
@@ -127,4 +128,21 @@ def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
             print(f"[FUSION] ALERT created: {alert.alert_id} (Confidence: {fused_confidence:.2f})")
             return alert
     
-    return None
+    # If benign (no malicious votes, or below threshold)
+    alert = ThreatAlert(
+        alert_id=str(uuid.uuid4()),
+        title="Normal Traffic",
+        description="All bots classified traffic as benign.",
+        severity="LOW",
+        attack_type="BENIGN",
+        source_ip=flow_data.get("src_ip", "unknown"),
+        target_ip=flow_data.get("dst_ip", "unknown"),
+        confidence_score=1.0,
+        status="RESOLVED",
+        contributing_bots=[],
+        bot_scores={b: res.get("confidence", 0) for b, res in bot_predictions.items()},
+        evidence={}
+    )
+    db.add(alert)
+    print(f"[FUSION] BENIGN traffic logged: {alert.alert_id}")
+    return alert
