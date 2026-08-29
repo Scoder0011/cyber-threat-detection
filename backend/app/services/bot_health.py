@@ -10,7 +10,7 @@ import requests
 from app.db.models import BotMetric
 from app.db.session import SessionLocal
 
-AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://three-1-1oz2.onrender.com")
+AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://bots3-a8ta.onrender.com")
 
 SPECIALIST_BOTS = {
     "ddos_bot": "DDoS Detection",
