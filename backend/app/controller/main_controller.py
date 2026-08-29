@@ -20,6 +20,13 @@ ACTIVE_BOTS = [
     "exfiltration_bot",
 ]
 
+def log_to_blockchain(alert_id: str, attack_label: str, confidence: float) -> str:
+    """
+    Log alert to blockchain and return transaction hash.
+    """
+    # Placeholder implementation - replace with actual blockchain integration
+    return f"0x{uuid.uuid4().hex[:64]}"
+
 def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
     """
     Score Fusion logic based on the bot predictions retrieved from Redis Event Bus.
