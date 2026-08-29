@@ -131,7 +131,7 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
     const total = alerts.length;
     origins.forEach((o) => (o.percentage = ((o.count / total) * 100).toFixed(1)));
 
-    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: vectors.slice(0, 50) }; // cap vectors for performance
+    return { dynamicAttackOrigins: origins.slice(0, 15), dynamicAttackVectors: vectors }; // show all vectors without capping
   }, [alerts]);
 
   // Pan & Zoom state
@@ -148,6 +148,20 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
   const [isGlobeView, setIsGlobeView] = useState(false); // Toggle between Natural Earth & Orthographic
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isTopOriginsCollapsed, setIsTopOriginsCollapsed] = useState(false);
+  const [globeRotation, setGlobeRotation] = useState(0);
+
+  // Rotate globe when in globe view
+  useEffect(() => {
+    let animationFrame;
+    if (isGlobeView) {
+      const rotate = () => {
+        setGlobeRotation((prev) => (prev + 0.3) % 360);
+        animationFrame = requestAnimationFrame(rotate);
+      };
+      animationFrame = requestAnimationFrame(rotate);
+    }
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isGlobeView]);
 
   // Interactive Hover and Popover States
   const [hoveredOrigin, setHoveredOrigin] = useState(null);
@@ -181,7 +195,8 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
         .geoOrthographic()
         .scale(190)
         .translate([SVG_WIDTH / 2, SVG_HEIGHT / 2 + 10])
-        .clipAngle(90);
+        .clipAngle(90)
+        .rotate([globeRotation, -10]);
     } else {
       proj = d3Geo
         .geoNaturalEarth1()
@@ -203,7 +218,7 @@ export const WorldMapWidget = ({ isLoading, alerts = [] }) => {
       projection: proj,
       geoPath: pathGen,
     };
-  }, [isGlobeView]);
+  }, [isGlobeView, globeRotation]);
 
   // Projected 2D screen positions
   const projectedDestination = useMemo(() => {
