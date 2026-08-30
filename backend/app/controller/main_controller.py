@@ -9,6 +9,7 @@ import requests
 from datetime import datetime
 from app.db.session import SessionLocal
 from app.db.models import ThreatAlert
+from app.notifications.service import notification_service
 
 AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "https://bots3-a8ta.onrender.com")
 CONFIDENCE_THRESHOLD = 0.65
@@ -71,6 +72,7 @@ def evaluate_flow(flow_data: dict, bot_name: str, bot_payload: dict):
             db.add(alert)
             db.commit()
             print(f"ALERT created: {alert.alert_id} ({bot_name}, {result.get('confidence')})")
+            notification_service.notify_alert_background(alert)
             return alert
         finally:
             db.close()
@@ -100,22 +102,27 @@ def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
             fused_confidence = min(0.99, fused_confidence + (malicious_votes * 0.05))
 
         if fused_confidence >= CONFIDENCE_THRESHOLD:
-            # Determine primary attack type
-            primary_bot = max(bot_predictions.items(), key=lambda x: x[1].get("confidence", 0))[0]
-            primary_res = bot_predictions[primary_bot]
+            # Determine primary attack type (only from bots that predicted malicious)
+            malicious_preds = {k: v for k, v in bot_predictions.items() if v.get("malicious")}
+            primary_bot = max(malicious_preds.items(), key=lambda x: x[1].get("confidence", 0))[0]
+            primary_res = malicious_preds[primary_bot]
+            
+            actual_attack_type = flow_data.get("attack_type", "BENIGN")
+            display_attack_type = actual_attack_type if actual_attack_type != "BENIGN" else primary_res.get("label", "Unknown")
+            display_title = actual_attack_type.replace('_', ' ').title() if actual_attack_type != "BENIGN" else primary_res.get("category", primary_bot).replace('_', ' ').title()
 
             alert_id = str(uuid.uuid4())
             
             # 6. Log to Blockchain
-            tx_hash = log_to_blockchain(alert_id, primary_res.get("label", "unknown"), fused_confidence)
+            tx_hash = log_to_blockchain(alert_id, display_attack_type, fused_confidence)
 
             # 7. Save Alert in PostgreSQL
             alert = ThreatAlert(
                 alert_id=alert_id,
-                title=f"Multi-Vector {primary_res.get('category', primary_bot).replace('_', ' ').title()} Detected",
+                title=f"{display_title} Detected",
                 description=f"Score Fusion engine detected malicious activity flagged by {malicious_votes} specialist bots.",
                 severity="CRITICAL" if fused_confidence > 0.85 else "HIGH",
-                attack_type=primary_res.get("label", "unknown"),
+                attack_type=display_attack_type,
                 source_ip=flow_data.get("src_ip", "unknown"),
                 target_ip=flow_data.get("dst_ip", "unknown"),
                 confidence_score=fused_confidence,
@@ -124,7 +131,25 @@ def evaluate_flow_fusion(flow_data: dict, bot_predictions: dict, db):
                 evidence={"tx_hash": tx_hash, "fused_confidence": fused_confidence}
             )
             db.add(alert)
-            print(f"[FUSION] ALERT created: {alert.alert_id} (Confidence: {fused_confidence:.2f})")
+            print(f"[FUSION] ALERT created: {alert.alert_id} (Type: {display_attack_type})")
+            notification_service.notify_alert_background(alert)
             return alert
     
-    return None
+    # If benign (no malicious votes, or below threshold)
+    alert = ThreatAlert(
+        alert_id=str(uuid.uuid4()),
+        title="Normal Traffic",
+        description="All bots classified traffic as benign.",
+        severity="LOW",
+        attack_type="BENIGN",
+        source_ip=flow_data.get("src_ip", "unknown"),
+        target_ip=flow_data.get("dst_ip", "unknown"),
+        confidence_score=1.0,
+        status="RESOLVED",
+        contributing_bots=[],
+        bot_scores={b: res.get("confidence", 0) for b, res in bot_predictions.items()},
+        evidence={}
+    )
+    db.add(alert)
+    print(f"[FUSION] BENIGN traffic logged: {alert.alert_id}")
+    return alert
