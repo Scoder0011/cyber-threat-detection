@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: threatlens-config
+  namespace: threatlens
+data:
+  CORS_ORIGINS: "https://dashboard.example.com"
+  REDIS_URL: "redis://redis:6379/0"
