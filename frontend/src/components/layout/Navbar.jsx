@@ -1,3 +1,4 @@
+import { sendTestNotification } from "../../api/backend";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -31,6 +32,7 @@ export const Navbar = ({ activeTab, onTabChange, activeIncidents = 0 }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
   const [confirmSignOut, setConfirmSignOut] = useState(false);
+  const [isTestLoading, setIsTestLoading] = useState(false);
 
   const [notifications, setNotifications] = useState([
     {
@@ -69,6 +71,19 @@ export const Navbar = ({ activeTab, onTabChange, activeIncidents = 0 }) => {
     // TODO: replace with actual Supabase client call — supabase.auth.signOut()
     await signOut();
     navigate("/login");
+  };
+
+  const handleTestNotification = async () => {
+    setIsTestLoading(true);
+    try {
+      const email = user?.email || "dark@thethirdeye.sec";
+      await sendTestNotification(email, "console", "HIGH");
+      alert(`Test notification sent successfully to ${email}!`);
+    } catch (e) {
+      alert(`Failed to send test notification: ${e.message}`);
+    } finally {
+      setIsTestLoading(false);
+    }
   };
 
   const userName = user?.user_metadata?.full_name || "DarkTheUnk";
@@ -302,6 +317,13 @@ export const Navbar = ({ activeTab, onTabChange, activeIncidents = 0 }) => {
                     </button>
                     <button className="w-full px-4 py-2 text-left text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 flex items-center gap-2.5">
                       <ShieldCheck className="w-4 h-4 text-slate-400" /> SOAR Automation Rules
+                    </button>
+                    <button 
+                      onClick={handleTestNotification}
+                      disabled={isTestLoading}
+                      className="w-full px-4 py-2 text-left text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 flex items-center gap-2.5"
+                    >
+                      <Bell className="w-4 h-4 text-slate-400" /> {isTestLoading ? "Sending..." : "Test Email Notification"}
                     </button>
                   </div>
 

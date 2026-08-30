@@ -39,3 +39,17 @@ export async function verifyAlertOnBlockchain(alertId) {
   }
   return response.json();
 }
+
+export async function sendTestNotification(email, provider = "console", severity = "HIGH") {
+  const response = await fetch(`${API_BASE_URL}/notifications/test`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, provider, severity }),
+  });
+  if (!response.ok) {
+    throw new Error("Failed to send test notification");
+  }
+  return response.json();
+}

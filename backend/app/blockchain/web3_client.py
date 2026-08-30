@@ -55,6 +55,7 @@ class BlockchainClient:
         if self.enabled and WEB3_AVAILABLE and self.rpc_url and self.private_key and Web3 is not None:
             self.w3 = Web3(Web3.HTTPProvider(self.rpc_url))
             self.account = self.w3.eth.account.from_key(self.private_key)
+            self.contract_address = self.w3.to_checksum_address(self.contract_address)
             self.contract = self.w3.eth.contract(address=self.contract_address, abi=ALERT_LOG_ABI)
         else:
             self.w3 = None
