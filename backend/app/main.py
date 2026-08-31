@@ -1,4 +1,8 @@
-from fastapi import FastAPI
+# Cache bust: force Render to recompile this file
+import asyncio
+import os
+
+from fastapi import FastAPI, Depends, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes.alerts import router as alerts_router
 from app.api.routes.alerts import router as alerts_router

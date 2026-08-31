@@ -53,13 +53,13 @@
     }
     .severity-banner {
       padding: 20px 32px;
-      {% if alert.severity == 'CRITICAL' %}
+      {% if alert.severity|upper == 'CRITICAL' %}
       background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(153, 27, 27, 0.05) 100%);
       border-left: 4px solid #EF4444;
-      {% elif alert.severity == 'HIGH' %}
+      {% elif alert.severity|upper == 'HIGH' %}
       background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(154, 52, 18, 0.05) 100%);
       border-left: 4px solid #F97316;
-      {% elif alert.severity == 'MEDIUM' %}
+      {% elif alert.severity|upper == 'MEDIUM' %}
       background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(133, 77, 14, 0.05) 100%);
       border-left: 4px solid #EAB308;
       {% else %}
@@ -75,15 +75,15 @@
       font-weight: 800;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      {% if alert.severity == 'CRITICAL' %}
+      {% if alert.severity|upper == 'CRITICAL' %}
       background-color: rgba(239, 68, 68, 0.2);
       color: #F87171;
       border: 1px solid rgba(239, 68, 68, 0.4);
-      {% elif alert.severity == 'HIGH' %}
+      {% elif alert.severity|upper == 'HIGH' %}
       background-color: rgba(249, 115, 22, 0.2);
       color: #FB923C;
       border: 1px solid rgba(249, 115, 22, 0.4);
-      {% elif alert.severity == 'MEDIUM' %}
+      {% elif alert.severity|upper == 'MEDIUM' %}
       background-color: rgba(234, 179, 8, 0.2);
       color: #FACC15;
       border: 1px solid rgba(234, 179, 8, 0.4);
@@ -242,7 +242,7 @@
                 </tr>
                 <tr>
                   <td class="grid-label">Score Fusion Confidence</td>
-                  <td class="grid-value">{{ "%.2f"|format(alert.confidence_score * 100) }}%</td>
+                  <td class="grid-value">{{ "%.2f"|format(alert.confidence_score|float * 100) }}%</td>
                 </tr>
                 <tr>
                   <td class="grid-label">Source IP</td>
@@ -265,7 +265,7 @@
                 {% for bot in alert.contributing_bots %}
                   {% set score = alert.bot_scores.get(bot) if alert.bot_scores else None %}
                   <span class="bot-pill">
-                    🤖 {{ bot }}{% if score %} ({{ "%.1f"|format(score * 100) }}%){% endif %}
+                    🤖 {{ bot }}{% if score %} ({{ "%.1f"|format(score|float * 100) }}%){% endif %}
                   </span>
                 {% endfor %}
               </div>
