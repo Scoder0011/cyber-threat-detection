@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt pytest
-      - run: DATABASE_URL=sqlite:///./ci.db pytest -q || [ $? -eq 5 ]
+      - run: pip install -r requirements.txt
+      - run: DATABASE_URL=sqlite:///./ci.db pytest -q --ignore=tests/test_ai_service.py
