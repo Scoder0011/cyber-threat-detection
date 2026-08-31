@@ -7,13 +7,27 @@ class Alert(Base):
     __tablename__ = "alerts"
 
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    timestamp = Column(DateTime, default=datetime.datetime.utcnow)
-    flow_id = Column(String, nullable=False)
-    threat_class = Column(String, nullable=False)
-    confidence = Column(Float, nullable=False)
-    severity = Column(String, nullable=False)
-    evidence = Column(JSON)
-    blockchain_tx = Column(String, nullable=True)
+    flow_id = Column(String(64), nullable=False, unique=True)
+    src_ip = Column(String(45), nullable=False)
+    dst_ip = Column(String(45), nullable=False)
+    src_port = Column(Integer, nullable=False)
+    dst_port = Column(Integer, nullable=False)
+    protocol = Column(String(10), nullable=False, default="TCP")
+    duration = Column(Numeric(10, 4), nullable=False, default=0.0)
+    bytes_in = Column(BigInteger, nullable=False, default=0)
+    bytes_out = Column(BigInteger, nullable=False, default=0)
+    pkts_in = Column(Integer, nullable=False, default=0)
+    pkts_out = Column(Integer, nullable=False, default=0)
+    tcp_flags = Column(String(32), default="SYN-ACK")
+    flow_rate_bps = Column(Numeric(14, 2), default=0.0)
+    packet_rate_pps = Column(Numeric(12, 2), default=0.0)
+    entropy = Column(Numeric(6, 4), default=0.0)
+    ja3_hash = Column(String(64), default=None)
+    is_attack = Column(Boolean, nullable=False, default=False)
+    attack_type = Column(String(64), default="BENIGN")
+    timestamp = Column(DateTime(timezone=True), default=datetime.datetime.utcnow)
+    extra_metadata = Column(JSON, default=dict)
+
 
 class ThreatAlert(Base):
     __tablename__ = "threat_alerts"

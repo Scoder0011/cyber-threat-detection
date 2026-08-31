@@ -9,7 +9,7 @@ Description: {{ alert.description }}
 [ INCIDENT TELEMETRY ]
 - Alert ID:              {{ alert.alert_id }}
 - Attack Classification: {{ alert.attack_type }}
-- Score Fusion Conf:     {{ "%.2f"|format(alert.confidence_score * 100) }}%
+- Score Fusion Conf:     {{ "%.2f"|format(alert.confidence_score|float * 100) }}%
 - Source IP:             {{ alert.source_ip }}
 - Target IP:             {{ alert.target_ip }}{% if alert.target_port %}:{{ alert.target_port }}{% endif %}
 - Severity Level:        {{ alert.severity }}
@@ -18,7 +18,7 @@ Description: {{ alert.description }}
 {% if alert.contributing_bots %}
 [ CONTRIBUTING AI SPECIALISTS ]
 {% for bot in alert.contributing_bots %}
-- {{ bot }}: {% if alert.bot_scores and alert.bot_scores.get(bot) %}{{ "%.1f"|format(alert.bot_scores.get(bot) * 100) }}% confidence{% else %}Flagged{% endif %}
+- {{ bot }}: {% if alert.bot_scores and alert.bot_scores.get(bot) %}{{ "%.1f"|format(alert.bot_scores.get(bot)|float * 100) }}% confidence{% else %}Flagged{% endif %}
 {% endfor %}
 {% endif %}
 
