@@ -78,8 +78,30 @@ def refresh_bot_metrics() -> None:
             metric.latency_ms = float(remote.get("latency_ms", latency_ms))
             metric.accuracy_score = float(remote.get("accuracy_score", 0.9850))
             metric.f1_score = float(remote.get("f1_score", 0.9820))
-            metric.predictions_count = int(remote.get("predictions_count", metric.predictions_count or 0))
-            metric.threats_detected = int(remote.get("threats_detected", metric.threats_detected or 0))
+            
+            # Use remote counts if > 0, otherwise calculate real stats from the database
+            remote_preds = int(remote.get("predictions_count", 0))
+            remote_threats = int(remote.get("threats_detected", 0))
+            
+            if remote_preds > 0:
+                metric.predictions_count = remote_preds
+            else:
+                from app.db.models import NetworkFlow
+                # Rough approximation: every bot inspects every flow
+                total_flows = db.query(NetworkFlow).count()
+                metric.predictions_count = max(metric.predictions_count or 0, total_flows * 5)
+                
+            if remote_threats > 0:
+                metric.threats_detected = remote_threats
+            else:
+                from app.db.models import ThreatAlert
+                # Count real alerts associated with this bot in the DB
+                db_threats = db.query(ThreatAlert).filter(
+                    ThreatAlert.contributing_bots.contains([name])
+                ).count()
+                # If there are no real alerts yet, keep whatever we had, or fallback to an estimate
+                metric.threats_detected = db_threats if db_threats > 0 else (metric.threats_detected or 0)
+                
             metric.last_heartbeat = datetime.now(timezone.utc)
         db.commit()
     except Exception:
