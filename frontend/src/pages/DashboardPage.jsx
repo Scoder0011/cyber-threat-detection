@@ -164,12 +164,12 @@ export const DashboardPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
                   
                   {/* Left (Larger): Global Threat Activity World Map */}
-                  <div className="lg:col-span-7 flex flex-col">
+                  <div className="lg:col-span-8 flex flex-col">
                     <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} alerts={feed} />
                   </div>
 
                   {/* Right (Smaller): Live Threats Feed */}
-                  <div className="lg:col-span-5 flex flex-col">
+                  <div className="lg:col-span-4 flex flex-col">
                     <ThreatFeed
                       isLoading={isLoading || isLoadingSkeletons}
                       items={feed}
@@ -215,11 +215,11 @@ export const DashboardPage = () => {
         {activeTab === "threat-feed" && (
           <div className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-              <div className="lg:col-span-5">
-                <ThreatFeed isLoading={isLoading || isLoadingSkeletons} items={feed} />
-              </div>
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-8">
                 <WorldMapWidget isLoading={isLoading || isLoadingSkeletons} alerts={feed} />
+              </div>
+              <div className="lg:col-span-4">
+                <ThreatFeed isLoading={isLoading || isLoadingSkeletons} items={feed} />
               </div>
             </div>
           </div>
