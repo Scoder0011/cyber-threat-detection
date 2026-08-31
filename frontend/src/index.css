@@ -149,33 +149,3 @@
     scroll-behavior: auto !important;
   }
 }
-
-/* CRT Scanline Effect for Demo */
-.scanlines {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0) 50%,
-    rgba(0, 0, 0, 0.05) 50%,
-    rgba(0, 0, 0, 0.05)
-  );
-  background-size: 100% 4px;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.6;
-}
-.dark .scanlines {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0) 50%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.3)
-  );
-  background-size: 100% 4px;
-}

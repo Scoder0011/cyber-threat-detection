@@ -250,11 +250,16 @@ class NotificationService:
         Non-blocking fire-and-forget background dispatcher.
         Ensures main controller and flow processing never wait for email delivery.
         """
+        alert_id = getattr(alert, "alert_id", None) or (alert.get("alert_id") if isinstance(alert, dict) else None)
+        
         def _run():
             try:
                 db = SessionLocal()
                 try:
-                    asyncio.run(self.process_alert_notifications(alert, provider_name, db))
+                    from app.db.models import ThreatAlert
+                    db_alert = db.query(ThreatAlert).filter(ThreatAlert.alert_id == alert_id).first()
+                    target_alert = db_alert if db_alert else alert
+                    asyncio.run(self.process_alert_notifications(target_alert, provider_name, db))
                 finally:
                     db.close()
             except Exception as e:
