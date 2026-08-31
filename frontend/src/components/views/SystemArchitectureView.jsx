@@ -15,7 +15,8 @@ export function SystemArchitectureView() {
     const fetchBots = async () => {
       try {
         const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api";
-        const aiServiceUrl = import.meta.env.VITE_AI_SERVICE_URL || "https://bots3-a8ta.onrender.com";
+        const rawAiUrl = import.meta.env.VITE_AI_SERVICE_URL || "https://bots3-a8ta.onrender.com";
+        const aiServiceUrl = rawAiUrl.replace(/\/$/, "");
         
         let data = null;
         try {
