@@ -1,5 +1,5 @@
 import asyncio
-import requests
+import resend
 from typing import Optional, Dict, Any
 
 from app.config import settings
@@ -11,7 +11,6 @@ logger = setup_logger(__name__)
 
 class ResendProvider(BaseNotificationProvider):
     name = "resend"
-    API_URL = "https://api.resend.com/emails"
 
     def __init__(
         self,
@@ -22,6 +21,8 @@ class ResendProvider(BaseNotificationProvider):
         self.api_key = api_key or settings.RESEND_API_KEY
         self.from_email = from_email or settings.SMTP_FROM_EMAIL
         self.from_name = from_name or settings.SMTP_FROM_NAME
+        if self.api_key:
+            resend.api_key = self.api_key
 
     def _send_sync(
         self,
@@ -41,7 +42,7 @@ class ResendProvider(BaseNotificationProvider):
         sender_name = from_name or self.from_name
         full_sender = f"{sender_name} <{sender_email}>" if sender_name else sender_email
 
-        payload = {
+        params = {
             "from": full_sender,
             "to": [to_email],
             "subject": subject,
@@ -49,33 +50,16 @@ class ResendProvider(BaseNotificationProvider):
             "text": text_content,
         }
 
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "User-Agent": "TheThirdEYE-SOC/1.0",
-        }
-
         try:
-            resp = requests.post(self.API_URL, json=payload, headers=headers, timeout=15)
-            if resp.status_code in (200, 201):
-                data = resp.json()
-                msg_id = data.get("id")
-                logger.info(f"Resend email dispatched to {to_email} (MsgID: {msg_id})")
-                return {
-                    "success": True,
-                    "provider": self.name,
-                    "message_id": msg_id,
-                    "error": None,
-                }
-            else:
-                err_msg = f"Resend API error ({resp.status_code}): {resp.text}"
-                logger.error(err_msg)
-                return {
-                    "success": False,
-                    "provider": self.name,
-                    "message_id": None,
-                    "error": err_msg,
-                }
+            resp = resend.Emails.send(params)
+            msg_id = getattr(resp, 'id', None) or (resp.get('id') if isinstance(resp, dict) else str(resp))
+            logger.info(f"Resend email dispatched to {to_email} (MsgID: {msg_id})")
+            return {
+                "success": True,
+                "provider": self.name,
+                "message_id": msg_id,
+                "error": None,
+            }
         except Exception as e:
             err_msg = f"Resend request exception: {str(e)}"
             logger.error(err_msg)
