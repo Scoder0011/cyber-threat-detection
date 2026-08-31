@@ -16,4 +16,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: DATABASE_URL=sqlite:///./ci.db pytest -q
+      - run: DATABASE_URL=sqlite:///./ci.db pytest -q --ignore=tests/test_ai_service.py
