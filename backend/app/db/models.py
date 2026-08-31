@@ -1,10 +1,10 @@
-from sqlalchemy import Column, String, Float, DateTime, JSON
+from sqlalchemy import Column, String, Float, DateTime, JSON, Integer, Numeric, BigInteger, Boolean, ForeignKey, ARRAY
 from app.db.session import Base
 import uuid
 import datetime
 
-class Alert(Base):
-    __tablename__ = "alerts"
+class NetworkFlow(Base):
+    __tablename__ = "network_flows"
 
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     flow_id = Column(String(64), nullable=False, unique=True)
@@ -42,7 +42,7 @@ class ThreatAlert(Base):
     target_ip = Column(String(45), nullable=False)
     target_port = Column(Integer)
     confidence_score = Column(Numeric(5, 4), nullable=False)
-    contributing_bots = Column(ArrayType, nullable=False, default=[])
+    contributing_bots = Column(ARRAY(String), nullable=False, default=[])
     bot_scores = Column(JSON, nullable=False, default={})
     evidence = Column(JSON, nullable=False, default={})
     status = Column(String(30), nullable=False, default="NEW")  # NEW, INVESTIGATING, RESOLVED, FALSE_POSITIVE
