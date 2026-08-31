@@ -39,7 +39,6 @@ const LoginRoute = () => {
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="scanlines"></div>
       <AuthProvider>
         <BrowserRouter>
           <PageTransition>
