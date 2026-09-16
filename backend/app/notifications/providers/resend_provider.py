@@ -1,6 +1,10 @@
 import asyncio
-import resend
 from typing import Optional, Dict, Any
+
+try:
+    import resend
+except ImportError:
+    resend = None
 
 from app.config import settings
 from app.notifications.providers.base import BaseNotificationProvider
@@ -21,7 +25,7 @@ class ResendProvider(BaseNotificationProvider):
         self.api_key = api_key or settings.RESEND_API_KEY
         self.from_email = from_email or settings.SMTP_FROM_EMAIL
         self.from_name = from_name or settings.SMTP_FROM_NAME
-        if self.api_key:
+        if self.api_key and resend is not None:
             resend.api_key = self.api_key
 
     def _send_sync(
@@ -79,6 +83,10 @@ class ResendProvider(BaseNotificationProvider):
         from_email: Optional[str] = None,
         from_name: Optional[str] = None,
     ) -> Dict[str, Any]:
+        if resend is None:
+            err = "Resend support is unavailable because the optional 'resend' package is not installed."
+            return {"success": False, "provider": self.name, "message_id": None, "error": err}
+
         return await asyncio.to_thread(
             self._send_sync,
             to_email,
