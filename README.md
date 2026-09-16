@@ -1,3 +1,34 @@
+# UniThreat AI — Demo Dataset Quick Start
+
+The demo uses passive Zeek-style logs (`conn.log`, `dns.log`, and `ssl.log`) and
+never decrypts traffic or performs an active network response. The supplied
+dataset lives in `realdata/`; `data/raw`, `data/processed`, and `data/models`
+are repository-relative links to it so all demo tooling has one stable path.
+
+```bash
+make mix       # rebuild data/processed/mixed with DDoS downsampling
+make train     # validate the six supplied CPU model artifacts
+make demo      # export compact, labeled demo alerts
+make api       # serve alerts at http://localhost:8000/api/alerts
+make dashboard # start the existing Vite dashboard
+```
+
+`make demo` writes `data/processed/alerts/demo_alerts.json`. To load that file
+automatically when starting the API, use `make api`; the API also accepts a
+replacement alert feed with `POST /api/alerts/import` (a JSON array). The
+model bundle covers DDoS, C2 beaconing, DGA/DNS, encrypted malware, scanning,
+and exfiltration.
+
+## Current cleanup audit
+
+Keep and build on `backend/app`, `ai_models`, `frontend/src`, `data/`, and the
+new `scripts/` demo path. The root and `backend/` currently contain duplicate
+patch/fix scripts and a second nested backend copy; these are legacy clutter
+and should be quarantined only after confirming no deployment configuration
+still references them. The active data source is now unambiguous: `realdata/`.
+
+---
+
 # 🛡️ AI-Powered Cyber Threat Detection System
 
 Welcome to the **AI-Powered Cyber Threat Detection System** project repository. This multi-layered platform is engineered to ingest high-throughput network traffic, process data stream aggregates, perform specialist machine-learning classification on diverse vectors (DDoS, Beaconing, DGA DNS, Encrypted Malware, Scanning, and Exfiltration), coordinate score fusion to establish final threat alerts, commit cryptographically secure audit logs to a blockchain network, and display real-time telemetry on an interactive security dashboard.
