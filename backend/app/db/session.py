@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")  # Supabase Postgres connection string
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./unithreat_demo.db")
 
 # Render uses postgres:// in env vars, but SQLAlchemy 1.4+ requires postgresql://
 if DATABASE_URL.startswith("postgres://"):

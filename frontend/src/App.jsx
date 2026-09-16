@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "./context/ThemeContext";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { DashboardPage } from "./pages/DashboardPage";
+import { LoginPage } from "./pages/LoginPage";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 
 // Route transition wrapper for smooth fade & slight scale
@@ -43,7 +44,7 @@ export default function App() {
           <PageTransition>
             <Routes>
               {/* Login Page Route */}
-              <Route path="/login" element={<dashboard />} />
+              <Route path="/login" element={<LoginPage />} />
 
               {/* Protected Dashboard Route */}
               <Route
